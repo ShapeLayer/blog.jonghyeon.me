@@ -15,7 +15,7 @@ jobs:
         uses: actions/setup-ruby@v1
         with:
           ruby-version: '3.0'
-      - name: Processing deploy configuration
+      - name: Process deploy configuration
         run: |
           sh deploy.sh
           bundle
