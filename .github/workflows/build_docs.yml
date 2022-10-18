@@ -21,4 +21,4 @@ jobs:
           git checkout -b deploy
           git add .
           git commit -m "Build page" -m "`date`"
-          git push
+          git push --set-upstream origin deploy
