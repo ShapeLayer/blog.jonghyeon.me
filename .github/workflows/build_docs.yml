@@ -21,4 +21,4 @@ jobs:
           git checkout -b deploy
           git add .
           git commit -m "Build page" -m "`date`"
-          git push -u origin deploy
+          git push -f origin deploy
