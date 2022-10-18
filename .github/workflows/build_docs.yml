@@ -14,6 +14,7 @@ jobs:
       - name: Processing deploy configuration
         run: |
           sh deploy.sh
+          bundle
       - name: Commit build to deploy branch
         run: |
           git config user.name github-actions
