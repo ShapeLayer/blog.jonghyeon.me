@@ -20,6 +20,7 @@ jobs:
           sh deploy.sh
           bundle
           bundle exec jekyll build
+          mv -r _site docs
       - name: Commit build to deploy branch
         run: |
           git config user.name github-actions
