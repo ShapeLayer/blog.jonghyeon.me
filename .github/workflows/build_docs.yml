@@ -20,6 +20,5 @@ jobs:
           git config user.email github-actions@github.com
           git checkout -b deploy
           git add .
-          now=`date`
-          git commit -m "Build page" -m $now
+          git commit -m "Build page" -m "`date`"
           git push
