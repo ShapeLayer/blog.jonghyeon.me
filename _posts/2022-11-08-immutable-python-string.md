@@ -158,7 +158,7 @@ merge_using_list_append:      0.00702214241027832
 merge_using_list_operation:   0.009548664093017578
 ```
 
-* 테스트 과정에서 사용한 코드는 리포지토리에 첨부하였습니다. [이곳에서 확인할 수 있습니다.](https://github.com/ShapeLayer/blog.jonghyeon.me/static/posts/2022-11-08-immutable-python-string/string.py)  
+* 테스트 과정에서 사용한 코드는 리포지토리에 첨부하였습니다. [이곳에서 확인할 수 있습니다.](https://github.com/ShapeLayer/blog.jonghyeon.me/blob/main/static/posts/2022-11-08-immutable-python-string/string.py)  
 
 ## 문자열 불변 특성을 이용한 CPython의 최적화 기법
 
