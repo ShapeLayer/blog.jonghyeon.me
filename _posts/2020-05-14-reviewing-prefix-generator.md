@@ -27,7 +27,7 @@ tags: [review, project]
 
 그렇게 코드조각을 조금씩 쪄 내기를 반복하던 와중, 친구 노트북을 뺏어다가 몇몇 코드 조각을 웹 규격으로 재작성한 것이 바로 지금 인터넷에 공개된 악질 이름 생성기입니다.  
 
-![](/static/posts/2020-03-14-reviewing-prefix-generator/prefix-init.jpg)  
+![](/static/posts/2020-05-14-reviewing-prefix-generator/prefix-init.jpg)  
 
 초기의 악질 이름 생성기 디자인은 단조로웠습니다. 본격적으로 무언가를 해보려고 만든 것이 아니었기 때문에 적당히 동작만 하면 됐기 때문입니다.  
 지금의 디자인은 사이트 개설 당일 저녁에 적용되었고, 이 디자인도 완벽하지는 않아 [kiwiyou](https://github.com/kiwiyou)님께서 해주신 조언을 바탕으로 며칠 뒤 디자인을 완성하게 되었습니다.  
@@ -45,7 +45,7 @@ tags: [review, project]
 
 누구나 무난하게 사용할 수 있게끔 악질 이름 생성기를 "무해하게" 수정하면서도, 아무리 널리 퍼져봐야 사이트 몇 곳 사용자들만 알음 알음 방문해보고 말것이라 생각하고 있었습니다.  
 
-![](/static/posts/2020-03-14-reviewing-prefix-generator/naver_trend.jpg)  
+![](/static/posts/2020-05-14-reviewing-prefix-generator/naver_trend.jpg)  
 
 하지만 제 예상과 달리 악질 이름 생성기는 급기야 실시간 급상승 검색에 차트에 오르기 시작했습니다. 스크린샷을 제대로 찍어놓은게 없어 아쉽지만, 차트 설정을 좀 조정하면 1위에 도달하기도 했습니다.  
 
@@ -77,7 +77,7 @@ tags: [review, project]
 
 ## 마치면서
 
-![](/static/posts/2020-03-14-reviewing-prefix-generator/labtop-with-article.jpg)
+![](/static/posts/2020-05-14-reviewing-prefix-generator/labtop-with-article.jpg)
 
 다시한번 말씀드리지만 그동안 정말 분에 넘치는 사랑을 받았습니다. 정말 충동적으로 시작한 일인데 이렇게 별 탈 없이 마무리되어가서 너무나 기쁠 뿐입니다.
 
