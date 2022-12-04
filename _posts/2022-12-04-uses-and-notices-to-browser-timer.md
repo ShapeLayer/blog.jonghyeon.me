@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 웹에서 마우스 오버 시 더 많은 소수부를 보여주는 실수 구현; 브라우저의 Nested time
+title: 웹에서 마우스 오버 시 더 많은 소수부를 보여주는 실수 구현; 브라우저의 지연된 타임아웃
 date: '2022-12-04'
 categories: [web, browser]
 tags: [web, browser, computer-science, javascript, svelte]
