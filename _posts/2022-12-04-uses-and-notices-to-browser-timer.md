@@ -63,7 +63,7 @@ CSS는 위 기능을 만들어내기 위해 존재하는 것이 아닙니다. �
     clearInterval(displayUpdater)
     displayUpdater = setInterval(fn, ms)
   }
-<script lang="ts">
+</script>
 ```
 지금의 사이트는 복무율에 마우스오버 시 `clearInterval`과 `setInterval`을 번갈아가며 실행합니다.  
 왠지 위 두 API를 번갈아가며 실행하면 브라우저에 부하를 일으킬것만 같은 근거없는 느낌이 있었으므로, 이 방식을 피하고자 했습니다.  
