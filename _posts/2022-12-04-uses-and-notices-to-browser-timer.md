@@ -7,7 +7,10 @@ tags: [web, browser, computer-science, javascript, svelte]
 ---
 
 ## 야호 해냈다
-![](/static/posts/2022-12-04-uses-and-notices-to-browser-timer/RPReplay_Final1670122781.webm)
+<video autoplay muted>
+  <source src="/static/posts/2022-12-04-uses-and-notices-to-browser-timer/RPReplay_Final1670122781.webm" type="video/webm">
+  <source src="/static/posts/2022-12-04-uses-and-notices-to-browser-timer/RPReplay_Final1670122781.mp4" type="video/mp4">
+</video>
 
 어제 개인 프로필 사이트를 수정하며 군 복무율에 마우스를 올리면 진행도의 표현 소수점이 늘어나는 기능을 추가했습니다.  
 간단한 기능이지만, 구현하며 고민했던 것들을 정리하려고 합니다.  
@@ -68,8 +71,10 @@ CSS는 위 기능을 만들어내기 위해 존재하는 것이 아닙니다. �
 하지만 복무율을 펼치는 과정에서도 완전히 펼쳤을 때 수준만큼 함수를 호출할 필요는 없습니다.  
 예를 들어 소수점 아래 2자리에서 12자리가 보이도록 복무율 소수점 표현이 전환되는 과정에 있다고 생각해봅시다.  
 
-![](/static/posts/2022-12-04-uses-and-notices-to-browser-timer/apple_promotion.webm)  
-_Source: Apple_  
+<video autoplay muted>
+  <source src="/static/posts/2022-12-04-uses-and-notices-to-browser-timer/apple_promotion.webm" type="video/webm">
+  <source src="/static/posts/2022-12-04-uses-and-notices-to-browser-timer/apple_promotion.mp4" type="video/mp4">
+</video><br><i>Source: Apple</i>  
 
 12자리가 표시될 때만큼의 함수 호출이 9자리가 표시될 때 이루어질 필요가 없습니다. 마치 고주사율 디스플레이 휴대기기에서 사용하는 가변 주사율처럼 말이죠.  
 따라서 setTimeout을 사용하여 재귀적으로 소수점 표현 자릿수를 수정하고 복무율을 갱신해보려고 시도했습니다.  
