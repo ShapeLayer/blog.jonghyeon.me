@@ -46,7 +46,7 @@ CSS는 위 기능을 만들어내기 위해 존재하는 것이 아닙니다. �
 하지만 이제와서 생각해보면 이 방식은 생각한대로 작동한다 하더라도 사용하지 않아야 할 이유가 더 많았으므로 처음부터 틀린 방식인 모양입니다.  
 
 ## setInterval과 clearInterval을 번갈아가며 사용하기
-```svelte
+```html
 <span
   id="percentage-displayer"
   on:mouseover={onMouseOverHandler}
@@ -85,7 +85,7 @@ CSS는 위 기능을 만들어내기 위해 존재하는 것이 아닙니다. �
 12자리가 표시될 때만큼의 함수 호출이 9자리가 표시될 때 이루어질 필요가 없습니다. 마치 고주사율 디스플레이 휴대기기에서 사용하는 가변 주사율처럼 말이죠.  
 따라서 setTimeout을 사용하여 재귀적으로 소수점 표현 자릿수를 수정하고 복무율을 갱신해보려고 시도했습니다.  
 
-```svelte
+```html
 ...
 <script lang="ts">
   const processUpdateDisplayValueInDurationSetTimeout = (toFixed, nextInterval, deltaIntervalInCalls) => {
