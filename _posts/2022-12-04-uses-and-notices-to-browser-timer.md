@@ -6,6 +6,12 @@ categories: [web, browser]
 tags: [web, browser, computer-science, javascript, svelte]
 ---
 
+<style>
+  video {
+    width: 100%;
+  }
+</style>
+
 ## 야호 해냈다
 <video autoplay muted>
   <source src="/static/posts/2022-12-04-uses-and-notices-to-browser-timer/RPReplay_Final1670122781.webm" type="video/webm">
