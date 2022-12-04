@@ -13,7 +13,7 @@ tags: [web, browser, computer-science, javascript, svelte]
 </style>
 
 ## 야호 해냈다
-<video autoplay muted>
+<video autoplay muted loop>
   <source src="/static/posts/2022-12-04-uses-and-notices-to-browser-timer/RPReplay_Final1670122781.webm" type="video/webm">
   <source src="/static/posts/2022-12-04-uses-and-notices-to-browser-timer/RPReplay_Final1670122781.mp4" type="video/mp4">
 </video>
@@ -77,7 +77,7 @@ CSS는 위 기능을 만들어내기 위해 존재하는 것이 아닙니다. �
 하지만 복무율을 펼치는 과정에서도 완전히 펼쳤을 때 수준만큼 함수를 호출할 필요는 없습니다.  
 예를 들어 소수점 아래 2자리에서 12자리가 보이도록 복무율 소수점 표현이 전환되는 과정에 있다고 생각해봅시다.  
 
-<video autoplay muted>
+<video autoplay muted loop>
   <source src="/static/posts/2022-12-04-uses-and-notices-to-browser-timer/apple_promotion.webm" type="video/webm">
   <source src="/static/posts/2022-12-04-uses-and-notices-to-browser-timer/apple_promotion.mp4" type="video/mp4">
 </video><br><i>Source: Apple</i>  
