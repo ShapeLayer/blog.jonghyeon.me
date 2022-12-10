@@ -13,7 +13,7 @@ tags: [web, browser, computer-science, javascript, svelte]
 </style>
 
 ## 야호 해냈다
-<video autoplay muted loop>
+<video autoplay muted loop playsinline>
   <source src="/static/posts/2022-12-04-uses-and-notices-to-browser-timer/RPReplay_Final1670122781.webm" type="video/webm">
   <source src="/static/posts/2022-12-04-uses-and-notices-to-browser-timer/RPReplay_Final1670122781.mp4" type="video/mp4">
 </video>
@@ -63,7 +63,7 @@ CSS는 위 기능을 만들어내기 위해 존재하는 것이 아닙니다. �
     clearInterval(displayUpdater)
     displayUpdater = setInterval(fn, ms)
   }
-<script lang="ts">
+</script>
 ```
 지금의 사이트는 복무율에 마우스오버 시 `clearInterval`과 `setInterval`을 번갈아가며 실행합니다.  
 왠지 위 두 API를 번갈아가며 실행하면 브라우저에 부하를 일으킬것만 같은 근거없는 느낌이 있었으므로, 이 방식을 피하고자 했습니다.  
@@ -77,13 +77,13 @@ CSS는 위 기능을 만들어내기 위해 존재하는 것이 아닙니다. �
 하지만 복무율을 펼치는 과정에서도 완전히 펼쳤을 때 수준만큼 함수를 호출할 필요는 없습니다.  
 예를 들어 소수점 아래 2자리에서 12자리가 보이도록 복무율 소수점 표현이 전환되는 과정에 있다고 생각해봅시다.  
 
-<video autoplay muted loop>
+<video autoplay muted loop playsinline>
   <source src="/static/posts/2022-12-04-uses-and-notices-to-browser-timer/apple_promotion.webm" type="video/webm">
   <source src="/static/posts/2022-12-04-uses-and-notices-to-browser-timer/apple_promotion.mp4" type="video/mp4">
 </video><br><i>Source: Apple</i>  
 
-12자리가 표시될 때만큼의 함수 호출이 9자리가 표시될 때 이루어질 필요가 없습니다. 마치 고주사율 디스플레이 휴대기기에서 사용하는 가변 주사율처럼 말이죠.  
-따라서 setTimeout을 사용하여 재귀적으로 소수점 표현 자릿수를 수정하고 복무율을 갱신해보려고 시도했습니다.  
+12자리가 표시될 때만큼의 함수 호출이 9자리가 표시될 때 이루어질 필요가 없습니다. 마치 고주사율 디스플레이 휴대기기에서 사용하는 가변 주사율처럼 필요한 순간에만 많은 처리를 하면 됩니다.  
+그래서 setTimeout을 사용하여 재귀적으로 소수점 표현 자릿수를 수정하고 복무율을 갱신해보려고 시도했습니다.  
 
 ```html
 ...
@@ -107,7 +107,7 @@ CSS는 위 기능을 만들어내기 위해 존재하는 것이 아닙니다. �
 </script>
 ```
 
-확실한건 기능의 복잡성에 비해 코드의 복잡성이 지나치게 커졌다는 사실입니다. 난방도 안되는 컨테이너 사지방에서 얼어버린 손가락으로 계속 작업을 진행하기에는 의욕만 꺾일 일이었으므로 다시 롤백할하기로 했습니다.  
+확실한건 기능의 복잡성에 비해 코드의 복잡성이 지나치게 커졌다는 사실입니다. 난방도 안되는 컨테이너 사지방에서 얼어버린 손가락으로 계속 작업을 진행하기에는 의욕만 꺾일 일이었으므로 다시 롤백하기로 했습니다.  
 게다가 이 방법 역시 CSS때와 마찬가지로 고려하지 못한, 사용하지 않아야 할 이유가 많았으므로 좋은 방식은 아닙니다.  
 
 일단 자명한 사실은 이 방식을 구현하며 복무율 갱신을 담당하는 코드와 표현 소수점을 수정하는 코드를 의존적으로 작성하였으므로 구현을 마치더라도 처음의 의도를 달성하지 못했을 것입니다.  
