@@ -2,7 +2,7 @@
 layout: post
 title: 경로 탐색 중 경로 탐색 알고리즘과 인접 행렬의 관계
 date: '2022-12-10'
-categories: [ps]
+categories: [algorithm]
 tags: [ps, algorithm, python]
 ---
 많은 경로 탐색 코드는 인접 행렬을 생성한 뒤 경로 탐색을 수행합니다. 인접 행렬은 주변의 인접한 다른 노드와의 연결 상태를 표현할 수 있으므로 대부분의 상황에서 유용합니다.
