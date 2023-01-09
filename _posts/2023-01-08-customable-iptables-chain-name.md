@@ -34,3 +34,7 @@ iptables -A AIMLESS -p tcp --dport 25563 -j ACCEPT
 ```
 
 이 명령이 오류가 발생하지 않긴 하지만, 방화벽 설정은 실질적으로 변경되지 않습니다. iptables는 INPUT, OUTPUT과 같은 내장 기본 체인만 실행합니다. 사용자 정의 체인은 내장 기본 체인에 연결하지 않으면 작동하지 않습니다.
+
+```sh
+iptables -A INPUT -j AIMLESS
+```
