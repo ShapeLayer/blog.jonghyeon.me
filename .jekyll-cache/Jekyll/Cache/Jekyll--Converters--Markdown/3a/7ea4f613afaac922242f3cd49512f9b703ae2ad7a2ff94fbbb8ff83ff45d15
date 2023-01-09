@@ -1,0 +1,118 @@
+I"H3<p>코드를 작성하다보면 코드 다발을 구문(statement)라고 표현하기도 하고 표현식(expression)이라고 표현하기도 합니다. 저 역시 영문으로 검색할 때 “Ruby for loop statement”와 “Ruby for loop expression” 이 두 표현을 혼재해서 사용한 적이 있습니다.</p>
+
+<p>하지만 엄밀히 말해 두 단어는 확실히 구분되어야 합니다. 결론부터 말하자면 “Ruby for loop expression”은 틀린 표현입니다.</p>
+
+<p>파이썬 코드를 예로 들어봅시다. 아래 코드는 구문입니다.</p>
+
+<div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre></td><td class="rouge-code"><pre><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">):</span>
+  <span class="k">continue</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>아래 코드는 표현식입니다.</p>
+
+<div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre><span class="nb">len</span><span class="p">(</span><span class="nb">input</span><span class="p">())</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>표현식과 구문의 가장 큰 차이는 “작동 방식”과 “값”에 있습니다. 구문은 어떤 처리가 어떻게 작동되어야 하는지 정의할 수 있고 반환값이 없습니다. 표현식보다 더 문법적이라고 표현할 수 있을겁니다. 어쩌면 사실상 문법을 의미할지도 모릅니다. 실제로 아래 코드는 오류를 반환합니다.</p>
+
+<div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre></td><td class="rouge-code"><pre><span class="o">&gt;&gt;&gt;</span> <span class="nb">len</span><span class="p">(</span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">)</span>
+<span class="nb">SyntaxError</span><span class="p">:</span> <span class="n">invalid</span> <span class="n">syntax</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>당연히 말도 안되는 코드이지만, for문이 표현식이었다면 이 코드는 최소한 컴파일 단계는 통과해야합니다. 즉, 표현식은 말 그대로 결과값이 존재하는 식입니다.<br />
+식의 결과값을 도출하는 과정에서 분명 어떤 처리를 할 수는 있겠지만, 결과를 얻어내기 위한 부수적인 단계일 뿐입니다. <code class="language-plaintext highlighter-rouge">1+3</code> 수식이 <code class="language-plaintext highlighter-rouge">4</code>를 <code class="language-plaintext highlighter-rouge">True == False</code> 비교식이 <code class="language-plaintext highlighter-rouge">False</code>를 한번에 정리해서 나타낼 수 있듯, 표현식은 단일한 반환값으로 처리될 수 있습니다.</p>
+
+<h2 id="다른-값으로-바꿔-생각할-수-있는-표현식">다른 값으로 바꿔 생각할 수 있는 표현식</h2>
+<p>표현식은 코드를 읽는 과정에서 임의의 상황을 가정하여 코드를 다른 값으로 대체할 수 있습니다.</p>
+
+<div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre><span class="k">print</span><span class="p">(</span><span class="s">'/'</span><span class="p">.</span><span class="n">join</span><span class="p">(</span><span class="n">sys</span><span class="p">.</span><span class="n">stdin</span><span class="p">.</span><span class="n">readline</span><span class="p">().</span><span class="n">split</span><span class="p">()))</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+<p>위 코드는 일련의 표현식으로, <code class="language-plaintext highlighter-rouge">print</code>함수는 따로 지정된 반환값이 없으므로 <code class="language-plaintext highlighter-rouge">None</code>을 의미합니다.</p>
+
+<div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+</pre></td><td class="rouge-code"><pre><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="k">print</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="o">&gt;&gt;&gt;</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
+<span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">):</span>
+  <span class="n">File</span> <span class="s">"&lt;stdin&gt;"</span><span class="p">,</span> <span class="n">line</span> <span class="mi">1</span><span class="p">,</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="nb">TypeError</span><span class="p">:</span> <span class="n">unsupported</span> <span class="n">operand</span> <span class="nb">type</span><span class="p">(</span><span class="n">s</span><span class="p">)</span> <span class="k">for</span> <span class="o">+</span><span class="p">:</span> <span class="s">'NoneType'</span> <span class="ow">and</span> <span class="s">'int'</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>일단 타입이 맞지않아 런타임 오류가 발생하더라도 연산 수행을 시도할 수는 있습니다. 이 코드는 위의 문법 오류는 발생하지 않았습니다.</p>
+
+<p><code class="language-plaintext highlighter-rouge">print</code>를 벗겨내고 다시 문제의 표현식을 살펴보겠습니다.</p>
+
+<div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre><span class="s">'/'</span><span class="p">.</span><span class="n">join</span><span class="p">(</span><span class="n">sys</span><span class="p">.</span><span class="n">stdin</span><span class="p">.</span><span class="n">readline</span><span class="p">().</span><span class="n">split</span><span class="p">())</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">print</code>가 없어도 여전히 위 식은 표현식이고, “값”의 기능을 잘 수행할 수 있습니다.</p>
+
+<p>그리고 <code class="language-plaintext highlighter-rouge">sys.stdin.readline()</code>을 <code class="language-plaintext highlighter-rouge">input()</code>으로 대체해 생각하더라도 *대부분의* 상황에서는 이상이 없을겁니다.</p>
+
+<ul>
+  <li><del><code class="language-plaintext highlighter-rouge">sys.stdin.readline()</code></del> =&gt; <code class="language-plaintext highlighter-rouge">input()</code><br />
+=&gt; <code class="language-plaintext highlighter-rouge">'/'.join(input().split())</code></li>
+</ul>
+
+<p>또, 다음과 같이 표준 입력을 가정하면 좀 더 대담하게 표현식을 동치할 수 있을겁니다.</p>
+
+<p><strong>예시 입력</strong></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>박종현 정준희 김광재 안주현
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<ol>
+  <li><del><code class="language-plaintext highlighter-rouge">input()</code></del> =&gt; <code class="language-plaintext highlighter-rouge">박종현 정준희 김광재 안주현</code><br />
+  =&gt; <code class="language-plaintext highlighter-rouge">'/'.join('박종현 정준희 김광재 안주현'.split())</code></li>
+  <li><del><code class="language-plaintext highlighter-rouge">'박종현 정준희 김광재 안주현'.split()</code></del> =&gt; <code class="language-plaintext highlighter-rouge">['박종현', '정준희', '김광재', '안주현']</code><br />
+  =&gt; <code class="language-plaintext highlighter-rouge">'/'.join(['박종현', '정준희', '김광재', '안주현'])</code></li>
+  <li><del><code class="language-plaintext highlighter-rouge">'/'.join(['박종현', '정준희', '김광재', '안주현'])</code></del> =&gt; <code class="language-plaintext highlighter-rouge">'박종현/정준희/김광재/안주현'</code></li>
+</ol>
+
+<div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+</pre></td><td class="rouge-code"><pre><span class="o">&gt;&gt;&gt;</span> <span class="s">'/'</span><span class="p">.</span><span class="n">join</span><span class="p">(</span><span class="n">sys</span><span class="p">.</span><span class="n">stdin</span><span class="p">.</span><span class="n">readline</span><span class="p">().</span><span class="n">split</span><span class="p">())</span>
+<span class="s">'박종현/정준희/김광재/안주현'</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="s">'박종현/정준희/김광재/안주현'</span>
+<span class="s">'박종현/정준희/김광재/안주현'</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">print()</code>가 <code class="language-plaintext highlighter-rouge">None</code>으로 동치될 수 있다 하더라도, 콘솔에 문자열을 출력하는 역할은 여전히 잘 수행할 수 있을 것이므로 다시 원래대로 <code class="language-plaintext highlighter-rouge">print</code>로 감싸겠습니다.</p>
+
+<div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre></td><td class="rouge-code"><pre><span class="o">&gt;&gt;&gt;</span> <span class="k">print</span><span class="p">(</span><span class="s">'/'</span><span class="p">.</span><span class="n">join</span><span class="p">(</span><span class="n">sys</span><span class="p">.</span><span class="n">stdin</span><span class="p">.</span><span class="n">readline</span><span class="p">().</span><span class="n">split</span><span class="p">()))</span>
+<span class="n">박종현</span><span class="o">/</span><span class="n">정준희</span><span class="o">/</span><span class="n">김광재</span><span class="o">/</span><span class="n">안주현</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h2 id="초심자에게-표현식에-대한-직관-키워주기">초심자에게 표현식에 대한 직관 키워주기</h2>
+<p>프로그래밍을 처음 손댔을 때를 생각하면 다들 그렇게 수월하게 코드를 짜진 못했을 겁니다. 저 역시 프로그래밍 언어가 기본적으로 가지고 있는 일련의 규칙들을 이해하지 못해 오직 직관과 감각에 의존하는 코드들을 만들어냈었습니다.</p>
+
+<p>아래는 저번 1학기 중에 새내기들을 가르치며 접한 코드입니다.</p>
+
+<div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre><span class="nb">input</span><span class="p">()</span> <span class="o">=</span> <span class="s">'무엇을 원하시나요?'</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>대부분 표현식에 대해 약간의 직관이라도 생기면 해결될법한 문제입니다. 그래서 저는 후배들에게 “괄호 단위로 끊어서 동치어로 대체해보라”고 제안했습니다. 그리고 대체로 이 제안은 개선을 이끌어낼 수 있었습니다.</p>
+
+<h2 id="마무리">마무리</h2>
+<p>표현식과 구문이라는 용어가 가지는 의미적 차이에서 시작해서 초심자에게 표현식에 대해 이해시키는 전략으로 마무리되었습니다. 두 사항 모두 아무도 제게 가르쳐주지 않았던 내용이고, 오랜 시간 몸소 부딪혀가며 익힌 것입니다.<br />
+하지만 직관과 감각으로만 프로그래밍을 공부하기엔 무엇을 모르는지 말로 설명하지 못하는 것이 많습니다. 이번 글에서는 그것이 표현식과 구문이었습니다.</p>
+:ET

@@ -1,11 +1,46 @@
-blog.jonghyeon.me
----
+# Chirpy Starter [![Gem Version](https://img.shields.io/gem/v/jekyll-theme-chirpy)](https://rubygems.org/gems/jekyll-theme-chirpy) [![GitHub license](https://img.shields.io/github/license/cotes2020/chirpy-starter.svg?color=blue)][mit]
 
-박종현 개인 블로그 아티클 리포지토리
+When installing the [**Chirpy**][chirpy] theme through [RubyGems.org][gem], Jekyll can only read files in the folders `_includes`, `_layout`, `_sass` and `assets`, as well as a small part of options of the `_config.yml` file from the theme's gem. If you have ever installed this theme gem, you can use the command `bundle info --path jekyll-theme-chirpy` to locate these files.
 
-이 리포지토리는 블로그 컨텐츠 부분만 포함하고 있습니다. 블로그 테마와 레이아웃 정의 파일은 이 리포지토리에서 확인할 수 없습니다.  
+The Jekyll organization claims that this is to leave the ball in the user’s court, but this also results in users not being able to enjoy the out-of-the-box experience when using feature-rich themes.
 
-## 배포
-하지만 [blog.jonghyeon.me](https://blog.jonghyeon.me)는 이 리포지토리의 Pages 설정에 따라 동작하고 있습니다. [테마 정의를 다른 리포지토리에 분리](./tools.conf)하고, Github Actions를 사용하여 병합 후 [`deploy`](https://github.com/ShapeLayer/blog.jonghyeon.me/tree/deploy) 브랜치에 게시합니다.  
+To fully use all the features of **Chirpy**, you need to copy the other critical files from the theme's gem to your Jekyll site. The following is a list of targets:
 
-Github Actions가 수행하는 일부 과정은 [`tools`](./tools/) 디렉토리 하위에 셸 스크립트로 정의하여 해당 디렉토리를 참조하여 확인할 수 있습니다.  
+```shell
+.
+├── _config.yml
+├── _data
+├── _plugins
+├── _tabs
+└── index.html
+```
+
+In order to save your time, and to prevent you from missing some files when copying, we extract those files/configurations of the latest version of the **Chirpy** theme and the [CD][CD] workflow to here, so that you can start writing in minutes.
+
+## Prerequisites
+
+Follow the instructions in the [Jekyll Docs](https://jekyllrb.com/docs/installation/) to complete the installation of `Ruby`, `RubyGems`, `Jekyll` and `Bundler`.
+
+## Installation
+
+[**Use this template**][use-template] to generate a brand new repository and name it `<GH_USERNAME>.github.io`, where `GH_USERNAME` represents your GitHub username.
+
+Then clone it to your local machine and run:
+
+```
+$ bundle
+```
+
+## Usage
+
+Please see the [theme's docs](https://github.com/cotes2020/jekyll-theme-chirpy#documentation).
+
+## License
+
+This work is published under [MIT][mit] License.
+
+[gem]: https://rubygems.org/gems/jekyll-theme-chirpy
+[chirpy]: https://github.com/cotes2020/jekyll-theme-chirpy/
+[use-template]: https://github.com/cotes2020/chirpy-starter/generate
+[CD]: https://en.wikipedia.org/wiki/Continuous_deployment
+[mit]: https://github.com/cotes2020/chirpy-starter/blob/master/LICENSE

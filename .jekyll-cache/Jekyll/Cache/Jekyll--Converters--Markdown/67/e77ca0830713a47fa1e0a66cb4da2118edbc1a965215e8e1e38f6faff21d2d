@@ -1,0 +1,162 @@
+I"S=<p>OOP에서, 어떤 클래스가 갖는 변수를 “속성”이라고 합니다.</p>
+
+<div class="language-cs highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><!-- <td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+</pre></td> --><td class="rouge-code"><pre><span class="k">class</span> <span class="nc">TextBox</span> <span class="p">{</span>
+  <span class="k">public</span> <span class="kt">string</span> <span class="k">value</span><span class="p">;</span>
+  <span class="k">public</span> <span class="kt">int</span> <span class="n">width</span><span class="p">;</span>
+  <span class="k">public</span> <span class="kt">int</span> <span class="n">height</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>위 <code class="language-plaintext highlighter-rouge">TextBox</code> 클래스는 <code class="language-plaintext highlighter-rouge">value</code>, <code class="language-plaintext highlighter-rouge">width</code>, <code class="language-plaintext highlighter-rouge">height</code> 속성을 갖고 있습니다.<br />
+이 속성은 attribute로 번역할 수 있을까요? property로 번역할 수 있을까요? 여느 번역이나 다 그렇듯, 원어가 갖고 있는 의미를 번역으로 정확히 전달하기란 어렵습니다.</p>
+
+<p>속성은 영어로 attribute 혹은 property이므로 겉으로는 똑같은 의미를 내포하고 있는 것으로 보입니다. 하지만 두 용어는 꽤 차이를 가지고 있습니다. attribute와 property는 엄연히 다른 용어입니다.</p>
+
+<h2 id="가상의-ui-애플리케이션-작성해보기">가상의 UI 애플리케이션 작성해보기</h2>
+<p>위 <code class="language-plaintext highlighter-rouge">TextBox</code> 클래스로 UI 애플리케이션을 작성한다고 생각해봅시다.</p>
+
+<div class="language-cs highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><!-- <td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td> --><td class="rouge-code"><pre><span class="n">TextBox</span> <span class="n">heroNotificationControl</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">TextBox</span><span class="p">(</span><span class="s">"새 공지사항이 없습니다."</span><span class="p">);</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>애플리케이션을 작성하다보니 텍스트 박스의 문자열 값의 길이를 따로 기록하고 싶어졌습니다. <code class="language-plaintext highlighter-rouge">String.Length</code>로 문자열 값의 길이를 확인할 수 있음에도 말입니다.</p>
+
+<div class="language-cs highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><!-- <td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+</pre></td> --><td class="rouge-code"><pre><span class="k">class</span> <span class="nc">TextBox</span> <span class="p">{</span>
+  <span class="p">...</span>
+  <span class="k">public</span> <span class="kt">int</span> <span class="n">length</span><span class="p">;</span>
+  <span class="k">public</span> <span class="nf">TextBox</span><span class="p">(</span><span class="kt">string</span> <span class="k">value</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">this</span><span class="p">.</span><span class="k">value</span> <span class="p">=</span> <span class="k">value</span><span class="p">;</span>
+    <span class="k">this</span><span class="p">.</span><span class="n">length</span> <span class="p">=</span> <span class="k">value</span><span class="p">.</span><span class="n">Length</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">value</code> 속성과 <code class="language-plaintext highlighter-rouge">length</code> 속성은 상황 맥락적으로 의미가 있을지 모르지만, 코드상에서는 연관이 없습니다. 두 속성은 각자 독립적이어서 만약 <code class="language-plaintext highlighter-rouge">value</code> 속성을 변경하게 된다고 하면 <code class="language-plaintext highlighter-rouge">length</code> 속성도 별도로 처리를 해야할 것입니다.</p>
+
+<div class="language-cs highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><!-- <td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+</pre></td> --><td class="rouge-code"><pre><span class="k">class</span> <span class="nc">TextBox</span> <span class="p">{</span>
+  <span class="k">public</span> <span class="nf">updateTextValue</span><span class="p">(</span><span class="kt">string</span> <span class="k">value</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">this</span><span class="p">.</span><span class="k">value</span> <span class="p">=</span> <span class="k">value</span><span class="p">;</span>
+    <span class="k">this</span><span class="p">.</span><span class="n">length</span> <span class="p">=</span> <span class="k">value</span><span class="p">.</span><span class="n">Length</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>이러한 코드는 코드를 수정할 다른 사람이나 미래의 나와 잘 소통이 된다면 문제가 발생하지 않을 겁니다. 하지만 전 항상 과거의 저와 소통이 잘 된적이 없었습니다.</p>
+
+<p>아마 높은 확률로 이런 코드를 어딘가에 추가할 것입니다.</p>
+
+<div class="language-cs highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><!-- <td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+</pre></td> --><td class="rouge-code"><pre><span class="k">class</span> <span class="nc">TextBox</span> <span class="p">{</span>
+  <span class="k">public</span> <span class="nf">updateTextValueOnly</span><span class="p">(</span><span class="kt">string</span> <span class="k">value</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">this</span><span class="p">.</span><span class="k">value</span> <span class="p">=</span> <span class="k">value</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>위쪽의 UI 애플리케이션 코드를 가져와서 이번엔 한번 <code class="language-plaintext highlighter-rouge">value</code> 속성을 수정해보겠습니다.</p>
+
+<div class="language-cs highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><!-- <td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+</pre></td> --><td class="rouge-code"><pre><span class="n">TextBox</span> <span class="n">heroNotificationControl</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">TextBox</span><span class="p">(</span><span class="s">"새 공지사항이 없습니다."</span><span class="p">);</span>
+<span class="n">Console</span><span class="p">.</span><span class="nf">Writeline</span><span class="p">(</span><span class="s">$"value: </span><span class="p">{</span><span class="n">heroNotificationControl</span><span class="p">.</span><span class="k">value</span><span class="p">}</span><span class="s">, length: </span><span class="p">{</span><span class="n">heroNotificationControl</span><span class="p">.</span><span class="n">length</span><span class="p">}</span><span class="s">"</span><span class="p">);</span>
+<span class="c1">// value: 새 공지사항이 없습니다., length: 13</span>
+<span class="n">heroNotificationControl</span><span class="p">.</span><span class="nf">updateTextValue</span><span class="p">(</span><span class="s">"새 공지사항을 가져오는 중입니다."</span><span class="p">);</span>
+<span class="n">Console</span><span class="p">.</span><span class="nf">Writeline</span><span class="p">(</span><span class="s">$"value: </span><span class="p">{</span><span class="n">heroNotificationControl</span><span class="p">.</span><span class="k">value</span><span class="p">}</span><span class="s">, length: </span><span class="p">{</span><span class="n">heroNotificationControl</span><span class="p">.</span><span class="n">length</span><span class="p">}</span><span class="s">"</span><span class="p">);</span>
+<span class="c1">// value: 새 공지사항을 가져오는 중입니다., length: 18</span>
+<span class="n">heroNotificationControl</span><span class="p">.</span><span class="nf">updateTextValueOnly</span><span class="p">(</span><span class="s">"새 공지사항이 없습니다."</span><span class="p">);</span>
+<span class="n">Console</span><span class="p">.</span><span class="nf">Writeline</span><span class="p">(</span><span class="s">$"value: </span><span class="p">{</span><span class="n">heroNotificationControl</span><span class="p">.</span><span class="k">value</span><span class="p">}</span><span class="s">, length: </span><span class="p">{</span><span class="n">heroNotificationControl</span><span class="p">.</span><span class="n">length</span><span class="p">}</span><span class="s">"</span><span class="p">);</span>
+<span class="c1">// value: 새 공지사항이 없습니다., length: 18</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">updateTextValue</code> 메서드는 <code class="language-plaintext highlighter-rouge">value</code>의 변화를 <code class="language-plaintext highlighter-rouge">length</code>에 잘 반영했지만, <code class="language-plaintext highlighter-rouge">updateTextValueOnly</code> 메서드는 그렇지 못했습니다. 이러한 Human-error는 누구나 일으킬 수 있습니다.</p>
+
+<p>물론 이러한 사례를 충분한 코딩 전략과 디자인 패턴을 활용하여 방지할 수 있습니다. 그리고 또 다른 좋은 방법을 사용할 수 있습니다.</p>
+
+<h2 id="프로퍼티property-속성을-메서드처럼">프로퍼티(Property), 속성을 메서드처럼</h2>
+<p>서두에서 attribute와 property는 엄연히 다른 용어라고 했습니다. 둘 다 한국어로는 속성으로 번역되나 지금까지 살펴본 속성은 attribute입니다. 그리고 attribute는 property와 구분하기 위해 “일반 속성”이라고 표현하겠습니다.</p>
+
+<p>프로퍼티는 변수(정확히는 필드) getter와 setter를 두고 값을 가져오거나 설정하려 할 때 getter나 setter를 실행합니다. 즉, getter와 setter는 함수입니다.</p>
+
+<div class="language-cs highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><!-- <td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+</pre></td> --><td class="rouge-code"><pre><span class="k">class</span> <span class="nc">TextBox</span> <span class="p">{</span>
+  <span class="k">public</span> <span class="kt">string</span> <span class="k">value</span><span class="p">;</span>
+  <span class="k">public</span> <span class="kt">int</span> <span class="n">width</span><span class="p">;</span>
+  <span class="k">public</span> <span class="kt">int</span> <span class="n">height</span><span class="p">;</span>
+  <span class="k">public</span> <span class="kt">int</span> <span class="n">length</span> <span class="p">{</span>
+    <span class="k">get</span> <span class="p">{</span> <span class="k">return</span> <span class="k">value</span><span class="p">.</span><span class="n">Length</span><span class="p">;</span> <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>위와 같이 정의한다면 <code class="language-plaintext highlighter-rouge">length</code> 프로퍼티는 <code class="language-plaintext highlighter-rouge">value</code>의 길이를 항상 잘 나타낼 것입니다.</p>
+
+<div class="language-cs highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><!-- <td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+</pre></td> --><td class="rouge-code"><pre><span class="n">TextBox</span> <span class="n">t</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">TextBox</span><span class="p">(</span><span class="s">"hello"</span><span class="p">);</span>
+<span class="n">Console</span><span class="p">.</span><span class="nf">WriteLine</span><span class="p">(</span><span class="n">t</span><span class="p">.</span><span class="n">length</span><span class="p">);</span>
+<span class="c1">// 5</span>
+<span class="n">t</span><span class="p">.</span><span class="k">value</span> <span class="p">=</span> <span class="s">"hello world"</span><span class="p">;</span>
+<span class="n">Console</span><span class="p">.</span><span class="nf">WriteLine</span><span class="p">(</span><span class="n">t</span><span class="p">.</span><span class="n">length</span><span class="p">);</span>
+<span class="c1">// 11</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>또 getter와 setter라고 표현했으나, 위 코드에서는 getter만 작성했습니다. 이렇게 작성하면 <code class="language-plaintext highlighter-rouge">length</code>를 수정하려 할 때 오류를 반환할 것입니다.</p>
+
+<div class="language-cs highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><!-- <td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre></td> --><td class="rouge-code"><pre><span class="n">TextBox</span> <span class="n">t</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">TextBox</span><span class="p">(</span><span class="s">"hello"</span><span class="p">);</span>
+<span class="n">t</span><span class="p">.</span><span class="n">length</span> <span class="p">=</span> <span class="m">3</span><span class="p">;</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><!-- <td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td> --><td class="rouge-code"><pre>error CS0200: Property or indexer 'TextBox.length' cannot be assigned to -- it is read only
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h2 id="getter와-get-메서드">getter와 get~ 메서드</h2>
+<p>프로퍼티에는 getter와 setter가 존재하고, 그것들은 함수이며, 실제로 “실행”한다는 사실은 차라리 자바에서 널리 쓰이는 <code class="language-plaintext highlighter-rouge">getField()</code> <code class="language-plaintext highlighter-rouge">setField()</code> 패턴을 채택해도 문제 없지 않나 싶을겁니다.</p>
+
+<p>실제로 그럴 수도 있습니다. 관점에 따라서 프로퍼티는 눈속임일 뿐이므로 getter setter 메서드를 작성하여 사용할 수도 있습니다.</p>
+
+<p>하지만 프로퍼티는 메서드를 일반 속성처럼 블랙박스화하고 “겉보기로는 일반 속성”에 읽기/쓰기 권한을 따로 따로 부여할 수 있습니다. (바로 위에서 getter만 작성하여 쓰기 권한을 제거한 것 같은 효과를 낸 것처럼) 이러한 활용법들은 클래스 사용자가 코드를 좀 더 유연하게 작성할 수 있도록 도울 수 있을지도 모릅니다.</p>
+:ET

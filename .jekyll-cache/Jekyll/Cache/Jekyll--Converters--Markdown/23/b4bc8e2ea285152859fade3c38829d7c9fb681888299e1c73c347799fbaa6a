@@ -1,0 +1,255 @@
+I"[S<p>이터레이터(Iterator)를 직역하면 반복자입니다. 그리고 이 이터레이터를 보통 이터레이블(Iterable)하다, 즉 반복가능하다고 합니다. 대체 뭐가 반복자이고 반복가능하다는걸까요?</p>
+
+<h2 id="for문-곱씹어보기">for문 곱씹어보기</h2>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><!-- <td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+</pre></td> --><td class="rouge-code"><pre><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">):</span>
+  <span class="k">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+<span class="c1"># 0
+# 1
+# 2
+# 3
+# 4
+</span></pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>가장 기본적인 형태의 for문을 살펴봅시다. 이 경우 파이썬은 콘솔에 <code class="language-plaintext highlighter-rouge">0</code>부터 <code class="language-plaintext highlighter-rouge">4</code>까지를 출력한 후 종료됩니다.<br />
+<code class="language-plaintext highlighter-rouge">for</code> 문 안에 <code class="language-plaintext highlighter-rouge">i</code>라는 변수가 임시로 생성되고, 이 <code class="language-plaintext highlighter-rouge">i</code>는 한번 반복할때마다 차례대로 <code class="language-plaintext highlighter-rouge">0</code> <code class="language-plaintext highlighter-rouge">1</code> <code class="language-plaintext highlighter-rouge">2</code> <code class="language-plaintext highlighter-rouge">3</code> <code class="language-plaintext highlighter-rouge">4</code> 로 갱신이 되는거죠.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><!-- <td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+</pre></td> --><td class="rouge-code"><pre><span class="n">arr</span> <span class="o">=</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">7</span><span class="p">]</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">arr</span><span class="p">:</span>
+  <span class="k">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+<span class="c1"># 10
+# 3
+# 4
+# 5
+# 7
+</span></pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>어떤 교수님은 이러한 형태의 <code class="language-plaintext highlighter-rouge">for</code> 문도 가르치십니다.<br />
+이 경우 <code class="language-plaintext highlighter-rouge">i</code> 는 한번 반복할때마다 <code class="language-plaintext highlighter-rouge">10</code> <code class="language-plaintext highlighter-rouge">3</code> <code class="language-plaintext highlighter-rouge">4</code> <code class="language-plaintext highlighter-rouge">5</code> <code class="language-plaintext highlighter-rouge">7</code> 을 의미하게 되어서 그대로 출력됩니다.</p>
+
+<h2 id="range와-리스트">range()와 리스트</h2>
+
+<p>위 두 사례는 <code class="language-plaintext highlighter-rouge">for i in</code> 부분까지는 똑같지만 그 뒤 부분에서 차이를 보이고 있습니다. 이것도 그냥 단순 암기해야하는 문법일까요?</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><!-- <td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+</pre></td> --><td class="rouge-code"><pre><span class="k">print</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">)))</span>
+<span class="c1"># [0, 1, 2, 3, 4]
+</span>
+<span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">))</span> <span class="o">==</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
+<span class="c1"># True
+</span></pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>괄호 단위로 끊어 읽어봅시다. <code class="language-plaintext highlighter-rouge">range(5)</code> 를 <code class="language-plaintext highlighter-rouge">list()</code> 를 사용해서 리스트로 변형했습니다. <code class="language-plaintext highlighter-rouge">print()</code>는 콘솔에 결과를 출력하는 것 뿐이니, <code class="language-plaintext highlighter-rouge">list(range(5))</code> 가 <code class="language-plaintext highlighter-rouge">[0, 1, 2, 3, 4]</code> 임을 알 수 있습니다.</p>
+
+<p>실제로 파이썬에 리스트로 변환한 <code class="language-plaintext highlighter-rouge">range(5)</code>와 그냥 리스트를 비교하니 둘을 똑같이 인식함을 확인할 수 있습니다.</p>
+
+<p>그럼 이제 for문의 사용법이 두 가지가 아님을 알 수 있습니다.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><!-- <td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+</pre></td> --><td class="rouge-code"><pre><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">):</span>
+	<span class="c1"># code
+</span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]:</span>
+  <span class="c1"># code
+</span></pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>이 두 for문은 사실상 같은 내용을 의미합니다. <code class="language-plaintext highlighter-rouge">range(5)</code> 가 0~4를 담는 리스트를 자동 생성하는 것이라고 생각해도 될 정도로 말입니다.</p>
+
+<h2 id="다시-이터레이터로-돌아와서">다시 이터레이터로 돌아와서</h2>
+
+<p>글머리에 이터레이터를 “반복자” “반복 가능한 데이터”라고 표현했습니다. 이제 for문을 통해 다시 한번 확인해봅시다.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><!-- <td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+</pre></td> --><td class="rouge-code"><pre><span class="n">sums</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">5</span><span class="p">]:</span>
+  <span class="n">sums</span> <span class="o">+=</span> <span class="n">n</span>
+<span class="c1"># sums = 10 + 9 + 8 + 7 + 6 + 5
+</span></pre></td></tr></tbody></table></code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">for &lt;var&gt; in &lt;iter&gt;</code> 의 <code class="language-plaintext highlighter-rouge">&lt;iter&gt;</code> 부분에는 리스트와, <code class="language-plaintext highlighter-rouge">list()</code> 를 통해 리스트가 될 수 있는 <code class="language-plaintext highlighter-rouge">range()</code> 가 들어갔습니다. 이들의 특징은 “하나의 변수에 여러 값을 한번에 넣을 수 있다”입니다.</p>
+
+<p>그렇다면 위 특징에 해당하는 다른 타입들을 떠올려봅시다.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><!-- <td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+</pre></td> --><td class="rouge-code"><pre><span class="n">tup</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="n">tup</span><span class="p">:</span>
+  <span class="k">print</span><span class="p">(</span><span class="n">tup</span><span class="p">)</span>
+<span class="c1"># 1
+# 2
+# 3
+# 4
+# 5
+</span></pre></td></tr></tbody></table></code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><!-- <td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+</pre></td> --><td class="rouge-code"><pre><span class="n">dic</span> <span class="o">=</span> <span class="p">{</span><span class="s">'name'</span><span class="p">:</span> <span class="s">'문성수'</span><span class="p">,</span> <span class="s">'high_school'</span><span class="p">:</span> <span class="s">'숭덕고등학교'</span><span class="p">,</span> <span class="s">'university'</span><span class="p">:</span> <span class="s">'전남대학교'</span><span class="p">}</span>
+<span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">dic</span><span class="p">:</span>
+  <span class="k">print</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">dic</span><span class="p">[</span><span class="n">key</span><span class="p">])</span>
+<span class="c1"># name 문성수
+# high_school 숭덕고등학교
+# university 전남대학교
+</span></pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>네 맞습니다. 위 예시는 모두 이터레이터입니다.</p>
+
+<p>다시한번, <strong>이터레이터는 for문의 <code class="language-plaintext highlighter-rouge">in</code> 다음에 배치해서 사용할 수 있습니다.</strong><br />
+동시에, <code class="language-plaintext highlighter-rouge">for</code> 와 <code class="language-plaintext highlighter-rouge">in</code> 사이에 배치한 변수(위 경우에는 <code class="language-plaintext highlighter-rouge">t</code> 와<code class="language-plaintext highlighter-rouge">key</code>)가 <strong>반복을 거듭하면서 계속 다른 값을 가져올 수 있습니다.</strong></p>
+
+<p>딕셔너리는 리스트가 두개 만들어질 수 있습니다. 키(Key) 리스트와 값(Value) 리스트입니다.</p>
+
+<p>하지만 반복문은 지금까지 <code class="language-plaintext highlighter-rouge">list()</code> 를 한번 거친 값을 사용하는 경향을 보였습니다. 따라서 딕셔너리 역시 그렇게 처리될 것입니다.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><!-- <td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td> --><td class="rouge-code"><pre><span class="nb">list</span><span class="p">(</span><span class="n">dic</span><span class="p">)</span>
+<span class="c1"># 딕셔너리를 리스트로 변환했는데도 오류없이 잘 처리됩니다.
+# ['name', 'high_school', 'university']
+</span></pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>딕셔너리 역시 마찬가지로 <code class="language-plaintext highlighter-rouge">list()</code> 를 한번 거친 값이 for문에 활용됩니다. <code class="language-plaintext highlighter-rouge">list()</code>를 한번 거치니 키값이 나타나는 것을 확인할 수 있습니다.</p>
+
+<p>여기서 자연스럽게 넘어갔는데, 딕셔너리를 리스트로 변환했는데 오류없이 잘 처리되었습니다.<br />
+이를 통해 한 가지를 더 확인할 수 있습니다. 바로 이터레이터는 <code class="language-plaintext highlighter-rouge">list()</code> 를 거쳐도 오류 없이 잘 처리된다는 것입니다.</p>
+
+<h2 id="인덱싱과-슬라이싱">인덱싱과 슬라이싱</h2>
+
+<p>이터레이터의 특징 중 “하나의 변수에 여러가지 값을 담을 수 있다.”를 떠올려봅시다.<br />
+이터레이터는 여러 개의 값을 하나로 묶은 것입니다. 때문에 원래의 값을 사용하려면 인덱싱과 슬라이싱을 사용해야 했습니다.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><!-- <td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+</pre></td> --><td class="rouge-code"><pre><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">)[</span><span class="mi">3</span><span class="p">]</span> <span class="c1"># 3번 인덱싱
+# 4
+</span><span class="p">{</span><span class="s">'name'</span><span class="p">:</span> <span class="s">'박종현'</span><span class="p">,</span> <span class="s">'high_school'</span><span class="p">:</span> <span class="s">'숭덕고등학교'</span><span class="p">,</span> <span class="s">'university'</span><span class="p">:</span> <span class="s">'전남대학교'</span><span class="p">}[</span><span class="s">'name'</span><span class="p">]</span> <span class="c1"># 'name' 키 인덱싱
+# 박종현
+</span><span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">1</span><span class="p">][</span><span class="mi">2</span><span class="p">:</span><span class="mi">4</span><span class="p">]</span> <span class="c1"># 2~3 슬라이싱
+# [3, 4]
+</span></pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>그런데 우리는 인덱싱과 슬라이싱이 되는 데이터타입을 하나 더 압니다. 바로 문자열(String)입니다.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><!-- <td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+</pre></td> --><td class="rouge-code"><pre><span class="n">text</span> <span class="o">=</span> <span class="s">'다람쥐 헌 쳇바퀴에 타고파.'</span>
+<span class="n">text</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+<span class="c1"># '쥐'
+</span><span class="n">text</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+<span class="c1"># '.파고타 에퀴바쳇 헌 쥐람다'
+</span><span class="n">text</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+<span class="c1"># '.'
+</span></pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>사실 문자열을 문장이라 하지 않고 “문자열”이라고 표현한 것은 컴퓨터가 이걸 “문자”들의 “배열”(=리스트)로 처리하고 있기 때문입니다.</p>
+
+<p>C언어를 학습했다면 다음 코드를 바로 떠올릴 것입니다.</p>
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><!-- <td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td> --><td class="rouge-code"><pre><span class="kt">char</span> <span class="n">foo</span><span class="p">[</span><span class="mi">10</span><span class="p">]</span> <span class="o">=</span> <span class="s">"foo</span><span class="se">\0</span><span class="s">"</span><span class="p">;</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>파이썬 역시 비슷하게 처리하므로 우리는 문자열을 인덱싱, 슬라이싱할 수 있습니다.</p>
+
+<p>문자열을 문자들의 “리스트”로 생각하고 처리하고 있으므로 아예 문자 리스트로 변환할 수도 있습니다.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><!-- <td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre></td> --><td class="rouge-code"><pre><span class="nb">list</span><span class="p">(</span><span class="s">'다람쥐 헌 쳇바퀴에 타고파'</span><span class="p">)</span>
+<span class="c1"># ['다', '람', '쥐', ' ', '헌', ' ', '쳇', '바', '퀴', '에', ' ', '타', '고', '파', '.']
+</span></pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>사실 문자열은 이터레이터입니다. 그리고 for문에 넣어도 오류 없이 동작합니다.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><!-- <td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+</pre></td> --><td class="rouge-code"><pre><span class="k">for</span> <span class="n">alphabet</span> <span class="ow">in</span> <span class="s">'apple'</span><span class="p">:</span>
+  <span class="k">print</span><span class="p">(</span><span class="n">alphabet</span><span class="p">)</span>
+<span class="c1"># a
+# p
+# p
+# l
+# e
+</span></pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>그렇다면 이제 인덱싱과 슬라이싱도 문자열, 리스트 각각 따로 생각할 필요가 없습니다.<br />
+애초에 둘 다 똑같은 이터레이터이므로 똑같이 처리되는건 당연합니다.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><!-- <td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+</pre></td> --><td class="rouge-code"><pre><span class="s">'다람쥐 헌 쳇바퀴에 타고파.'</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">3</span><span class="p">]</span>
+<span class="c1"># '다람쥐'
+</span>
+<span class="p">[</span><span class="s">'다'</span><span class="p">,</span> <span class="s">'람'</span><span class="p">,</span> <span class="s">'쥐'</span><span class="p">,</span> <span class="s">' '</span><span class="p">,</span> <span class="s">'헌'</span><span class="p">,</span> <span class="s">' '</span><span class="p">,</span> <span class="s">'쳇'</span><span class="p">,</span> <span class="s">'바'</span><span class="p">,</span> <span class="s">'퀴'</span><span class="p">,</span> <span class="s">'에'</span><span class="p">,</span> <span class="s">' '</span><span class="p">,</span> <span class="s">'타'</span><span class="p">,</span> <span class="s">'고'</span><span class="p">,</span> <span class="s">'파'</span><span class="p">,</span> <span class="s">'.'</span><span class="p">][</span><span class="mi">0</span><span class="p">:</span><span class="mi">3</span><span class="p">]</span>
+<span class="c1"># ['다', '람', '쥐']
+</span></pre></td></tr></tbody></table></code></pre></div></div>
+
+<h2 id="되짚어보기">되짚어보기</h2>
+
+<p>지금까지 언급한 이터레이터의 특징을 요약하면 이렇습니다.</p>
+
+<ul>
+  <li>하나의 변수에 여러가지 값을 담을 수 있다.</li>
+  <li>반복문(for문)에 사용할 수 있다.</li>
+  <li>
+    <p>for문을 사용하면 반복할 때마다 임시로 선언한 변수의 값이 바뀐다. (<code class="language-plaintext highlighter-rouge">for i in range()</code> 의 <code class="language-plaintext highlighter-rouge">i</code> 가 계속 바뀐다.)</p>
+
+    <p>= 이터레이터는 for문의 <code class="language-plaintext highlighter-rouge">for &lt;var&gt; in &lt;iter&gt;</code> 의 <code class="language-plaintext highlighter-rouge">&lt;iter&gt;</code> 부분에 들어갈 수 있고, <code class="language-plaintext highlighter-rouge">&lt;var&gt;</code> 는 반복할 때 마다 이터레이터 속 값을 하나씩 꺼낸다.</p>
+  </li>
+  <li>인덱싱이 가능하다: <code class="language-plaintext highlighter-rouge">[1]</code>
+(슬라이싱은 모든 이터레이터가 되는 것이 아닙니다: <code class="language-plaintext highlighter-rouge">[:2]</code> <code class="language-plaintext highlighter-rouge">[::-1]</code>)</li>
+  <li><code class="language-plaintext highlighter-rouge">list()</code> 를 오류 없이 통과한다.</li>
+  <li>대표 타입: 리스트, 문자열, 튜플, 딕셔너리, 레인지(<code class="language-plaintext highlighter-rouge">range</code>)</li>
+</ul>
+:ET
