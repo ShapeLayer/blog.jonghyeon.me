@@ -28,3 +28,13 @@ $ du snap
 ## df (Disk Free)
 
 `df` 명령은 `free`의 저장장치 버전입니다. `free`가 메모리의 사용 현황을 출력하듯, df는 마운트된 저장 장치의 사용 현황을 출력합니다.
+
+```bash
+$ df
+Filesystem     1K-blocks    Used Available Use% Mounted on
+tmpfs              99276    1188     98088   2% /run
+/dev/vda1       24476576 8257656  14891872  36% /
+tmpfs             496360       0    496360   0% /dev/shm
+tmpfs               5120       0      5120   0% /run/lock
+tmpfs              99272       4     99268   1% /run/user/0
+```
