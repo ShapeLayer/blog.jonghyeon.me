@@ -22,6 +22,7 @@ class Solve:
         self.__result = []
         self.node_mapping = [[-1 for _i in range(self.height)] for _j in range(self.width)]
         self.node_count = 1
+        self.__define_node_count()
         self.adj = [[False for _i in range(self.node_count + 1)] for _j in range(self.node_count + 1)]
         self.visited = [0 for _i in range(self.node_count + 1)]
         self.dest_node = -1
@@ -48,7 +49,6 @@ class Solve:
         '''
         인접행렬을 초기화합니다.
         '''
-        self.__define_node_count()
         for i in range(self.width):
             for j in range(self.height):
                 now = Pos(i, j)
