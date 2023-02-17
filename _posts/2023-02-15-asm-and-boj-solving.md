@@ -16,7 +16,7 @@ tags: [language, assembly, computer-science, nasm, sasm, boj]
 백준의 채점 환경은 [인텔 제온 위에서 64비트 리눅스를 사용](https://help.acmicpc.net/judge/info)합니다. 따라서 윈도우의 커널 서비스가 아니라 리눅스의 시스템 콜을 사용하는 코드를 작성해야 합니다.  
 하지만 이 정도만 고려해서는 채점 프로그램을 통과할 수 없습니다.  
 
-```asm
+```nasm
 section .text:
 global main
 main:
@@ -45,7 +45,7 @@ section .data:
 ## 이제 제 백준에서도 되는데요
 코드가 백준 채점 프로그램을 통과하기 위해서는 따로 `sys_call`을 호출하는 것이 아니라 eax에 `0`을 담고 리턴하는 것으로 코드를 종료해야합니다.  
 
-```asm
+```nasm
 section .text:
 global main
 main:
@@ -75,7 +75,7 @@ Hello World!
 ```  
 _55910233번 제출 코드의 Exit Code: 0_
 
-```
+```bash
 @ShapeLayer ➜ .../oj/boj/asm/x86 (main ✗) $ ./2557.2.bin
 Hello World!
 @ShapeLayer ➜ .../oj/boj/asm/x86 (main ✗) $ echo $?
@@ -87,7 +87,7 @@ _55910382번 제출 코드의 Exit Code: 0_
 추정되는 원인은 크게 두 가지로, 구체적으로 어느 것이 더 정확한 설명인지는 더 학습해야할 것 같습니다.  
 
 ## 1. 프로그램 종료 타이밍
-```asm
+```nasm
   mov eax, 0x1
   mov ebx, 0
   int 0x80
@@ -105,7 +105,7 @@ _55910382번 제출 코드의 Exit Code: 0_
 ## 2. 0x01 시스템 콜을 stderr 출력으로 감지
 [백준의 채점 정보](https://help.acmicpc.net/judge/info)를 확인하면 Standard Error(stderr)에 출력을 하면 런타임 에러를 받게 된다는 언급이 있습니다.  
 
-```asm
+```nasm
   mov eax, 0x1
   mov ebx, 0
   int 0x80
@@ -118,7 +118,7 @@ _55910382번 제출 코드의 Exit Code: 0_
 몇 가지 이유들을 세워보아도 만족할만한 설명은 없었으므로 계속해서 확인 작업을 거쳐야 함은 분명합니다.  
 또 한가지 분명한 사실은 32비트 어셈블리 코드가 백준의 채점 프로그램을 통과하려면 `sys_exit` 콜 없이 아래 코드로 종료되어야 한다는 것입니다.  
 
-```asm
+```nasm
   mov eax, 0x0
   ret
 ```
