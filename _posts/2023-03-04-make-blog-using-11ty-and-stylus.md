@@ -16,7 +16,23 @@ Jekyll은 분명히 유용하고 간편해서 독서 기록 블로그에도 사�
 그래서 이번엔 Eleventy를 사용해보았습니다. Eleventy도 Jekyll과 비슷하게 동작합니다. 마크다운 파일을 HTML로 빌드하는 것이 주 기능입니다. 차이점이 있다면 조금 더 많은 종류의 템플릿 언어와 문서 형식을 사용할 수 있다는 것입니다. [실제로 Eleventy 문서를 참조하면 다양한 형식의 코드 예시가 첨부되어 있는 것을 확인할 수 있습니다.](https://www.11ty.dev/docs/layouts/)
 
 ## SCSS 대신 Stylus 사용하기
-그래서 새 시도를 시작한 김에 한가지 새 시도를 더 했습니다. Jekyll에선 SCSS를 주로 사용했지만, 이번엔 Stylus를 사용했습니다. 사실 Jekyll과 Eleventy의 관계처럼 Stylus도 SCSS와 비교해서 큰 틀에서 스타일 정의 매커니즘이 달라진 것은 없으므로 단순히 새로운 언어 포맷을 도입한 것에 지나지 않긴 합니다.  
+그래서 새 시도를 시작한 김에 한가지 새 시도를 더 했습니다. Jekyll에선 SCSS를 주로 사용했지만, [이번엔 Stylus를 사용했습니다.](https://github.com/ShapeLayer/bookshelf/tree/main/src/stylus)  
+
+```styl
+.cards
+  display: grid
+  grid-column: 2 / span 12
+  grid-template-columns: repeat(12, minmax(auto, 60px))
+  grid-gap: 40px
+  list-style: none
+  padding: 0
+  @media only screen and (max-width: 500px)
+    grid-column: 2 / span 6
+    grid-template-columns: repeat(8, 1fr)
+    grid-gap: 20px
+```
+
+사실 Jekyll과 Eleventy의 관계처럼 Stylus도 SCSS와 비교해서 큰 틀에서 스타일 정의 매커니즘이 달라진 것은 없으므로 단순히 새로운 언어 포맷을 도입한 것에 지나지 않긴 합니다.  
 
 ## Eleventy를 사용하며
 Eleventy는 Node.js를 기반으로 하므로 Ruby 기반의 Jekyll보다 웹 라이브러리가 다소 더 풍부한 감이 있습니다. Stylus 역시 npm 패키지 매니저가 없었다면 생각조차 하지 못했을 것입니다.  
