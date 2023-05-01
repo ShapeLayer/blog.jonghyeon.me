@@ -3,7 +3,7 @@ layout: post
 title: 사용자 정의 가능한 iptables의 체인 이름
 date: '2023-01-08'
 categories: [linux, software]
-tags: [linux, software, tool]
+tags: [linux, software, tools]
 ---
 
 리눅스의 iptables에 익숙하지 않은 사용자는 리눅스 위에서 서버를 여는 과정에서 의아한 경험을 종종 핮니다. 분명 리눅스 로컬, localhost로 잘 접속되는 서버가 외부에서는 접근할 수 없습니다.

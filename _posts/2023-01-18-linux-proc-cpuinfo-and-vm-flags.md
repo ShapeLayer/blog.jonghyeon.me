@@ -3,7 +3,7 @@ layout: post
 title: 리눅스에 등록되는 x86 CPU별 가상화 기술과 그 확인 방법
 date: '2023-01-18'
 categories: [linux, software]
-tags: [linux, software, tool, virtualization, vm]
+tags: [linux, software, tools, virtualization, vm]
 ---
 
 ## cpuinfo

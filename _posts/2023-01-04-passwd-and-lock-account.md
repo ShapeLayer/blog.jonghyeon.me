@@ -3,7 +3,7 @@ layout: post
 title: passwd와 계정 비활성화
 date: '2023-01-04'
 categories: [linux, software]
-tags: [linux, software, tool]
+tags: [linux, software, tools]
 ---
 
 passwd는 그 이름과 달리 정말 많은 기능을 가지고 있는 듯 합니다. 단순히 비밀번호를 관리하는 것을 넘어서, 사용자의 계정을 사용하지 못하게 잠궈 로그인을 막을 수도 있습니다.

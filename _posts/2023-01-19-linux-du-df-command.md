@@ -3,7 +3,7 @@ layout: post
 title: 리눅스 du와 df명령
 date: '2023-01-19'
 categories: [linux, software]
-tags: [linux, software, tool, storage]
+tags: [linux, software, tools, storage]
 ---
 
 `du`와 `df` 모두 파일 용량에 관계된 유틸리티입니다. 디스크의 잔여 용량 혹은 파일의 용량을 확인할 수 있습니다.
