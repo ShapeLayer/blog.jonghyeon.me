@@ -50,7 +50,7 @@ _Source: 펀디지_
 
 하지만 저는 아이폰 사용자입니다. 그리고 iOS의 편의 기능들이 블루투스 키보드를 이용해 코드를 작성하는 상황에서는 불편함으로 작용할 수 있습니다.
 
-<video loop="loop" muted="muted" autoplay="autoplay" playsinline>
+<video loop="loop" muted="muted" autoplay="autoplay" playsinline style="width: 100%; height: 100%;">
   <source src="/static/posts/2023-04-19-programming-in-roka/IMG_2696.MOV" type="video/mp4">  
 </video>
 
