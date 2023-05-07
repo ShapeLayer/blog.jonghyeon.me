@@ -54,6 +54,8 @@ _Source: 펀디지_
   <source src="/static/posts/2023-04-19-programming-in-roka/IMG_2696.MOV" type="video/mp4">  
 </video>
 
+_터미널에 어떤 내용을 넣는지 모르니 계속해서 오타가 납니다: "I cannot see what I(?) typing now"_
+
 위 영상은 Codespaces에서 블루투스 키보드를 이용해 터미널에 명령을 넣는 모습입니다. 입력기가 활성화되면 나타나는 하단의 UI가 터미널을 가리고 있습니다.
 
 ## 마무리
