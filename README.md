@@ -1,6 +1,8 @@
 blog.jonghyeon.me
 ---
 
+[![pages-build-deployment](https://github.com/ShapeLayer/blog.jonghyeon.me/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/ShapeLayer/blog.jonghyeon.me/actions/workflows/pages/pages-build-deployment)  
+
 박종현 개인 블로그 아티클 리포지토리
 
 이 리포지토리는 블로그 컨텐츠 부분만 포함하고 있습니다. 블로그 테마와 레이아웃 정의 파일은 이 리포지토리에서 확인할 수 없습니다.  
