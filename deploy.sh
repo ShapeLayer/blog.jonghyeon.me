@@ -4,3 +4,4 @@ sh tools/clone_theme_customizer.sh
 cp -rf customizer/deploy docs
 rm -rf customizer
 mv docs/assets/lib/.gitkeep docs/assets/lib/.gitmodules
+rm docs/.gitmodules
