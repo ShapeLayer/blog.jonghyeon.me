@@ -1,9 +1,13 @@
 theme=$(awk '/^theme/{print $3}' tools.conf)
 theme_repo_url=$(awk '/^theme_repo_url/{print $3}' tools.conf)
 theme_repo_branch=$(awk '/^theme_repo_branch/{print $3}' tools.conf)
-# sh tools/clone_theme_customizer.sh
-# cp -rf customizer/deploy docs
-# rm -rf customizer
-# mv docs/assets/lib/.gitkeep docs/assets/lib/.gitmodules
-# rm docs/.gitmodules
-sh tools/merge_with_theme.sh $theme $theme_repo_url
+theme_clone_cache=theme
+
+echo 'Pulling theme repository.'
+git clone -b $theme_repo_branch $theme_repo_url $theme_clone_cache
+echo 'Pulling done.'
+echo 'Merging Start.'
+rm -rf $theme_clone_cache/.git
+cp -rf $theme_clone_cache/* .
+rm -rf $theme_clone_cache
+echo 'Merging End.'
