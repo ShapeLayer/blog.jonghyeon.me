@@ -11,16 +11,9 @@ jobs:
     steps:
       - name: Checkout Code
         uses: actions/checkout@v3
-      - name: Install ruby environment
-        uses: ruby/setup-ruby@v1
-        with:
-          ruby-version: '3.0'
       - name: Process deploy configuration
         run: |
           sh deploy.sh
-          bundle
-          bundle exec jekyll build
-          mv _site docs
       - name: Commit build to deploy branch
         run: |
           git config user.name github-actions

@@ -7,7 +7,7 @@ echo 'Pulling theme repository.'
 git clone -b $theme_repo_branch $theme_repo_url $theme_clone_cache
 echo 'Pulling done.'
 echo 'Merging Start.'
-rm -rf $theme_clone_cache/.git
-cp -rf $theme_clone_cache/* .
+rm -rf $theme_clone_cache/deploy/.git
+cp -rf $theme_clone_cache/deploy/* .
 rm -rf $theme_clone_cache
 echo 'Merging End.'
