@@ -1,7 +1,7 @@
 blog.jonghyeon.me
 ---
 
-[![pages-build-deployment](https://github.com/ShapeLayer/blog.jonghyeon.me/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/ShapeLayer/blog.jonghyeon.me/actions/workflows/pages/pages-build-deployment)  
+[![Build Blog](https://github.com/ShapeLayer/blog.jonghyeon.me/actions/workflows/build_blog.yml/badge.svg)](https://github.com/ShapeLayer/blog.jonghyeon.me/actions/workflows/build_blog.yml)
 
 박종현 개인 블로그 아티클 리포지토리
 
