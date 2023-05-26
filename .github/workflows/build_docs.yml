@@ -24,4 +24,5 @@ jobs:
           git commit -m "Build page" -m "`date`"
           git push -f origin deploy
   call-deploy:
+    needs: build
     uses: ./.github/workflows/jekyll-gh-pages.yml
