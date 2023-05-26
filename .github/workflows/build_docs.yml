@@ -25,4 +25,4 @@ jobs:
           git push -f origin deploy
   call-deploy:
     needs: build
-    uses: ./.github/workflows/jekyll-gh-pages.yml
+    uses: ./.github/workflows/jekyll.yml
