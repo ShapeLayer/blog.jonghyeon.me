@@ -14,6 +14,7 @@ if [ -d $theme_path ]; then
   rm -rf $theme_path/.git
   cp -rf $theme_path/* .
   rm -rf $theme_path
+  rm -rf $theme_clone_cache
   echo 'Merging End.'
 else
   echo 'Theme not found.'
