@@ -14,7 +14,8 @@ tags: [review, jekyll, git, gh-actions, gh-pages]
 
 지킬은 본질적으로는 정적 웹 페이지를 생성하는 도구이므로 항상 블로그의 테마 정의와, 마크다운으로 작성된 게시물을 항상 함께 저장하게됩니다. 정적 웹 페이지를 저장하는 하나의 저장소가 HTML, CSS, JS 파일을 담는 것은 그리 이상한 일이 아닙니다.
 
-![](/static/posts/2023-05-26-seperate-theme-definition-from-jekyll-repository/minima.png)
+![](/static/posts/2023-05-26-seperate-theme-definition-from-jekyll-repository/minima.png)  
+_Source: [jekyll/minima](https://github.com/jekyll/minima)_
 
 **편리한 마이그레이션을 위해**
 
