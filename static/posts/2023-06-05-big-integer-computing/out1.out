@@ -1,0 +1,13 @@
+         6 function calls in 5.065 seconds
+
+   Ordered by: standard name
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        1    0.000    0.000    5.065    5.065 <string>:1(<module>)
+        1    0.000    0.000    5.065    5.065 app.py:11(compute)
+        1    4.811    4.811    4.811    4.811 app.py:12(calc_int)
+        1    0.253    0.253    0.253    0.253 app.py:14(calc_str)
+        1    0.000    0.000    5.065    5.065 {built-in method builtins.exec}
+        1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
+
+
