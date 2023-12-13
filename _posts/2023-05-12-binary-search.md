@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 이분 탐색 활용하기
+title: 이분 탐색
 date: '2023-05-12'
 categories: [algorithm]
 tags: [ps, algorithm, python, binary-search]
