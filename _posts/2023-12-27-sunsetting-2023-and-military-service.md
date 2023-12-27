@@ -8,7 +8,7 @@ tags: [review]
 
 ## The Weirdest Year of my Life
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/KxuOshkp_Ys?si=7ME9mohROaiROIPN" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe src="https://www.youtube.com/embed/KxuOshkp_Ys?si=7ME9mohROaiROIPN" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 2023년이 저물어갑니다. 다사다난했던 한 해였고, 잊지 못할 경험들로 가득찬 1년이었습니다. 2022년 하반기를 포함해서, 근래 1.5년은 인생에서 가장 이상한 날들을 보냈던 것 같습니다.  
 
@@ -36,7 +36,7 @@ tags: [review]
 
 ## A Time for Change
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/Q3UoAMcbUuU?si=T1KA2gf8OCtzDnZl" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe src="https://www.youtube.com/embed/Q3UoAMcbUuU?si=T1KA2gf8OCtzDnZl" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 부대 안에서는 그 무엇도 제대로 할 수 없었습니다. 와중에 SNS 속 친구, 지인들은 모두 나름대로의 성취를 일궈가는 것이 저 혼자 정체되어있다는 좌절감을 가중시켰습니다.  
 
@@ -64,7 +64,7 @@ tags: [review]
 
 ### Not changed; 시도했으나 바꾸지 못한 것들
 
-**23.02** — 리눅스 마스터 1급
+**23.03** — 리눅스 마스터 1급
 
 ![](/static/posts/2023-12-27-sunsetting-2023-and-military-service/IMG_2490.jpg)
 
@@ -76,7 +76,7 @@ tags: [review]
 
 23년 상반기를 꽤 갈아넣어서 공모전에 참여했었습니다만, 아쉽게도 아직도 공모전 결과를 모릅니다. 떨어진게 아니라 결과 발표가 안났습니다. 3월에 마감한 공모전인데도.  
 
-공모전 공고에 결과 발표일도, 입상 규모도 제대로 나와있지 않았던 걸 대수롭지 않게 생각했던 것 같습니다.  
+이제와서 되돌아보면 공모전 공고에 결과 발표일도, 입상 규모도 제대로 나와있지 않았던 걸 대수롭지 않게 생각해선 안됐었습니다.  
 
 추측컨데 내부적으로 쓸만한 아이디어나 정책이 있는지 찾으려고 공모전을 열고, 입맛에 맞는 제안이 없으니 아예 입상 결정 자체를 하지 않은 것으로 보입니다.  
 
