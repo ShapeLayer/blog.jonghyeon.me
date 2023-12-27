@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 백준 오픈 컨테스트, 월간 향유회 2023. 12. · Arena #15 돌아보기
+title: 백준 오픈 컨테스트, 월간 향유회 2023. 12. · Arena 15 돌아보기
 date: '2023-12-24'
 categories: [review]
 tags: [review]
@@ -27,7 +27,8 @@ _그래 그래 이건 사실이야_
 
 $$
 a + bc = (a + b)(a + c)
-$$
+$$  
+
 $$
 a = a ^ 2 + ab + bc \\\\\\
 $$
