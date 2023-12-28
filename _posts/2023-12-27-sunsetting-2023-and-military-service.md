@@ -8,7 +8,7 @@ tags: [review]
 
 ## The Weirdest Year of my Life
 
-<iframe src="https://www.youtube.com/embed/KxuOshkp_Ys?si=7ME9mohROaiROIPN" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe style="width: 100%; height: 100%;" src="https://www.youtube.com/embed/KxuOshkp_Ys?si=7ME9mohROaiROIPN" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 2023년이 저물어갑니다. 다사다난했던 한 해였고, 잊지 못할 경험들로 가득찬 1년이었습니다. 2022년 하반기를 포함해서, 근래 1.5년은 인생에서 가장 이상한 날들을 보냈던 것 같습니다.  
 
@@ -36,7 +36,7 @@ tags: [review]
 
 ## A Time for Change
 
-<iframe src="https://www.youtube.com/embed/Q3UoAMcbUuU?si=T1KA2gf8OCtzDnZl" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe style="width: 100%; height: 100%;" src="https://www.youtube.com/embed/Q3UoAMcbUuU?si=T1KA2gf8OCtzDnZl" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 부대 안에서는 그 무엇도 제대로 할 수 없었습니다. 와중에 SNS 속 친구, 지인들은 모두 나름대로의 성취를 일궈가는 것이 저 혼자 정체되어있다는 좌절감을 가중시켰습니다.  
 
@@ -126,3 +126,5 @@ TV 프로그램 [부산촌놈 in 시드니](https://tvn.cjenm.com/ko/busanguys/)
 하지만 이게 단순히 겉보기에 성취가 있는 것처럼 보이는건지, 내실도 열심히 쌓은건지 가늠이 되지 않기도 합니다.  
 
 오는 2024년에는 조금 더 열심히, 조금 더 다양한 방법으로 노력해봐야겠습니다.  
+
+![](/static/posts/2023-12-27-sunsetting-2023-and-military-service/IMG_3629.jpg)  
