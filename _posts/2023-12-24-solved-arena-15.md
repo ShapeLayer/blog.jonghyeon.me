@@ -2,8 +2,8 @@
 layout: post
 title: 백준 오픈 컨테스트, 월간 향유회 2023. 12. · Arena 15 돌아보기
 date: '2023-12-24'
-categories: [review]
-tags: [review]
+categories: [contest]
+tags: [review, ps, baekjoon-contest, arena]
 ---
 
 ![](/static/posts/2023-12-24-solved-arena-15/스크린샷%202023-12-24%20225654.png)  
