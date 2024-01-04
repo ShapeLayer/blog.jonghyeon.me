@@ -127,4 +127,4 @@ TV 프로그램 [부산촌놈 in 시드니](https://tvn.cjenm.com/ko/busanguys/)
 
 오는 2024년에는 조금 더 열심히, 조금 더 다양한 방법으로 노력해봐야겠습니다.  
 
-![](/static/posts/2023-12-27-sunsetting-2023-and-military-service/IMG_3629.jpg)  
+![](/static/posts/2023-12-27-sunsetting-2023-and-military-service/IMG_3689.jpg)  
