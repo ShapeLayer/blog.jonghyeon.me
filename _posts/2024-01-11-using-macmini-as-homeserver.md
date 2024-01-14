@@ -20,8 +20,7 @@ tags: [challenges, apple, macmini]
   * Apple M2 (8 CPU, 10GPU, 16 NPU)
   * 256GB SSD
   * 16GB RAM
-* Synology NAS
-  * DS120j
+* Synology NAS DS120j
 * ASUS RT-AX53U
   * Overwritted with OpenWrt
 
