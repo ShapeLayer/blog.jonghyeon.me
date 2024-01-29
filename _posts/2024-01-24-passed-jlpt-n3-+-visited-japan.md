@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 일본 여행을 다녀왔습니다. + JLPT N3에 합격했습니다.
+title: 일본 여행을 다녀왔습니다 + JLPT N3에 합격했습니다
 date: '2024-01-24'
 categories: [review]
 tags: [review, exam, certification, jlpt]
