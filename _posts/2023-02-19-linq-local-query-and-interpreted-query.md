@@ -26,7 +26,7 @@ IEnumerable<string> query =
 foreach (string lang in query) Console.WriteLine(lang);
 ```
 
-```txt
+```text
 Cpp
 Csharp
 Java
@@ -91,7 +91,7 @@ WHERE UPPER([t0].[loginName]) LIKE @P0
 ORDER BY LEN([t0].[loginName])
 ```
 
-```txt
+```text
 문성수
 성홍념
 박종현

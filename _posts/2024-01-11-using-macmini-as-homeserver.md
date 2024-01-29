@@ -83,7 +83,7 @@ sudo launchctl load -w /System/Library/LaunchDaemons/ssh.plist
 
 Podman 위에 마인크래프트 서버 컨테이너를 올리니 마인크래프트 서버가 제대로 작동하지 않고 뻗는 문제가 발견되었습니다. 우선 맥os 바로 위에서 실행하는건 이러한 오류가 발생하지 않고 잘 작동합니다.  
 
-```txt
+```text
 Starting net.minecraft.server.Main
 [19:04:01] [ServerMain/WARN]: Failed to get system info for Microarchitecture
 java.lang.NullPointerException: Cannot invoke "String.toUpperCase()" because "this.cpuVendor" is null
@@ -107,7 +107,7 @@ java.lang.NullPointerException: Cannot invoke "String.toUpperCase()" because "th
 
 Docker에서도 같은 문제가 발생하는걸 보니, 아무래도 두 프로그램이 맥 환경에서 가상화 레이어로 사용하는 QEMU에서 CPU 벤더 정보를 제대로 전달하지 않고 있는 것 같습니다.  
 
-```txt
+```text
 2024-01-11T19:04:18.651+0900    WARN    mc-server-runner        Minecraft server failed. Inspect logs above for errors that indicate cause. DO NOT report this line as an error.    {"exitCode": -1}
 2024-01-11T19:04:18.656+0900    INFO    mc-server-runner        Done
 ```
