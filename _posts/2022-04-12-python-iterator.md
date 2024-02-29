@@ -83,7 +83,7 @@ for n in [10, 9, 8, 7, 6, 5]:
 ```python
 tup = (1, 2, 3, 4, 5)
 for t in tup:
-  print(tup)
+  print(t)
 # 1
 # 2
 # 3
