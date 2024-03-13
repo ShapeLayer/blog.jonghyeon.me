@@ -35,7 +35,8 @@
 * $i$번째 방수 씰의 방수 성능 유지 시간 $W_i$는 아래와 같이 정의한다. 방수 씰은 $W_i$가 초과되면 액체가 빠져나가거나 마를 때까지 방수 기능을 잃는다.
 
 ```math
-$W_i=\begin{cases}(aW_{i-1}+c)\mod m&(i\ge 1)\\ b&(i=0)\end{cases}\\(0\le a,b,c\le 40;1\le m\le 40)$
+W_i=\begin{cases}(aW_{i-1}+c)\mod m&(i\ge 1)\\ b&(i=0)\end{cases} \\
+(0\le a,b,c\le 40;1\le m\le 40)
 ```
 
 **가정**
