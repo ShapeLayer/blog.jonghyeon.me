@@ -88,6 +88,8 @@ tags: [review, project, baekjoon, contest, algorithm]
 
 ## 그래픽 리소스, 솔브드 프로필 배경과 뱃지
 
+![](/static/posts/2024-03-13-rewinding-24-1-pimm-party/스크린샷%202024-03-18%20오후%205.09.07.png)
+
 ### 졸업식 현수막으로 사골 끓이기
 
 ![](/static/posts/2024-03-13-rewinding-24-1-pimm-party/그다음%20세대.png)  
