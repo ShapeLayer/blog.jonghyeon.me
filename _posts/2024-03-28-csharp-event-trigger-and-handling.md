@@ -141,7 +141,7 @@ public class Program
 
 `EventHandler`는 마치 클래스의 생성자, 소멸자와 같이 구독, 구독 해제 시의 동작을 정의할 수 있습니다. 주로 `EventHandler`를 숨기고, 외부에 구독, 구독 해제의 “통로”를 만들 때 사용한다는 점에서 마치 `EventHandler`의 getter, setter 같습니다. 
 
-**이벤트 발신 측**
+**이벤트 발신자 정의**
 
 ```csharp
 public class ComplexAddRemoveEventClass
@@ -168,19 +168,21 @@ public class ComplexAddRemoveEventClass
 }
 ```
 
-**이벤트 수신 측**
-
+**이벤트 수신/발신**  
 ```csharp
 public class Program
 {
     public static void Main()
     {
         ComplexAddRemoveEventClass complexObject = new ComplexAddRemoveEventClass();
+        // 이벤트 핸들러 구독
         complexObject.CustomEvent += onCustomEvent;
+        // 이벤트 발생
         complexObject.InvokeEvent();
         complexObject.CustomEvent -= onCustomEvent;
     }
 
+    // 이벤트 수신
     static void onCustomEvent(object sender, EventArgs e)
     {
         Console.WriteLine($"CustomEvent Invoked: by {sender}, value: {((CustomEventArgs)e).x}");
