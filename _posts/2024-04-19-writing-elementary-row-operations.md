@@ -108,7 +108,7 @@ $$
 \Rightarrow
 \begin{bmatrix}
 1 & 1 & 2 & 9 \\
-\sout{2} & \sout{4} & \sout{-3} & \sout{1} \\
+\enclose{horizontalstrike}{2} & \enclose{horizontalstrike}{4} & \enclose{horizontalstrike}{-3} & \enclose{horizontalstrike}{1} \\
 3 & 6 & -5 & 0  \\
 0 & 2 & -7 & -17
 \end{bmatrix}
@@ -119,23 +119,23 @@ $$
 $$
 \begin{bmatrix}
 1 & 1 & 2 & 9 \\
-\sout{2} & \sout{4} & \sout{-3} & \sout{1} \\
-\sout{3} & \sout{6} & \sout{-5} & \sout{0}  \\
-\sout{0} & \sout{2} & \sout{-7} & \sout{-17} \\
+\enclose{horizontalstrike}{2} & \enclose{horizontalstrike}{4} & \enclose{horizontalstrike}{-3} & \enclose{horizontalstrike}{1} \\
+\enclose{horizontalstrike}{3} & \enclose{horizontalstrike}{6} & \enclose{horizontalstrike}{-5} & \enclose{horizontalstrike}{0}  \\
+\enclose{horizontalstrike}{0} & \enclose{horizontalstrike}{2} & \enclose{horizontalstrike}{-7} & \enclose{horizontalstrike}{-17} \\
 0 & 1 & -7/2 & -17/2 \\
-\sout{0} & \sout{3} & \sout{-11} & \sout{-27} \\
-\sout{0} & \sout{0} & \sout{-1/2} & \sout{-3/2} \\
+\enclose{horizontalstrike}{0} & \enclose{horizontalstrike}{3} & \enclose{horizontalstrike}{-11} & \enclose{horizontalstrike}{-27} \\
+\enclose{horizontalstrike}{0} & \enclose{horizontalstrike}{0} & \enclose{horizontalstrike}{-1/2} & \enclose{horizontalstrike}{-3/2} \\
 0 & 0 & 1 & 3
 \end{bmatrix}
 \Rightarrow
 \begin{bmatrix}
-\sout{1} & \sout{1} & \sout{2} & \sout{9} \\
-\sout{2} & \sout{4} & \sout{-3} & \sout{1} \\
-\sout{3} & \sout{6} & \sout{-5} & \sout{0}  \\
-\sout{0} & \sout{2} & \sout{-7} & \sout{-17} \\
+\enclose{horizontalstrike}{1} & \enclose{horizontalstrike}{1} & \enclose{horizontalstrike}{2} & \enclose{horizontalstrike}{9} \\
+\enclose{horizontalstrike}{2} & \enclose{horizontalstrike}{4} & \enclose{horizontalstrike}{-3} & \enclose{horizontalstrike}{1} \\
+\enclose{horizontalstrike}{3} & \enclose{horizontalstrike}{6} & \enclose{horizontalstrike}{-5} & \enclose{horizontalstrike}{0}  \\
+\enclose{horizontalstrike}{0} & \enclose{horizontalstrike}{2} & \enclose{horizontalstrike}{-7} & \enclose{horizontalstrike}{-17} \\
 0 & 1 & -7/2 & -17/2 \\
-\sout{0} & \sout{3} & \sout{-11} & \sout{-27} \\
-\sout{0} & \sout{0} & \sout{-1/2} & \sout{-3/2} \\
+\enclose{horizontalstrike}{0} & \enclose{horizontalstrike}{3} & \enclose{horizontalstrike}{-11} & \enclose{horizontalstrike}{-27} \\
+\enclose{horizontalstrike}{0} & \enclose{horizontalstrike}{0} & \enclose{horizontalstrike}{-1/2} & \enclose{horizontalstrike}{-3/2} \\
 0 & 0 & 1 & 3 \\
 1 & 0 & 11/2 & 35/2
 \end{bmatrix}
@@ -155,13 +155,13 @@ $$
 
 $$
 \begin{matrix}
-\sout{1} & \sout{1} & \sout{2} & \sout{9} \\
-\sout{2} & \sout{4} & \sout{-3} & \sout{1} \\
-\sout{3} & \sout{6} & \sout{-5} & \sout{0}  \\
-\sout{0} & \sout{2} & \sout{-7} & \sout{-17} \\
+\enclose{horizontalstrike}{1} & \enclose{horizontalstrike}{1} & \enclose{horizontalstrike}{2} & \enclose{horizontalstrike}{9} \\
+\enclose{horizontalstrike}{2} & \enclose{horizontalstrike}{4} & \enclose{horizontalstrike}{-3} & \enclose{horizontalstrike}{1} \\
+\enclose{horizontalstrike}{3} & \enclose{horizontalstrike}{6} & \enclose{horizontalstrike}{-5} & \enclose{horizontalstrike}{0}  \\
+\enclose{horizontalstrike}{0} & \enclose{horizontalstrike}{2} & \enclose{horizontalstrike}{-7} & \enclose{horizontalstrike}{-17} \\
 0 & 1 & -7/2 & -17/2 \\
-\sout{0} & \sout{3} & \sout{-11} & \sout{-27} \\
-\sout{0} & \sout{0} & \sout{-1/2} & \sout{-3/2} \\
+\enclose{horizontalstrike}{0} & \enclose{horizontalstrike}{3} & \enclose{horizontalstrike}{-11} & \enclose{horizontalstrike}{-27} \\
+\enclose{horizontalstrike}{0} & \enclose{horizontalstrike}{0} & \enclose{horizontalstrike}{-1/2} & \enclose{horizontalstrike}{-3/2} \\
 0 & 0 & 1 & 3 \\
 1 & 0 & 11/2 & 35/2
 \end{matrix}
@@ -171,15 +171,15 @@ $$
 
 $$
 \begin{matrix}
-\sout{1} & \sout{1} & \sout{2} & \sout{9} \\
-\sout{2} & \sout{4} & \sout{-3} & \sout{1} \\
-\sout{3} & \sout{6} & \sout{-5} & \sout{0}  \\
-\sout{0} & \sout{2} & \sout{-7} & \sout{-17} \\
-\sout{0} & \sout{1} & \sout{-7/2} & \sout{-17/2} \\
-\sout{0} & \sout{3} & \sout{-11} & \sout{-27} \\
-\sout{0} & \sout{0} & \sout{-1/2} & \sout{-3/2} \\
-\sout{0} & \sout{0} & \sout{1} & \sout{3} \\
-\sout{1} & \sout{0} & \sout{11/2} & \sout{35/2} \\
+\enclose{horizontalstrike}{1} & \enclose{horizontalstrike}{1} & \enclose{horizontalstrike}{2} & \enclose{horizontalstrike}{9} \\
+\enclose{horizontalstrike}{2} & \enclose{horizontalstrike}{4} & \enclose{horizontalstrike}{-3} & \enclose{horizontalstrike}{1} \\
+\enclose{horizontalstrike}{3} & \enclose{horizontalstrike}{6} & \enclose{horizontalstrike}{-5} & \enclose{horizontalstrike}{0}  \\
+\enclose{horizontalstrike}{0} & \enclose{horizontalstrike}{2} & \enclose{horizontalstrike}{-7} & \enclose{horizontalstrike}{-17} \\
+\enclose{horizontalstrike}{0} & \enclose{horizontalstrike}{1} & \enclose{horizontalstrike}{-7/2} & \enclose{horizontalstrike}{-17/2} \\
+\enclose{horizontalstrike}{0} & \enclose{horizontalstrike}{3} & \enclose{horizontalstrike}{-11} & \enclose{horizontalstrike}{-27} \\
+\enclose{horizontalstrike}{0} & \enclose{horizontalstrike}{0} & \enclose{horizontalstrike}{-1/2} & \enclose{horizontalstrike}{-3/2} \\
+\enclose{horizontalstrike}{0} & \enclose{horizontalstrike}{0} & \enclose{horizontalstrike}{1} & \enclose{horizontalstrike}{3} \\
+\enclose{horizontalstrike}{1} & \enclose{horizontalstrike}{0} & \enclose{horizontalstrike}{11/2} & \enclose{horizontalstrike}{35/2} \\
 1 & 0 & 0 & 1 \\
 0 & 0 & 1 & 3 \\
 0 & 1 & 0 & 2
@@ -190,15 +190,15 @@ $$
 
 $$
 \begin{matrix}
-\sout{1} & \sout{1} & \sout{2} & \sout{9} \\
-\sout{2} & \sout{4} & \sout{-3} & \sout{1} \\
-\sout{3} & \sout{6} & \sout{-5} & \sout{0}  \\
-\sout{0} & \sout{2} & \sout{-7} & \sout{-17} \\
-\sout{0} & \sout{1} & \sout{-7/2} & \sout{-17/2} \\
-\sout{0} & \sout{3} & \sout{-11} & \sout{-27} \\
-\sout{0} & \sout{0} & \sout{-1/2} & \sout{-3/2} \\
-\sout{0} & \sout{0} & \sout{1} & \sout{3} \\
-\sout{1} & \sout{0} & \sout{11/2} & \sout{35/2} \\
+\enclose{horizontalstrike}{1} & \enclose{horizontalstrike}{1} & \enclose{horizontalstrike}{2} & \enclose{horizontalstrike}{9} \\
+\enclose{horizontalstrike}{2} & \enclose{horizontalstrike}{4} & \enclose{horizontalstrike}{-3} & \enclose{horizontalstrike}{1} \\
+\enclose{horizontalstrike}{3} & \enclose{horizontalstrike}{6} & \enclose{horizontalstrike}{-5} & \enclose{horizontalstrike}{0}  \\
+\enclose{horizontalstrike}{0} & \enclose{horizontalstrike}{2} & \enclose{horizontalstrike}{-7} & \enclose{horizontalstrike}{-17} \\
+\enclose{horizontalstrike}{0} & \enclose{horizontalstrike}{1} & \enclose{horizontalstrike}{-7/2} & \enclose{horizontalstrike}{-17/2} \\
+\enclose{horizontalstrike}{0} & \enclose{horizontalstrike}{3} & \enclose{horizontalstrike}{-11} & \enclose{horizontalstrike}{-27} \\
+\enclose{horizontalstrike}{0} & \enclose{horizontalstrike}{0} & \enclose{horizontalstrike}{-1/2} & \enclose{horizontalstrike}{-3/2} \\
+\enclose{horizontalstrike}{0} & \enclose{horizontalstrike}{0} & \enclose{horizontalstrike}{1} & \enclose{horizontalstrike}{3} \\
+\enclose{horizontalstrike}{1} & \enclose{horizontalstrike}{0} & \enclose{horizontalstrike}{11/2} & \enclose{horizontalstrike}{35/2} \\
 1 & 0 & 0 & 1 \\
 0 & 0 & 1 & 3 \\
 0 & 1 & 0 & 2
