@@ -82,7 +82,7 @@ _우리 배 정상 영업합니다_
 
 ### https를 지원하지 않으면 GPS가 안켜진다구요??
 
-![](/static/posts/2024-08-30-i-participated-local-hackathon/IMG_8244.jpg)  
+![](/static/posts/2024-08-30-i-participated-local-hackathon/IMG_8235.jpg)  
 
 정말 난처한 사실 중 하나는 [https를 지원하지 않으면 Geolocation API를 사용할 수 없다](https://developer.chrome.com/blog/geolocation-on-secure-contexts-only)는 것입니다.  
 
