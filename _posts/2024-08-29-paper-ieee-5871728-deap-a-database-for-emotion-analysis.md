@@ -106,7 +106,7 @@ $$
 
 ### EEG와 말초 신경계
 
-말초 신경계 신호는 갈바니 피부 반응(GSR; Galvanic Skin Reponse), 호흡 진폭*(Respiration Amplitude, 피부 온도, 혈액량, 근전도와 안구전도를 이용하였습니다.
+말초 신경계 신호는 갈바니 피부 반응(GSR; Galvanic Skin Reponse), 호흡 진폭*(Respiration Amplitude), 피부 온도, 혈액량, 근전도와 안구전도를 이용하였습니다.
 
 \*호흡 진폭: (=호흡 속도) 호흡 간격을 5%~95% 수준에서 추출한 것
 
