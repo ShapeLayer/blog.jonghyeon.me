@@ -115,11 +115,11 @@ Residual Network(ResNet)의 경우 모두 같은 깊이의 신경망에서 성�
 
 또 shortcut에 대해서도 세 가지 방법을 두고 비교했습니다.  
 
-A. 차원 조정 시에만 zero-padding shortcut을 사용
-B. 차원 조정 시에만 projection shortuct을 사용
-C. 모든 shortcut에 project shortcut을 사용
+A. 차원 조정 시에만 zero-padding shortcut을 사용  
+B. 차원 조정 시에만 projection shortuct을 사용  
+C. 모든 shortcut에 project shortcut을 사용  
 
-\* Table 3.의 &lt;ResNet-34 \[A|B|C]&gt; 참조
+\* Table 3.의 &lt;ResNet-34 \[A\|B\|C\]&gt; 참조
 
 세 방법 모두 C, B, A 순으로 plain model보다 좋은 성능을 보였습니다.  
 A의 경우 zero-padded 차원이 residual learning을 수행하지 않기 때문에, C의 경우 project shortcut에 의해 파라미터가 추가되어서 성능 차이가 발생했습니다.  
