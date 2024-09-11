@@ -3,7 +3,7 @@ layout: post
 title: "Deep Residual Learning for Image Recognition 리뷰"
 date: '2024-09-04'
 categories: [paper-review]
-tags: [paper-review]
+tags: [paper-review, deep-learning, model]
 ---
 
 깊은 CNN의 등장이 이미지 분류에 있어 상당한 돌파구가 되어주었지만, 동시에 다양한 문제점을 가져다주었습니다.  
