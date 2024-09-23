@@ -20,8 +20,8 @@ tags: [review, project, baekjoon, contest, algorithm]
 
 더 이상 문제 상황을 방치할 수는 없었기 때문에 TF 관리에 신경쓰기로 하고 퀄리티 컨트롤에 실패한 문제는 폐기처분했습니다.
 
-<div style="display: flex; justify-items: center; gap: .5em">
-    <img src="/static/posts/2024-09-23-rewinding-2024-2-pimm-party/figa.png" /><img src="/static/posts/2024-09-23-rewinding-2024-2-pimm-party/figb.png" />
+<div style="display: flex; justify-items: center; gap: .5em; align-items: center;">
+    <img src="/static/posts/2024-09-23-rewinding-2024-2-pimm-party/figa.png" style="height: fit-content;"/><img src="/static/posts/2024-09-23-rewinding-2024-2-pimm-party/figb.png" style="height: fit-content;" />
 </div>
 
 *피라미드 게임의 경우 jh01533<sup>최정환</sup>이 그 뒤에 한 번 더 수정했습니다.*
@@ -50,7 +50,7 @@ tags: [review, project, baekjoon, contest, algorithm]
 
 이어서 폴리곤에서 스택으로 옮기면서도 비슷한 문제가 있었습니다.
 
-사실 폴리곤-스택 변환기는 이미 박수현shiftpsh 님이 작성하신 solved-ac/boj-description-converter가 있었으므로 이 변환기를 사용하면 됩니다.
+사실 폴리곤-스택 변환기는 이미 박수현<sup>shiftpsh</sup> 님이 작성하신 solved-ac/boj-description-converter가 있었으므로 이 디스크립션 툴을 사용하면 됩니다.
 
 ![image.png](/static/posts/2024-09-23-rewinding-2024-2-pimm-party/desc-broken.png)
 
