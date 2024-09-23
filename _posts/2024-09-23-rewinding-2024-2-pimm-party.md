@@ -20,8 +20,8 @@ tags: [review, project, baekjoon, contest, algorithm]
 
 더 이상 문제 상황을 방치할 수는 없었기 때문에 TF 관리에 신경쓰기로 하고 퀄리티 컨트롤에 실패한 문제는 폐기처분했습니다.
 
-<div style="diplay: flex; justify-items: center; gap: .5em">
-    <img src="/static/posts/2024-09-23-rewinding-2024-2-pimm-party/figa.png" style="width: 45%;"/><img src="/static/posts/2024-09-23-rewinding-2024-2-pimm-party/figb.png" style="width: 45%"/>
+<div style="display: flex; justify-items: center; gap: .5em">
+    <img src="/static/posts/2024-09-23-rewinding-2024-2-pimm-party/figa.png" /><img src="/static/posts/2024-09-23-rewinding-2024-2-pimm-party/figb.png" />
 </div>
 
 *피라미드 게임의 경우 jh01533<sup>최정환</sup>이 그 뒤에 한 번 더 수정했습니다.*
