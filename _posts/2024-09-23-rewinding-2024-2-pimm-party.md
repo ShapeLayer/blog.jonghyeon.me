@@ -98,6 +98,9 @@ tags: [review, project, baekjoon, contest, algorithm]
 
 ## 이번 대회는 저번 대회보다 어렵네요
 
+![](/static/posts/2024-09-23-rewinding-2024-2-pimm-party/IMG_8562.jpeg)  
+_브실골골플다다..._
+
 대회가 끝나고 친구들, 건너 건너 들려오는 소식, solved.ac 디스코드 서버를 통해 일관되게 받은 반응이 "저번 대회보다 확실히 어렵다"입니다.
 
 사실 좀 다양한 이유가 있었습니다.
