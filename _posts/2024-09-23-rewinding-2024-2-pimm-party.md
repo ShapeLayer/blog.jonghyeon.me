@@ -12,7 +12,7 @@ tags: [review, project, baekjoon, contest, algorithm]
 
 하지만 희망은 빗나갔고.. 이번 대회는 지난 두 대회만큼이나 특기할 점이 꽤 있었습니다.
 
-<video src="/static/posts/2024-09-23-rewinding-2024-2-pimm-party/instagram-reels.mp4" loop="loop" muted="muted" autoplay="autoplay" playsinline></video>
+<video src="/static/posts/2024-09-23-rewinding-2024-2-pimm-party/instagram-reels.mp4" loop="loop" muted="muted" autoplay="autoplay" playsinline style="width: 100%"></video>
 
 ## 일 좀 그만 늘려
 
