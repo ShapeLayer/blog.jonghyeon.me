@@ -169,7 +169,7 @@ _훈련병의 편지: 1 문제 이상 해결 시 획득 &copy;김근성_
 
 이번 대회에 출제 함께 해주신 invrtd_h<sup>송혜근</sup> 님 정말 도움 많이 됐습니다. 내년 지스트 대회도 잘 준비해봐요!
 
-그리고 지난 대회에서부터 계속 힘써주시고 계신 kiwiyou, measurezero, lycoris1600님 매 대회마다 큰 힘이 되어주고 계십니다.
+그리고 지난 대회에서부터 계속 힘써주시고 계신 kiwiyou, measurezero, lycoris1600님 매 대회마다 특히나 큰 힘이 되어주고 계십니다.
 
 ![](/static/posts/2024-09-23-rewinding-2024-2-pimm-party/after-party.jpg)  
 
