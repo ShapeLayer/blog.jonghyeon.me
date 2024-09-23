@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 2024 상반기 전남대학교 PIMM 알고리즘 파티를 반성하며
-date: '2024-03-13'
+date: '2024-09-23'
 categories: [review]
 tags: [review, project, baekjoon, contest, algorithm]
 ---
