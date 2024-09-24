@@ -134,6 +134,9 @@ _브실골골플다다..._
 - 기피되는 문제 유형
     ![](/static/posts/2024-09-23-rewinding-2024-2-pimm-party/string-is-lucky-ad-hoc.png)  
 
+![](/static/posts/2024-09-23-rewinding-2024-2-pimm-party/IMG_8568.jpg)  
+_브골골골플다다..._
+
 ## 왜 solved.ac 프로필 배경이 두 개나 있나?
 
 ![](/static/posts/2024-09-23-rewinding-2024-2-pimm-party/season-second-marathon.png)  
