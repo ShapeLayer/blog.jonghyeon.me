@@ -6,7 +6,7 @@ categories: [review]
 tags: [review, project, baekjoon, contest, algorithm]
 ---
 
-안녕하세요, &lt;2024 하반기 전남대학교 PIMM 알고리즘 파티&gt; 대회 총괄 belline0124<sup>박종현</sup>입니다.
+안녕하세요, &lt;2024 하반기 전남대학교 PIMM 알고리즘 파티&gt; 대회 총괄 박종현<sup>belline0124</sup>입니다.
 
 2023년 대회와 상반기 대회 회고에서 이야기할만한건 다 했고, 더 이상 할 만한 이야기는 없겠다 싶어 이번에는 별다른 이유가 없으면 이런 글은 적지 못하리라 생각했습니다.
 
@@ -26,7 +26,7 @@ tags: [review, project, baekjoon, contest, algorithm]
     <img src="/static/posts/2024-09-23-rewinding-2024-2-pimm-party/figa.png" style="object-fit: contain; max-height: 100%"/><img src="/static/posts/2024-09-23-rewinding-2024-2-pimm-party/figb.png" style="object-fit: contain; max-height: 100%" />
 </div>
 
-*피라미드 게임의 경우 jh01533<sup>최정환</sup>이 그 뒤에 한 번 더 수정했습니다.*
+*피라미드 게임의 경우 최정환<sup>jh01533</sup>이 그 뒤에 한 번 더 수정했습니다.*
 
 사실 그래서 이번 대회 준비 기간에는 계속 다른 분들 눈칫밥을 먹으면서 지냈습니다.
 
@@ -105,17 +105,17 @@ _브실골골플다다..._
 
 사실 좀 다양한 이유가 있었습니다.
 
-- belline0124<sup>박종현</sup>의 부재
+- 박종현<sup>belline0124</sup>의 부재
     
     저는 그동안 널리 알려진 유형을 출제하거나 알고리즘 학습용 기본 문제를 살짝 변형한 수준에서 문제를 출제해왔습니다. 그래서 평가되는 난이도보다 체감 난이도가 낮은 편입니다.
     
     출제 부담을 줄이기 위해 이렇게 내왔는데, 이번에는 출제 부담을 더 줄이기 위해 출제를 않아버려 낮은 체감 난이도의 문제가 함께 없어졌습니다.
     
-- invrtd_h<sup>송혜근</sup>의 합류
+- 송혜근<sup>invrtd_h</sup>의 합류
     
-    invrtd_h<sup>송혜근</sup> 님은 GIST 학부과정에 계시는 분으로, 저번 GIST 알고리즘 마스터즈를 이끄셨습니다. 지난번에 핌파티TF 인원이 알고리즘 마스터즈에 합류한 것을 계기로 간간히 교류가 있었는데, 덕분에 이번에 출제진으로 합류하셨습니다.
+    송혜근<sup>invrtd_h</sup> 님은 GIST 학부과정에 계시는 분으로, 저번 GIST 알고리즘 마스터즈를 이끄셨습니다. 지난번에 핌파티TF 인원이 알고리즘 마스터즈에 합류한 것을 계기로 간간히 교류가 있었는데, 덕분에 이번에 출제진으로 합류하셨습니다.
     
-    개인적으로 invrtd_h<sup>송혜근</sup> 님이 지문으로 보아도, 풀이로 보아도 문제를 깔끔하고 신선하게 잘 내신다고 생각합니다. 더 나아가 저와는 반대로 평가되는 난이도보다 체감 난이도가 높은 편이지 않을까 싶습니다.
+    개인적으로 송혜근<sup>invrtd_h</sup> 님이 지문으로 보아도, 풀이로 보아도 문제를 깔끔하고 신선하게 잘 내신다고 생각합니다. 더 나아가 저와는 반대로 평가되는 난이도보다 체감 난이도가 높은 편이지 않을까 싶습니다.
     
 - 낮은 난이도 문제들의 대량 폐기
     
@@ -199,7 +199,7 @@ _이 판단 기준에 따라 제출에 따라서는 최근 8개월 내 접근 �
 
 검수진으로 힘써주신 dongwook7, jwpassion1, kiwiyou, ksoosung77, lycoris1600, measurezero, mujigae, tony9402, utilforever님 모두 감사합니다.
 
-이번 대회에 출제 함께 해주신 invrtd_h<sup>송혜근</sup> 님 정말 도움 많이 됐습니다. 내년 지스트 대회도 잘 준비해봐요!
+이번 대회에 출제 함께 해주신 송혜근<sup>invrtd_h</sup> 님 정말 도움 많이 됐습니다. 내년 지스트 대회도 잘 준비해봐요!
 
 그리고 지난 대회에서부터 계속 힘써주시고 계신 kiwiyou, measurezero, lycoris1600님 매 대회마다 특히나 큰 힘이 되어주고 계십니다.
 
