@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 이변은 없다.
+title: 이변은 없다
 date: '2024-09-27'
 categories: [daily]
 tags: [daily]
