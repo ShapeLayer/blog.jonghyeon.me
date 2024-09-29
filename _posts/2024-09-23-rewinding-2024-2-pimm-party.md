@@ -212,3 +212,5 @@ _이 판단 기준에 따라 제출에 따라서는 최근 8개월 내 접근 �
 언젠간 진짜 찾아뵙는걸로..!
 
 🎉
+
+![](/static/posts/2024-09-23-rewinding-2024-2-pimm-party/ending.jpg)  
