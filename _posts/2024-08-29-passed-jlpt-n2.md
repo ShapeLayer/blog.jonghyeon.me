@@ -1,6 +1,6 @@
 ---
 layout: post
-title: JLPT N2에 합격했습니다.
+title: JLPT N2에 합격했습니다
 date: '2024-08-29'
 categories: [daily]
 tags: [daily, review, exam, certification, jlpt]
