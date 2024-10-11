@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 권위와 역할에 관해
-date: '2024-10-10'
+date: '2024-09-22'
 categories: [opinion]
 tags: [opinion, community-management]
 ---
