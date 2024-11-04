@@ -292,7 +292,7 @@ _왜 사진만 찍고 도망가_
 선물 정말 감사합니다! 모든게 잘 정리되면 스위치 바꿔서 사용하겠습니다.
 
 ![](/static/posts/2024-11-01-created-djmax-arcade-controller/junlms.png)  
-_"끝 아녔어?<sup>The End... Again...</sup>"_
+_"끝 아녔어?"_
 
 ## 계산기를 두드려보자
 
