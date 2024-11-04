@@ -206,7 +206,7 @@ _RTFM: 빌어먹을 문서를 읽으시오_
 
 이 문제를 너무 늦게 발견했기 때문에, 마감에 맞춰 작업을 마무리하지 못했습니다. 마감이 지난 지금도 코드를 다시 들여다보지 않았기 때문에 원인 파악도 하지 않은 상태입니다.
 
-데드라인 후 중간고사 대체 프로젝트 발표에서는, 다른 사람들이 만드는 DIY 컨트롤러와 같이 키 매핑이 하드코딩된 짧은 코드를 사용했습니다. 리포지토리의 `controller_without_comm` 가 바로 그것입니다.
+데드라인 후 중간고사 대체 프로젝트 발표에서는, 다른 사람들이 만드는 DIY 컨트롤러와 같이 키 매핑이 하드코딩된 짧은 코드를 사용했습니다. 리포지토리의 [`controller_without_comm`](https://github.com/undefined-rainy-storm/embedded-rhythm-game-controller/tree/main/controller_without_comm) 가 바로 그것입니다.
 
 ## 실 기체 제작
 
