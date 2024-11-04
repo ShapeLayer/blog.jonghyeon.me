@@ -10,7 +10,10 @@ tags: [review, project, djmax, rhythm-game, game]
 
 올해 듣는 수업의 <임베디드소프트웨어> 과목 중에 디제이맥스 아케이드 컨트롤러를 만들어보았습니다. 가벼운 마음에 수강하고 가벼운 마음에 주제를 정했는데, 어쩌다보니 학교의 지원을 받으면서 교내 행사에 전시까지 하게 되었습니다.
 
-<div style="display: flex; width: 100%; justify-content: center;"><iframe width="560" height="315" src="https://www.youtube.com/embed/FnhedPLxksQ?si=ELdgbgxtFcmQt-9E" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+<div style="display: flex; width: 100%; justify-content: center;">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/FnhedPLxksQ?si=ELdgbgxtFcmQt-9E" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+
 
 팀원 여러분, 여러분이 상판에 집어넣었던 친구들의 곡은 하나라도 들어봐야하지 않을까요??
 
@@ -275,7 +278,7 @@ _RTFM: 빌어먹을 문서를 읽으시오_
 ![IMG_8927.jpg](/static/posts/2024-11-01-created-djmax-arcade-controller/IMG_8927.jpg)  
 _평균적으로 이정도 방문객은 쭉 유지된 모양입니다._ 
 
-아무래도 전시회 유일의 게임 플레이 체험부스라 그런지 사람이 끊기지는 않았습니다. 단순히 물건 전시라 방문객 한둘이 조금 구경하는데 일반적임에도 그렇습니다.
+아무래도 우리 팀이 전시회 유일의 게임 플레이 체험부스라 그런지 사람이 끊기지는 않았습니다. 전시회 전체의 기조는 물건 전시라 방문객 한둘이 조금 구경하는게 일반적임에도 그렇습니다.
 
 재미있는 사실은 대부분 리듬게임을 처음 접한 사람들이라, 그 많은 수록곡 중 POP/STARS만 열심히들 플레이했다는 것입니다.
 
@@ -287,3 +290,6 @@ _왜 사진만 찍고 도망가_
 이 과정에서 어느 관계자께서 버튼의 키압이 높다고 아쉬워하시다가, 삼덕사의 버튼을 가져와 선물해주시기도 했습니다. 
 
 선물 정말 감사합니다! 모든게 잘 정리되면 스위치 바꿔서 사용하겠습니다.
+
+![](/static/posts/2024-11-01-created-djmax-arcade-controller/junlms.png)  
+_"끝 아녔어?<sup>The End... Again...</sup> "_
