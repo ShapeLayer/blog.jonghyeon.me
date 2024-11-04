@@ -292,4 +292,49 @@ _왜 사진만 찍고 도망가_
 선물 정말 감사합니다! 모든게 잘 정리되면 스위치 바꿔서 사용하겠습니다.
 
 ![](/static/posts/2024-11-01-created-djmax-arcade-controller/junlms.png)  
-_"끝 아녔어?<sup>The End... Again...</sup> "_
+_"끝 아녔어?<sup>The End... Again...</sup>"_
+
+## 계산기를 두드려보자
+
+이런 물건은 진짜 게임에 애정이 있어야 만든다는 이야기를 들었습니다.  
+
+다른 것보다 그만큼 값이 비싸게 나가기 때문입니다.  
+
+학교의 지원 사업을 끼고도 나간 값을 보면 정말 애정이 있어야 만들 수 있을 것 같습니다.  
+
+구입한 물건들
+- 아두이노 레오나르도 R3  
+  ![](/static/posts/2024-11-01-created-djmax-arcade-controller/product-arduino.jpg)  
+  일반적으로 정품 보드보다 싼 호환 보드를 구매해서 사용하고, 우리 팀도 호환 보드를 사용했습니다.  
+  - 가격 소요: 8,500원 (5,500원 + 배송비)
+  - 실제 작업: 14,000원 (동시 작업을 위해 두 개 주문)
+  - [구입처](https://www.coupang.com/vp/products/8313002411)
+- AWG 22 케이블
+  ![](/static/posts/2024-11-01-created-djmax-arcade-controller/product-cable.jpg)
+  - 가격 소요: 11,800원
+  - 실제 작업: 7,840원 (쿠팡와우 혜택가)
+  - [구입처](https://www.coupang.com/vp/products/8351400074)
+- IST 405버튼
+  ![](/static/posts/2024-11-01-created-djmax-arcade-controller/product-btn405.jpg)
+  - 가격 소요: 31,000원 (2,800원 * 10 + 배송비)
+  - 실제 작업: 36,600원 (2,800원 * 12 + 배송비)
+  - [구입처](https://istmall.co.kr/shop/shopdetail.html?branduid=58&xcode=020&mcode=003&scode=001&type=Y&sort=sellcnt&cur_code=020003&search=&GfDT=bm16W1k%3D)
+- IST 406버튼
+  ![](/static/posts/2024-11-01-created-djmax-arcade-controller/product-btn406.jpg)  
+  - 가격 소요: 5,600원 (2,800원 * 2; IST 405버튼 버튼과 함께 주문 가정, 배송비 제외)
+  - 실제 작업: 11,200원 (2,800원 * 4)
+  - [구입처](https://istmall.co.kr/shop/shopdetail.html?branduid=59&xcode=020&mcode=003&scode=001&type=Y&sort=sellcnt&cur_code=020003&search=&GfDT=bG13UFw%3D)
+
+구입해야하나 학교의 지원을 받은 물건들
+- 케이스 하우징  
+  사업단에서 5T 아크릴 판과 아크릴 레이저 커팅을 지원해주어서 가장 큰 비용을 아낄 수 있었습니다.  
+  학교 메이커스페이스에서는 도면 전체를 커팅할 수 있는 5T 아크릴 판 개당 재료비 25,000원을 책정하고 있다고 했으니, 커팅비까지 합하면 실제로는 더 많은 비용이 나갈 것 같습니다.  
+  \* 아크릴을 사용한다면 아크릴 전용 본드를 사용하는 것을 강하게 권합니다.  
+- USB Type-B 마이크로5핀 데이터 케이블  
+  이제 USB Type-C 규격의 보급이 사실상 마무리되어서 의외로 찾기 어렵습니다.  
+  가끔 전력 전송만 가능한 충전 전용 케이블이 있으니 주의해야합니다.  
+- (선택) 케이블 압착 단자 혹은 납땜기  
+  전선의 피복을 벗기고 스위치에는 묶어서, 아두이노 보드에는 꽂아서 전선을 연결할 수 있지만, 신뢰성 문제 우려가 있습니다.  
+  케이블 압착 혹은 납땜으로 고정 대책을 세우는 것이 좋습니다.  
+
+결과적으로 위에 언급하지 않았지만 팀 내부적으로 조사나 확인을 위해서 혹은 시행 착오로 구매한 물품을 모두 합해서, 대략 80,000원 전후의 비용이 소모된 것으로 확인하고 있습니다.  
