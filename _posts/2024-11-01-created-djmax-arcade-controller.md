@@ -14,8 +14,9 @@ tags: [review, project, djmax, rhythm-game, game]
 <iframe width="560" height="315" src="https://www.youtube.com/embed/FnhedPLxksQ?si=ELdgbgxtFcmQt-9E" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
+<br />
 
-우리 팀원 여러분, 양심이 있다면 여러분이 제 꿈으로 만들어버린 친구들의 곡은 하나라도 들어봐야하지 않을까요??
+_우리 팀원 여러분, 양심이 있다면 여러분이 제 꿈으로 만들어버린 친구들의 곡은 하나라도 들어봐야하지 않을까요??_
 
 ## 배경
 
