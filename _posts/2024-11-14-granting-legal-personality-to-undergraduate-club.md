@@ -105,6 +105,8 @@ tags: [review, project, legal, legal-issue]
 
 일단 법률로서 식별할 수 있는 독립적인 객체로 만들고자 하는 것이니, 도장 역시 필요합니다. 다만 요구하는 것이 법인 인감이 아니라 직인인데, 법인 인감을 직인으로 대체한다는 것인지, 법인 인감도 필요한데 직인만 준비하면 된다고 착각한 것인지는 잘 모르겠습니다. 인터넷에서 싼 값에 괜찮은 직인을 만들 수 있습니다.
 
+![](/static/posts/2024-11-14-granting-legal-personality-to-undergraduate-club/IMG_9432.jpg)  
+
 ### 회의록(총회 또는 이사회)
 
 ![image.png](/static/posts/2024-11-14-granting-legal-personality-to-undergraduate-club/image5.png)
