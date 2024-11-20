@@ -65,5 +65,5 @@ tags: [review, g-con24, conference, conference-summary]
 
 이러한 면을 들어, 소녀전선의 스토리 구성은 결과적으로 옳은 전략이 되었다고 생각합니다.
 
-![](https://i3.ruliweb.com/img/24/11/15/1932ece99f519ea12.jpg)  
+![](/static/posts/2024-11-20-gcon24-sunborn-girlsfrontline/1932ece99f519ea12.jpg)  
 *다만 이런 상황에 이마를 짚게 되는건 어쩔 수 없겠지만 ([source](https://m.ruliweb.com/best/board/300143/read/68424657))*
