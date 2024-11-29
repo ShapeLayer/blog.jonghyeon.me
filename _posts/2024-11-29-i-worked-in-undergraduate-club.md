@@ -87,7 +87,7 @@ tags: [review, undergraduate-club, pimm, project, legal, legal-issue]
 
 그럼에도 제가 원하는 그림, 동아리 회원 사이의 거리감이라던가, 활동량이라던가 하는 것들이 만족스럽게 나오지는 않았습니다. 이제 동아리는 이전처럼 열심히 술을 마시는 동아리가 아니게 되었고, 번개나 밥약의 빈도는 사실상 죽은 것 처럼 보입니다.
 
-![image.png](/static/posts/2024-11-29-i-worked-in-undergraduate-club/image.jpg)
+![image.png](/static/posts/2024-11-29-i-worked-in-undergraduate-club/image.png)
 
 많은 것들을 궤도에 올려두었지만, 신경쓰지 못한 부분, 미숙하게 대응했던 부분은 동아리에서 고사되어버렸습니다.
 
