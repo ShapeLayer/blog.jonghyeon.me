@@ -98,7 +98,7 @@ _source: &lt;전남대학교 게임개발동아리 PIMM 회칙, 종교에 관한
 문제는 교내에 동아리방으로 사용할 공간이 매우 부족해서, 중앙동아리로 등록하더라도 학생마루에 입주하지 못한다는 것입니다.  
 
 ![](/static/posts/2024-11-29-i-worked-in-undergraduate-club/jnu-today.png)  
-_[source](https://today.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=146&bbsMode=view&page=5&key=17236) 대학측에서 명료한 대답을 주지 못했다는 문구가 있었는데, 삭제되었습니다._
+_[source](https://today.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=146&bbsMode=view&page=5&key=17236) 분명 이전 기사에서는 대학측에서 명료한 대답을 주지 못했다는 문구가 있었는데, 어느 순간 삭제되었습니다. 중앙동아리 등록을 확실하게 포기하게 한 문구여서 꽤 기억에 남는 언급이었는데._
 
 이러한 상황에서 중앙동아리에 등록하게된다면, 회칙에 따라 등록비만 지불하게 되면서 중앙동아리로서의 혜택을 얻기 어려워보였습니다.
 
@@ -107,6 +107,8 @@ _[source](https://today.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?boardID=14
 ### 이게 몇 번째야
 
 사실 중앙동아리화 추진도 이야기가 나왔다가 어느 순간 말 없이 사라지는 대표적인 안건 중 하나이기 때문에, 이번에 확실히 매듭을 짓고 싶었습니다.  
+
+![](/static/posts/2024-11-29-i-worked-in-undergraduate-club/notify-chatroom.png)  
 
 분명 이전 회장이 당시의 총동연 비상대책위원장과 관련한 대화를 했던 모습도 있었는데 변한 것은 커녕 어떻게 진행되었는지도 정확하게 알려지지 않았습니다.
 
