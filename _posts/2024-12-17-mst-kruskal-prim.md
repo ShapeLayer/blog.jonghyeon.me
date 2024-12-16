@@ -1,6 +1,6 @@
 ---
 layout: post
-title: '최소 스패닝 트리와 두 탐색 알고리즘: 크루스칼 알고리즘과 프림 알고리즘을 중심으로"
+title: "최소 스패닝 트리와 두 탐색 알고리즘: 크루스칼 알고리즘과 프림 알고리즘을 중심으로"
 date: '2024-12-17'
 categories: [algorithm]
 tags: [ps, algorithm, python, binary-search]
