@@ -68,7 +68,7 @@ tags: [review, seasonal-rewinding]
 
 ## 한 학기 교과 과정 중에 프로젝트를 세 건이나 하라고?
 
-<img src="/static/posts/2024-12-21-la-vita-e-sogno/photo_2024-12-22_11-17-27.jpg" style="max-width: 400px;" />
+![](/static/posts/2024-12-21-la-vita-e-sogno/photo_2024-12-22_11-17-27.jpg)
 
 2학기에 수강한 전공 필수 교과 과정에서 &lt;임베디드소프트웨어&gt;, &lt;컴퓨터공학프로젝트1(캡스톤디자인)&gt;이 각 2건, 1건 총 3건의 컴퓨터공학 프로젝트 수행을 요구했습니다. 캡스톤 디자인이야 어느정도 생각한 바가 있었으나, 임베디드소프트웨어 과목이 미니 캡스톤처럼 운영될 줄은 상상도 못했습니다.
 
@@ -113,7 +113,7 @@ tags: [review, seasonal-rewinding]
 
 ## 헌혈과 장학
 
-<img src="/static/posts/2024-12-21-la-vita-e-sogno/self-dev.png" style="max-width: 600px;" />
+![](/static/posts/2024-12-21-la-vita-e-sogno/self-dev.png)
 
 전남대학교에는 자기계발활동기록부라고, 마치 고등학교의 생활기록부 비슷하게 학교 활동을 기록하는 문서가 있습니다. 8개 부문에 대해 1,000점 만점의 점수로 수치화하여 대학 생활을 얼마나 열심히 했는지 보여줍니다.
 
@@ -125,7 +125,7 @@ tags: [review, seasonal-rewinding]
 
 진짜 2주 간격으로 연달아 헌혈을 하기도 했는데, 대개 수면 부족이거나 체력적으로 무리한 일들을 많이 했기 때문에 "쿨타임"이 돌 때마다 계속 헌혈을 하는 무리수를 두지는 못했습니다.
 
-<img src="/static/posts/2024-12-21-la-vita-e-sogno/image.png" style="max-width: 600px;" />
+![](/static/posts/2024-12-21-la-vita-e-sogno/image.png)
 
 아무튼 이렇게 봉사 부문 점수를 쌓듯, 자계부의 다양한 부문의 점수를 쌓으면서 현장실습 부문을 제외한 모든 부문에서 학과 평균보다 높은 점수를 달성했습니다.
 
