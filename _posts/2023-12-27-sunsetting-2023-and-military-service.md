@@ -2,8 +2,8 @@
 layout: post
 title: 다시 없을 군생활과 2023년을 마무리하며
 date: '2023-12-27'
-categories: [review]
-tags: [review]
+categories: [seasonal-rewinding]
+tags: [review, seasonal-rewinding]
 ---
 
 ## The Weirdest Year of my Life

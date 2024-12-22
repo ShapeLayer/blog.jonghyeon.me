@@ -2,8 +2,8 @@
 layout: post
 title: 커리어를 잠시 중단하며
 date: '2022-07-04'
-categories: [review]
-tags: [review]
+categories: [seasonal-rewinding]
+tags: [review, seasonal-rewinding]
 ---
 
 드디어 인생에서 오지 않을 것 같은 날이 왔습니다. 이제 14시간 뒤면 육군훈련소에서 긴 여정을 시작하게 되겠죠.  

@@ -2,8 +2,8 @@
 layout: post
 title: ...아주 천천히 세차게
 date: '2024-12-22'
-categories: [review]
-tags: [review]
+categories: [seasonal-rewinding]
+tags: [review, seasonal-rewinding]
 ---
 
 2024년 연말 돌아보기

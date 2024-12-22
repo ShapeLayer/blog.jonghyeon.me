@@ -2,8 +2,8 @@
 layout: post
 title: 삶과 꿈
 date: '2024-12-21'
-categories: [review]
-tags: [review]
+categories: [seasonal-rewinding]
+tags: [review, seasonal-rewinding]
 ---
 
 2024년 연말 돌아보기
