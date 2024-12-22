@@ -141,6 +141,14 @@ for i in range(v_count):
 
 이렇게 업데이트된 간선 비용 정보, 지금 뻗어나가고 있는 그룹과 연결된 간선들의 비용 정보를 바탕으로 다음으로 뻗어나갈 간선을 선택합니다.
 
+## 크루스칼 알고리즘과 프림 알고리즘
+
+정점의 수를 $v$, 간선의 수를 $e$라고 가정할 때, 크루스칼 알고리즘은 $O(e \log_2 e)$의 시간 복잡도를, 프림 알고리즘은 $O(v^2)$의 시간 복잡도를 가집니다.  
+
+따라서 정점의 개수보다 간선의 개수가 적은 그래프 유형인 희소 그래프(Sparse graph)에는 크루스칼 알고리즘을, 그 반대의 유형인 밀집 그래프(Dense graph)에서는 프림 알고리즘을 사용하는 것이 좋습니다.  
+
+하지만 해결하고자 하는 문제가 특별히 희소 그래프, 혹은 밀집 그래프 유형만 다루는 것이 아니라, 두 그래프를 모두 다루어야 하는 것이 일반적이므로 깊게 고려할 사항은 아닐 것입니다.  
+
 ## 최소 스패닝 트리의 적용
 
 백준 온라인 저지의 [&lt;1197번: 최소 스패닝 트리&gt;](https://www.acmicpc.net/problem/1197)는 기본적인 최소 스패닝 트리 문제입니다. 하지만 제한이 엄격하게 설정되어 있어, 성능을 고려하면서 정확하게 작성해야 합니다.
@@ -186,4 +194,52 @@ if __name__ == '__main__':
   conns = [[*map(int, input().split())] for _i in range(e)]
   conns.sort(key=lambda each: each[2], reverse=True)
   print(compute(v, e, conns))
+```
+
+### 프림 알고리즘으로 구현하기
+```py
+from sys import stdin
+import heapq
+input = stdin.readline
+INF = int(1e10)
+
+def compute(v: int, conns: list[int]) -> int:
+  visited = [False for _ in range(v + 1)]
+  hq = []
+
+  result = 0
+  now = 1
+  visited[now] = True
+  for cost, _next in conns[now]:
+    heapq.heappush(hq, (cost, _next))
+  
+  while hq:
+    cost, now = heapq.heappop(hq)
+    if visited[now]:
+      continue
+    visited[now] = True
+
+    result += cost
+    for cost, _next in conns[now]:
+      if visited[_next]:
+        continue
+      heapq.heappush(hq, (cost, _next))
+
+  return result
+
+if __name__ == '__main__':
+  v, e = map(int, input().split())
+  conns: [int, list[int]] = {}
+  for _ in range(e):
+    a, b, c = map(int, input().split())
+    if a not in conns:
+      conns[a] = [(c, b)]
+    else:
+      conns[a].append((c, b))
+    if b not in conns:
+      conns[b] = [(c, a)]
+    else:
+      conns[b].append((c, a))
+
+  print(compute(v, conns))
 ```
