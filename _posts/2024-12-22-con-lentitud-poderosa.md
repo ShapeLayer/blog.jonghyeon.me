@@ -7,12 +7,12 @@ tags: [review]
 ---
 
 2024년 연말 돌아보기
-1. [삶과 꿈<super>La vita e sogno</super>](/posts/2024-12-21-la-vita-e-sogno)
-2. (이 글) **[...아주 천천히 세차게<super>...con lentitud poderosa</super>](/posts/2024-12-22-con-lentitud-poderosa)**
+1. [삶과 꿈<sup>La vita e sogno</sup>](/posts/2024-12-21-la-vita-e-sogno)
+2. (이 글) **[...아주 천천히 세차게<sup>...con lentitud poderosa</sup>](/posts/2024-12-22-con-lentitud-poderosa)**
 
-# …아주 천천히 세차게<super>…con lentitud poderosa</super>
+# …아주 천천히 세차게<sup>…con lentitud poderosa</sup>
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/9tDeSuyz9kE?si=ubFiJRpu0hFyDp_4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe style="width: 100%;" src="https://www.youtube.com/embed/9tDeSuyz9kE?si=ubFiJRpu0hFyDp_4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 [24년 한 해 나름 무언가](/posts/2024-12-22-la-vita-e-sogno) 해내긴 했지만, 군 생활을 계기로 다짐했던 것은 여전히 하나도 이루지 못했습니다.
 
@@ -28,7 +28,7 @@ tags: [review]
 
 그리고 실패와 시행착오가 이어지면서 정서 문제가 심화되었습니다. 자존감은 점차 떨어져 종래에는 갈곳을 잃어버리게 되었습니다.
 
-그래서 한창 무력감에 빠졌을 때 짧게 [&lt;이변은 없다&gt;](/posts/2024-09-27-there-are-no-surprises.md)를 작성했습니다.(24.09.) 특별한 주제에 집중해서 이야기했지만, 지금 끌어안고 있는 그 어떤 문제를 넣어도 크게 어색하지 않을 글이라고 생각합니다. 그리고 시간이 더 지나 연말이 된 지금도, 여전히 이변은 없습니다.
+그래서 한창 무력감에 빠졌을 때 짧게 [&lt;이변은 없다&gt;](/posts/2024-09-27-there-are-no-surprises)를 작성했습니다.(24.09.) 특별한 주제에 집중해서 이야기했지만, 지금 끌어안고 있는 그 어떤 문제를 넣어도 크게 어색하지 않을 글이라고 생각합니다. 그리고 시간이 더 지나 연말이 된 지금도, 여전히 이변은 없습니다.
 
 ## 분류된 저위험군
 
@@ -44,13 +44,15 @@ tags: [review]
 
 그 누구보다 사람들과의 깊은 관계를 갈망했지만, 정신 차리고 보니 넓고 얕은 인간관계를 가지고 있었습니다. 많은 집단 속에서 박종현을 찾을 수 있었지만, 그 어떤 집단의 박종현도 박종현이 아니었습니다. 그 어느 곳에서든, 그 곳의 사람들이 박종현은 함께 하는 친구라고 생각하더라도, 심지어는 회장으로 있었던 동아리에서마저, 저는 그 곳에서 외부인이었습니다.
 
-동시에 정말 이중적이고 모순적이게도, 모르는 어떤 장소에서 모르는 어떤 일이 일어나는 것이, 소외되는 것이 정말로 싫었습니다. 이러한 일들이 실제로도 박종현은 외부인이라고 확인해주는 것 같았습니다.
+여름 즈음에 한 동아리 후배가 왜 모두에게 높임말을 쓰는지 물어본 적이 있었습니다. 당시에는 이유를 잘 설명하기 어려워서 혹은 제대로 밝히고 싶지 않아, 열심히 얼버무렸던 기억이 있습니다. 그 대답으로 납득해주었는지는 모르겠습니다. 이제와서 생각해보면 마음 붙일 곳이 없었던게 아닌가 싶습니다.
+
+그리고 동시에 정말 이중적이고 모순적이게도, 모르는 어떤 장소에서 모르는 어떤 일이 일어나는 것이, 소외되는 것이 정말로 싫었습니다. 이러한 일들이 실제로도 박종현은 외부인이라고 확인해주는 것 같았습니다.
 
 ## 과로
 
 이렇게 생겨난 부정적인 감정들을 제어하는 데 선택한 대책은 비는 시간을 완전히 없애는 것이었습니다. 계속해서 일을 끌어왔습니다. 정신적인 문제를 신체적으로 틀어막은 셈입니다. 당연하지만 적절한 해결 방법이 아니었기 때문에 점점 건강이 나빠지게 되었습니다.
 
-심리 상담 중에도 일을 조금 포기하고 줄이라는 진심어린 조언을 받을 정도였습니다.(24.07.) 하지만 시작한 일은 어떻게든 끝을 보겠다며 당시에도 몇 가지 일들([#1](/posts/2024-08-30-i-participated-local-hackathon), [#2](/posts/2024-09-23-rewinding-2024-2-pimm-party.md))을 억지로 끌고 갔습니다. 당연히 그 결과가 만족스러울 리 없었습니다. (24.08., 24.09.)
+심리 상담 중에도 일을 조금 포기하고 줄이라는 진심어린 조언을 받을 정도였습니다.(24.07.) 하지만 시작한 일은 어떻게든 끝을 보겠다며 당시에도 몇 가지 일들([#1](/posts/2024-08-30-i-participated-local-hackathon), [#2](/posts/2024-09-23-rewinding-2024-2-pimm-party))을 억지로 끌고 갔습니다. 당연히 그 결과가 만족스러울 리 없었습니다. (24.08., 24.09.)
 
 2학기에 들어서 온몸에서 경고를 보내고, 일평균 서너 시간만을 자고, 하루에도 커피와 에너지 드링크를 몇 잔씩 마시고, 심장이 무리하는 듯한 느낌을 받았습니다. 달성하고자 하는 뚜렷한 목표가 있는 것이 아니면서도 그저 온 몸을 불사르기만 하고 있었습니다.
 

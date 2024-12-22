@@ -164,7 +164,7 @@ tags: [review, project, baekjoon, contest, algorithm]
 
 ## 똥통에 빠진 휴대폰, 똥통에 빠진 총괄
 
-대회 추진은 절대 23년 대회같이 잘 흘러가지 못했습니다. [&lt;똥통에 빠진 휴대폰&gt;](https://github.com/ShapeLayer/blog.jonghyeon.me/tree/main/static/posts/2024-03-13-rewinding-24-1-pimm-party/phone-in-toilet.md)이라고, 제 출제 역량을 벗어나는 문제를 출제했던 것이 문제였습니다.
+대회 추진은 절대 23년 대회같이 잘 흘러가지 못했습니다. [&lt;똥통에 빠진 휴대폰&gt;](https://github.com/ShapeLayer/blog.jonghyeon.me/tree/main/static/posts/2024-03-13-rewinding-24-1-pimm-party/phone-in-toilet)이라고, 제 출제 역량을 벗어나는 문제를 출제했던 것이 문제였습니다.
 
 원래대로라면 검수 과정이 지연되거나 출제 역량을 벗어난다고 판단한 문제는 과감하게 자릅니다. 23년 대회때도, 이번에도 그렇게 잘려나간 문제가 꽤 있습니다.  
 

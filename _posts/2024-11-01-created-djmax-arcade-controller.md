@@ -11,7 +11,7 @@ tags: [review, project, djmax, rhythm-game, game]
 올해 듣는 수업의 <임베디드소프트웨어> 과목 중에 디제이맥스 아케이드 컨트롤러를 만들어보았습니다. 가벼운 마음에 수강하고 가벼운 마음에 주제를 정했는데, 어쩌다보니 학교의 지원을 받으면서 교내 행사에 전시까지 하게 되었습니다.
 
 <div style="display: flex; width: 100%; justify-content: center;">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/FnhedPLxksQ?si=ELdgbgxtFcmQt-9E" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe style="width: 100%" src="https://www.youtube.com/embed/FnhedPLxksQ?si=ELdgbgxtFcmQt-9E" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
 <br />
@@ -249,7 +249,7 @@ _RTFM: 빌어먹을 문서를 읽으시오_
 뭐.. 그걸로 우리 팀이 즐겁고 행복해한다면 오케이겠지만.. 다시 한번 말하지만 유정빈 모아림 당신들은 당장 박종현을 놀리는데 사용한 결속밴드 곡 전체를 순회하시기 바랍니다.
 
 <div style="display: flex; width: 100%; justify-content: center;">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/RWFW1OSlMkM?si=IIRg8FmzdcDvJBk3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe style="width: 100%" src="https://www.youtube.com/embed/RWFW1OSlMkM?si=IIRg8FmzdcDvJBk3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
 ## 피폐해진 공대 학부생은 지금 당장 시험을 그만두고 싶어 ~언제까지 계속해야하는거야~

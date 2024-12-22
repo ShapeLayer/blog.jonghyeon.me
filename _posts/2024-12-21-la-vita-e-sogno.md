@@ -7,12 +7,12 @@ tags: [review]
 ---
 
 2024년 연말 돌아보기
-1. (이 글) **[삶과 꿈<super>La vita e sogno</super>](/posts/2024-12-21-la-vita-e-sogno)**
-2. [...아주 천천히 세차게<super>...con lentitud poderosa</super>](/posts/2024-12-22-con-lentitud-poderosa)
+1. (이 글) **[삶과 꿈<sup>La vita e sogno</sup>](/posts/2024-12-21-la-vita-e-sogno)**
+2. [...아주 천천히 세차게<sup>...con lentitud poderosa</sup>](/posts/2024-12-22-con-lentitud-poderosa)
 
-# 삶과 꿈<super>La vita e sogno</super>
+# 삶과 꿈<sup>La vita e sogno</sup>
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/tKoUyXZ13jY?si=3EvLf3Wr9leheIU8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe style="width: 100%" src="https://www.youtube.com/embed/tKoUyXZ13jY?si=3EvLf3Wr9leheIU8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 
 ## TOPCIT (24.05., 24.10.)
@@ -86,7 +86,7 @@ tags: [review]
 
 ## 게임개발동아리 PIMM의 회장을 맡다
 
-[_게임개발동아리를 1년간 운영했습니다_](/_posts/2024-11-29-i-worked-in-undergraduate-club.md) (24.12.)
+[_게임개발동아리를 1년간 운영했습니다_](/_posts/2024-11-29-i-worked-in-undergraduate-club) (24.12.)
 
 학기 초에 교내의 사진 연구회 중앙동아리에 가입을 시도한 적이 있습니다. 왠만한 질문은 수월하게 대답했다고 생각하지만, 마지막에 출사에 잘 참여할 수 있겠느냐는 질문을 애매하게 답했습니다. 그리고 동아리에 가입할 수 없었습니다.
 
@@ -139,7 +139,7 @@ tags: [review]
 
 ![image.png](/static/posts/2024-12-21-la-vita-e-sogno/image%201.png)
 
-그 중 꽤 오래간 동경한 분에 [각별<super>@monun</super>](https://www.youtube.com/@%EA%B0%81%EB%B3%84)도 있습니다. 최근에는 유튜브로 더 널리 알려져있지만, 사실 대략 10년 전부터 마인크래프트 플러그인 개발로 유명한 분입니다.
+그 중 꽤 오래간 동경한 분에 [각별<sup>@monun</sup>](https://www.youtube.com/@%EA%B0%81%EB%B3%84)도 있습니다. 최근에는 유튜브로 더 널리 알려져있지만, 사실 대략 10년 전부터 마인크래프트 플러그인 개발로 유명한 분입니다.
 
 마인크래프트에 상당히 몰입한 어린 시절에, 컴퓨터공학을 진로로 잡는데 주요한 영향을 미친 사람이기도 합니다.
 
@@ -152,5 +152,5 @@ tags: [review]
 ---
 
 2024년 연말 돌아보기
-1. [삶과 꿈<super>La vita e sogno</super>](/posts/2024-12-21-la-vita-e-sogno)
-2. (다음 글) **[...아주 천천히 세차게<super>...con lentitud poderosa</super>](/posts/2024-12-22-con-lentitud-poderosa)**
+1. [삶과 꿈<sup>La vita e sogno</sup>](/posts/2024-12-21-la-vita-e-sogno)
+2. (다음 글) **[...아주 천천히 세차게<sup>...con lentitud poderosa</sup>](/posts/2024-12-22-con-lentitud-poderosa)**
