@@ -14,6 +14,9 @@ tags: [review, seasonal-rewinding]
 
 <iframe style="width: 100%" src="https://www.youtube.com/embed/tKoUyXZ13jY?si=3EvLf3Wr9leheIU8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
+<br />
+
+이제 2024년도 마무리에 접어들었습니다. 올 한 해도 정말 많은 일이 있었고, 많은 성취와 실패가 있었습니다. 지난 1년을 되돌아보며 그동안 어떻게 생활해왔는지 정리해보려고 합니다.
 
 ## TOPCIT (24.05., 24.10.)
 
