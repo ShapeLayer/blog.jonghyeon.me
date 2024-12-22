@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 기대와 실망에 관하여
-date: '2022-07-04'
+date: '2024-12-03'
 categories: [opinion]
 tags: [opinion, book-report]
 ---
