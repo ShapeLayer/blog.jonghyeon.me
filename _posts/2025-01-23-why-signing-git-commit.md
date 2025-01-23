@@ -6,6 +6,8 @@ categories: [git]
 tags: [git, commit-signing, code-signing, security]
 ---
 
+![](/static/posts/2025-01-23-why-signing-git-commit/github-verified-commit.png)
+
 깃허브에서는 전자 서명된 커밋에 verified 뱃지를 부여합니다.
 
 이 전자 서명은 꽤 중요하고 필수적입니다. 규모있는 모든 오픈소스 프로젝트에서는 커밋에 전자 서명할 것을 요구합니다.
