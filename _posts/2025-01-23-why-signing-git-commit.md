@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 왜 커밋에 전자 서명을 하는가? 왜 많은 오픈소스 프로젝트는 전자 서명을 요구하는가?
+title: 왜 커밋에 전자 서명을 하는가?
 date: '2025-01-23'
 categories: [git]
 tags: [git, commit-signing, code-signing, security]
