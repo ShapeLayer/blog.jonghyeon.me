@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 실버를 위한 스마트폰 환경은 없다다
+title: 실버를 위한 스마트폰 환경은 없다
 date: '2025-03-16'
 categories: [opinion]
 tags: [opinion, smartphone, mobile]
