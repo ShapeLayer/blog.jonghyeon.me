@@ -63,7 +63,7 @@ tags: [exchange-student, japan]
   A. 말이 되는 소리를 하십시오.  
 
 - Q. 이 오타쿠 새123끼 드디어 본색을 드러내구 고향으로 떠나버리는구나  
-  A. .  
+  A. .  <br><br>
   ![](/static/posts/2025-04-14-ex-st-jp-im-going-to-japan/chairforeveryone_agad3amaaqdkavy.png)  
   ![](/static/posts/2025-04-14-ex-st-jp-im-going-to-japan/chairforeveryone_agadlqadlejjda.png)
 
