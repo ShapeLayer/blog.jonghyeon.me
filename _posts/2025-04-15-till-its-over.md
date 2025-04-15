@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 전남대학교 알고리즘 파티가 끝날 때까지
+title: PIMM 알고리즘 파티가 끝날 때까지
 date: '2025-04-15'
 categories: [review]
 tags: [review, project, baekjoon, contest, algorithm]
