@@ -8,7 +8,7 @@ tags: [review, project, baekjoon, contest, algorithm]
 
 <iframe style="width: 100%;" src="https://www.youtube.com/embed/J47AEDV9KQ0?si=oeVrRIXAUpoZeHx4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-안녕하세요, 지난 세 번의 대회에 이어서 올해에도 전남대학교 PIMM 알고리즘 파티 대회의 총괄을 맡은 박종현<sup><code>@belline9124</code></sup>입니다.
+안녕하세요, 지난 세 번의 대회에 이어서 올해에도 전남대학교 PIMM 알고리즘 파티 대회의 총괄을 맡은 박종현<sup><code>@belline0124</code></sup>입니다.
 
 지난 매 대회마다 대회 회고를 작성해서, 이번에는 정말 더 이상 쓸 내용이 없을 것이라고 생각하고 있었습니다. 아니나 다를까, 그 예상이 보기 좋게 빗나가게 되었습니다. 매 회차마다 다른 내용으로 글을 작성하게 될 줄은 몰랐습니다.
 
