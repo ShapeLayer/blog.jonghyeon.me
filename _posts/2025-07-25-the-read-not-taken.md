@@ -4,7 +4,7 @@ title: 가지 않은 길
 date: '2025-07-25'
 ---
 
-<iframe style="width: 100%;" src="0vN674KmFN4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe style="width: 100%;" src="https://www.youtube.com/embed/0vN674KmFN4?si=_Pe-x6UmqkbtiOW3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ![](/static/posts/2025-07-25-the-read-not-taken/image1.png)
 
