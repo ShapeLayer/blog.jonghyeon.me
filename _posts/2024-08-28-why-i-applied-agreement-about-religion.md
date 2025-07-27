@@ -6,6 +6,8 @@ categories: [review]
 tags: [review, student-club, policy]
 ---
 
+[종교에 관한 서약서 - 1.2판](https://github.com/pimm-dev/agreement-about-religion)
+
 ## 배경
 
 전남대학교(이하 학교)는 운동권, 신천지와 같이 특정한 이해관계에 있는 집단의 영향으로 다양한 사건사고와 문제가 발생하고 있다. 특히 최근에는 종교단체의 영향을 많이 받는 편이다.  
