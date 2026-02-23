@@ -65,7 +65,7 @@ Ten, or maybe fifteen years ago, if I hadn't read Japanese anime and light novel
 ![](/static/posts/2026-02-23-for-all-in-saga-i-met/nagasaki-clock.jpeg)  
 _Wall Clock, Nagasaki Atomic Bomb Museum, Nagasaki City, Nagasaki Prefecture_
 
-### \# I Guess "Jonghyun" is Hard to Pronounce After All
+### \# I Guess "Jonghyeon" is Hard to Pronounce After All
 
 Whenever I introduced myself, I always asked people to call me by my surname, "Park." Then, I would often receive questions like, "Aren't all Koreans surnamed Park?" or "That sounds a bit cold, so I'll call you by your first name," or anyway, asking what my first name was.
 
