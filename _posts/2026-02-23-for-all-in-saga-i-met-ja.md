@@ -12,9 +12,9 @@ date: '2026-02-23'
 
 佐賀で出会った皆へ
 
-[한국어는 여기: 「(ko) 사가에서 만난 모두에」](#)  
-[日本語の方はこちら: 「(ja) 佐賀で出会った皆へ」](#)  
-[for English: 「(en) for All in Saga I met」](#)
+[한국어는 여기: 「(ko) 사가에서 만난 모두에」](https://blog.jonghyeon.me/posts/2026-02-23-for-all-in-saga-i-met-ko)  
+[日本語の方はこちら: 「(ja) 佐賀で出会った皆へ」](https://blog.jonghyeon.me/posts/2026-02-23-for-all-in-saga-i-met-ja)  
+[for English: 「(en) for All in Saga I met」](https://blog.jonghyeon.me/posts/2026-02-23-for-all-in-saga-i-met-en)
 
 <br />
 
