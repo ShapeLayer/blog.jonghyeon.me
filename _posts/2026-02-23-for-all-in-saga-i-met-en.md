@@ -1,6 +1,6 @@
 ---
 layout: post
-title: for All in Saga I met
+title: (en) for All in Saga I met
 date: '2026-02-23'
 ---
 <style>
