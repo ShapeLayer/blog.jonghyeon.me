@@ -33,7 +33,7 @@ The sentences that follow might be a bit too personal to be included in a formal
 
 I simply want to unravel the words I wish to attach to the things I encountered during this exchange period. I hope you can think of this as a director's commentary on a one-man play that no one really cares about, something you can just skim through to kill time.
 
-![](./assets/takeo-lib.jpeg)  
+![](/static/posts/2026-02-23-for-all-in-saga-i-met/takeo-lib.jpeg)  
 _Takeo City Library, Takeo City, Saga Prefecture_  
 
 ### \# The Beginning
@@ -62,7 +62,7 @@ Five years ago, in the game development club I joined right after becoming an ad
 
 Ten, or maybe fifteen years ago, if I hadn't read Japanese anime and light novels from a fairly young age, I wouldn't have become so intertwined with Japan. I might not have even thought about joining a game development club. I think the young me shared more cultural codes and common ground with Japanese kids than with Korean kids. When my friends were going crazy over the new songs by TWICE and EXO, and obsessing over *Reply 1988*, I was overly immersed in *A Certain Magical Index* and *Sword Art Online*, unhesitatingly making all sorts of embarrassing actions and remarks.
 
-![](./assets/nagasaki-clock.jpeg)  
+![](/static/posts/2026-02-23-for-all-in-saga-i-met/nagasaki-clock.jpeg)  
 _Wall Clock, Nagasaki Atomic Bomb Museum, Nagasaki City, Nagasaki Prefecture_
 
 ### \# I Guess "Jonghyun" is Hard to Pronounce After All
@@ -73,7 +73,7 @@ However, even when I showed them the Katakana pronunciation, it seemed just as d
 
 But fortunately, among the Korean exchange students this time, there were only two with the surname Park, and the other person's name was easy for Japanese people to pronounce. So, I got to keep the title "Park-san," and that friend could be called by their first name.
 
-![](./assets/yufu-showa.jpeg)  
+![](/static/posts/2026-02-23-for-all-in-saga-i-met/yufu-showa.jpeg)  
 _Yufuin Showakan, Yufuin, Yufu City, Oita Prefecture_  
 
 ### \# People Who Stay in Saga, People Who Leave Saga, People Who Gather in Saga
@@ -92,8 +92,8 @@ According to a Korean friend who came to visit Saga, while talking with the owne
 
 Saga looked like a typical declining small town. On a Sunday evening, just a few days after I started staying in Saga, I went out looking for a crowded place, but the streets near Saga Station were dead silent, let alone having any people. Even though Saga Station should be the most bustling place in Saga.
 
-![](./assets/eigyouku-empty.jpeg)
-![](./assets/eigyouku-oshirase.jpeg)
+![](/static/posts/2026-02-23-for-all-in-saga-i-met/eigyouku-empty.jpeg)
+![](/static/posts/2026-02-23-for-all-in-saga-i-met/eigyouku-oshirase.jpeg)
 
 It was also quite impressive to see quite a variety of stores, which looked like they had maintained a long history, closing down during this short period. Especially when I saw a supermarket that had kept its place in the community for 50 years emptying all its shelves to close down, I felt sad and regretful, even though I wasn't a local resident.
 
@@ -115,14 +115,14 @@ One day, while traveling in Hita City, Oita Prefecture, I visited a local histor
 
 In Saga, it was easier to find young children and students than in Gwangju, Korea. It might be that Korea is the unusual one, where it's hard to see the younger generation because they are busy touring all sorts of academies—piano, Taekwondo, etc.—from a young age, but just seeing these kids made me feel nostalgic about my own childhood.
 
-![](./assets/sunset-ogi.jpeg)  
+![](/static/posts/2026-02-23-for-all-in-saga-i-met/sunset-ogi.jpeg)  
 _Sunset View, Ogi City, Saga Prefecture_  
 
 ### \# Surviving Even After Eating Tempura, Ramen, and Desserts
 
 Japan is said to be a country with one of the lowest obesity rates in the world. But I absolutely could not agree with this. How can the obesity rate be low with a food culture that dares to put tempura, ramen, bread, and desserts at the forefront?
 
-![](./assets/lunch.png)  
+![](/static/posts/2026-02-23-for-all-in-saga-i-met/lunch.png)  
 _Me: Today's lunch (650 yen); Member Z: Is the whole nation of Japan on a diet?_  
 
 But soon, I was able to confirm the specific truth through their small meal portions and the use of bicycles. When eating out, one serving wasn't enough, and even if I chose the large (Oomori) or double option, I would get hungry again not long after. Especially the single serving at the school cafeteria definitely did not seem like an amount that could satisfy young men in their prime.
@@ -133,7 +133,7 @@ What's funny is that usually, everyone left their seats looking satisfied after 
 
 I think everyone living in Saga would probably agree, but life in Saga was quite difficult without a bicycle. When I checked my records around the time I was wrapping up my life in Saga, it seemed I had cycled about 190km a month.
 
-![](./assets/cycle-total.png)
+![](/static/posts/2026-02-23-for-all-in-saga-i-met/cycle-total.png)
 
 Since this was mostly recorded by the Apple Watch's automatic workout detection feature, I probably actually rode about 250km a month. Anyway, riding that much, it wasn't a matter of losing fat; I might not even need to do lower body workouts.
 
@@ -145,7 +145,7 @@ Actually, I changed my usual workout routine. If I did my lower body workout as 
 
 This is what I genuinely said while preparing for the exchange program after hearing that a bicycle is essential for life in Saga. I mean, I already know how to run a marathon, and I'll probably ride a bike until I'm sick of it. I felt like I could do it if I just prepared for swimming. Besides, there's a big swimming pool right in front of my house.
 
-![](./assets/marathon.png)
+![](/static/posts/2026-02-23-for-all-in-saga-i-met/marathon.png)
 
 And time passed, and it was the jogging competition in Saga. I ran 20km. The problem was that I had to travel to the competition venue by bicycle. Even though I took plenty of time and moved slowly and leisurely to the venue, I ended up finishing in about 2 hours and 30 minutes, which was about 1.7 times slower than my personal half-marathon record.
 
@@ -167,7 +167,7 @@ In fact, my win rate is probably less than 10%. My teammates always said it was 
 
 Looking back on the train leaving Saga, there were many people whose names I never even heard properly. It's just a shame that I can no longer put a name to the voices that used to call me "Park-san." I know it's my own fault for regretting it so late now, though.
 
-![](./assets/saga-field.jpeg)  
+![](/static/posts/2026-02-23-for-all-in-saga-i-met/saga-field.jpeg)  
 _Saga University Athletics Stadium at Night, Honjo, Saga City, Saga Prefecture_  
 
 ### \# TLL
@@ -192,7 +192,7 @@ While talking with the English track students who came to Saga University, it ev
 
 Even I think it's a very strange behavior.
 
-![](./assets/honjo-machi.jpeg)  
+![](/static/posts/2026-02-23-for-all-in-saga-i-met/honjo-machi.jpeg)  
 _Near Saga University, Honjo, Saga City, Saga Prefecture_  
 
 ### \# SPACE-SAGA
@@ -203,7 +203,7 @@ Perhaps because the general schedules of everyone in SPACE-SAGA were almost unif
 
 <br />
 
-![](./assets/lawson-onecard.jpeg)  
+![](/static/posts/2026-02-23-for-all-in-saga-i-met/lawson-onecard.jpeg)  
 _Playing One Card in front of Lawson late at night_  
 
 Because it's an English track, the SPACE-SAGA group itself was composed of students from very diverse countries, so I think there were many unexpected and various scenes. I think it was that much fun.
@@ -214,7 +214,7 @@ The friends from SPACE-SAGA were almost always gathered at the Lawson convenienc
 
 ### \# Culture Night
 
-![](./assets/cultral-night.jpeg)
+![](/static/posts/2026-02-23-for-all-in-saga-i-met/cultral-night.jpeg)
 
 While preparing for the Global Supporters' cultural exchange festival, *Culture Night*, I think I showed a lot of immature sides. In the end, it wrapped up well and I think it was evaluated as a good stage, so I'm relieved, but at the time, I don't know how many times I fell into pessimism, thinking I had completely ruined the planning and that people who didn't know the background would scoff and laugh at the shabbiness of the stage.
 
@@ -242,7 +242,7 @@ Almost all the time I spent using the computer was used to forcefully continue a
 
 It was a task to make a real-time multiplayer 3D game in Unity that accommodates about 4 players, plus about 4 spectators.
 
-![](./assets/computer.png)  
+![](/static/posts/2026-02-23-for-all-in-saga-i-met/computer.png)  
 _Because of this, unfortunately, wherever I went, I always carried my laptop and hammered away at work regardless of the time and place_  
 
 <br />
@@ -271,7 +271,7 @@ But, no. I would have been unable to endure the very short boredom of an interlu
 
 So actually, all I could do was curse myself for becoming so weird.
 
-![](./assets/saga-engcol.jpeg)  
+![](/static/posts/2026-02-23-for-all-in-saga-i-met/saga-engcol.jpeg)  
 _The lights in the College of Engineering never go out 24 hours a day, anywhere in the world, Saga University, Saga City, Saga Prefecture_  
 
 ### \# Connections
@@ -286,7 +286,7 @@ Actually, for me, I think I was able to observe quite a variety of cases up clos
 
 Exchange students stay for a short period and have to return to their original countries. So, the different appearances, thoughts, actions, and responses of each person worrying about what comes after the exchange program were novel and colorful, providing me with a lot of food for thought.
 
-![](./assets/xmas-tsuruha.jpeg)  
+![](/static/posts/2026-02-23-for-all-in-saga-i-met/xmas-tsuruha.jpeg)  
 _A Santa Claus colored by local children; Tsuruha Drug, Honjo, Saga City, Saga Prefecture_
 
 ### \# The End is Not Yet
@@ -307,5 +307,5 @@ It would actually make more sense to do a double major while preparing for the e
 
 It feels akin to throwing away the optimal opportunity and chasing after a missed train too late.
 
-![](./assets/geijutsu-no-mori.jpeg)  
+![](/static/posts/2026-02-23-for-all-in-saga-i-met/geijutsu-no-mori.jpeg)  
 _Environmental Art Forest, Kyuragi, Karatsu City, Saga Prefecture_
