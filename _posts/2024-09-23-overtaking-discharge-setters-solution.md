@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 〈전역 역전〉 출제자 해설
+title: 〈전역 역전〉 문제 출제자 해설
 date: '2024-09-23'
 category: [ps]
 ---

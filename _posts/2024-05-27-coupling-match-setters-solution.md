@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 〈커플링 매치〉 출제자 해설
+title: 〈커플링 매치〉 문제 출제자 해설
 date: '2024-05-27'
 category: [ps]
 ---
