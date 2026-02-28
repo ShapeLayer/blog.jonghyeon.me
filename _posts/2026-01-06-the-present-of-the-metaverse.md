@@ -91,8 +91,8 @@ Xbox Game Studios의 수장인 필 스펜서는 "메타버스는 매우 질나�
 
 위 사례 외에도 다양한 게임회사들이 메타버스를 구성하는 개념들을 차용하여 자사 게임 내 운영 모델에 실험적으로 적용하기 시작하여, 소위 UGC(User Generated Content; 사용자 제작 콘텐츠)로 일반화된 명칭을 가지게 되었다. 이들 게임은 사용자들이 게임의 기반 시스템을 이용해서 아예 다른 게임을 구현할 수 있게 하고, 이로부터 나오는 수익을 셰어하는 형식으로 변화하고 있다.[^14] 
 
-![PUBG: BATTLEGROUNDS 공식 유튜브 〈PUBG | UGC Alpha Gameplay Trailer〉 캡쳐](/static/posts/2026-01-06-the-present-of-the-metaverse/capture-pubg-official-ugc-trailer.jpg)
-*PUBG: BATTLEGROUNDS 공식 유튜브 〈PUBG | UGC Alpha Gameplay Trailer〉 캡쳐[^15]*
+![PUBG: BATTLEGROUNDS 공식 유튜브 〈PUBG \| UGC Alpha Gameplay Trailer〉 캡쳐](/static/posts/2026-01-06-the-present-of-the-metaverse/capture-pubg-official-ugc-trailer.jpg)
+*PUBG: BATTLEGROUNDS 공식 유튜브 〈PUBG \| UGC Alpha Gameplay Trailer〉 캡쳐[^15]*
 
 게임 〈포트나이트〉는 이 구조가 완전히 자리를 잡아 서양권 사용자 사이에서 널리 사용되고 있고, 게임 〈PUBG: 배틀그라운드〉에서도 지난 2025년 7월부터 UGC 모드의 알파 테스트를 시작하여 이 모델을 도입하려고 시도하고 있다.[^16] [^17]
 
