@@ -2,6 +2,7 @@
 layout: post
 title: (ko) 사가에서 만난 모두에
 date: '2026-02-23'
+category: [essay]
 ---
 
 <!--

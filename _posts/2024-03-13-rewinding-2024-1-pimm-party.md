@@ -2,6 +2,7 @@
 layout: post
 title: 2024 상반기 전남대학교 PIMM 알고리즘 파티를 반성하며
 date: '2024-03-13'
+category: [rewinding]
 ---
 
 안녕하세요, [&lt;2024 상반기 전남대학교 PIMM 알고리즘 파티&gt;](https://www.acmicpc.net/contest/view/1247) 대회(24년 대회, 핌파티)의 총괄을 맡은 박종현<sup>belline0124</sup>입니다.  

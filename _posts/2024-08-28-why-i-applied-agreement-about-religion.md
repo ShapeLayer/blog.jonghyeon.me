@@ -2,8 +2,7 @@
 layout: post
 title: 왜 그리고 어떻게 나는 동아리에 "종교에 관한 서약서"를 도입하였는가
 date: '2024-08-28'
-categories: [review]
-tags: [review, student-club, policy]
+category: [rewinding]
 ---
 
 [종교에 관한 서약서 - 1.2판](https://github.com/pimm-dev/agreement-about-religion)

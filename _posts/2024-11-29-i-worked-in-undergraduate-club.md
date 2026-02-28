@@ -2,8 +2,7 @@
 layout: post
 title: 게임개발동아리를 1년간 운영하다
 date: '2024-11-29'
-categories: [review]
-tags: [review, undergraduate-club, pimm, project, legal, legal-issue]
+category: [rewinding]
 ---
 
 대학생활 첫 동아리이면서 꽤나 다양한 경험, 감정을 맛보게 했던 교내 게임개발동아리 PIMM(핌)의 회장을 맡았다.

@@ -2,6 +2,7 @@
 layout: post
 title: 이변은 없다
 date: '2024-09-27'
+category: [essay]
 ---
 
 군 입대를 열흘 남짓 앞둔 날,

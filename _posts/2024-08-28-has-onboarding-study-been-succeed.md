@@ -2,8 +2,7 @@
 layout: post
 title: 동아리 신규 회원을 대상으로 한 온보딩 스터디는 성공했는가
 date: '2024-08-28'
-categories: [review]
-tags: [review, student-club, policy]
+category: [rewinding]
 ---
 
 ## 배경

@@ -2,6 +2,7 @@
 layout: post
 title: (ja) 佐賀で出会った皆へ
 date: '2026-02-23'
+category: [essay]
 ---
 
 <style>

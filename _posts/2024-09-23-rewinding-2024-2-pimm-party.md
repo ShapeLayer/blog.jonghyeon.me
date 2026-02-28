@@ -2,6 +2,7 @@
 layout: post
 title: 2024 하반기 전남대학교 PIMM 알고리즘 파티 대회에는 무슨 일이 있었나?
 date: '2024-09-23'
+category: [rewinding]
 ---
 
 안녕하세요, &lt;2024 하반기 전남대학교 PIMM 알고리즘 파티&gt; 대회 총괄 박종현<sup>belline0124</sup>입니다.

@@ -2,6 +2,7 @@
 layout: post
 title: 2023 전남대학교 PIMM 알고리즘 파티를 되돌아보며
 date: '2023-09-05'
+category: [rewinding]
 ---
 
 > 군대에서 대회 굴린 이야기 ...대회가 날 굴린건가..?

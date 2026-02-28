@@ -2,8 +2,7 @@
 layout: post
 title: 데스크톱은 SSD 250GB + HDD 2TB 조합을 피해야 한다
 date: '2023-05-28'
-categories: [hardware]
-tags: [article, hardware]
+categories: [opinion]
 ---
 
 데스크톱 PC를 맞출 때 많은 사람들이 저장 장치를 SSD 250GB + HDD 2TB 조합으로 구성한다. 250GB의 SSD는 크게 부담을 못 느낄 정도로 싸기도 하고, 부족한 용량은 HDD가 어떻게든 해주겠다는 생각인듯 하다.  

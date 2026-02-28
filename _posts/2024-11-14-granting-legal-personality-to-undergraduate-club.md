@@ -2,8 +2,7 @@
 layout: post
 title: 동아리에 법인격 부여하기
 date: '2024-11-14'
-categories: [review]
-tags: [review, undergraduate-club, pimm, project, legal, legal-issue]
+category: [rewinding]
 ---
 
 ![image.png](/static/posts/2024-11-14-granting-legal-personality-to-undergraduate-club/image.png)

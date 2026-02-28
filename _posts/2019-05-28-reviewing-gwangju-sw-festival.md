@@ -2,6 +2,7 @@
 layout: post
 title: 2019 광주SW체험축전을 되돌아보며
 date: '2019-05-28'
+category: [rewinding]
 ---
 
 5월 26일자로 광주SW체험축전이 성황리에 마무리되었다.

@@ -2,6 +2,7 @@
 layout: post
 title: PIMM 알고리즘 파티가 끝날 때까지
 date: '2025-04-15'
+category: [rewinding]
 ---
 
 <iframe style="width: 100%;" src="https://www.youtube.com/embed/J47AEDV9KQ0?si=oeVrRIXAUpoZeHx4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>

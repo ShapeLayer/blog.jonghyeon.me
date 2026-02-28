@@ -2,6 +2,7 @@
 layout: post
 title: 전남대학교 인공지능학부 과동아리 Stolio의 개설을 되돌아보며
 date: '2023-07-30'
+category: [rewinding]
 ---
 
 ### 새로운 시작

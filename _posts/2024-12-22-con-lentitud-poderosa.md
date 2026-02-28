@@ -2,6 +2,7 @@
 layout: post
 title: ...아주 천천히 세차게
 date: '2024-12-22'
+category: [essay]
 ---
 
 <iframe style="width: 100%;" src="https://www.youtube.com/embed/9tDeSuyz9kE?si=ubFiJRpu0hFyDp_4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>

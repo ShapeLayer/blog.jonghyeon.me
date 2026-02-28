@@ -2,6 +2,7 @@
 layout: post
 title: 악질 이름 생성기를 되돌아보며
 date: '2020-05-14'
+category: [rewinding]
 ---
 
 안녕하세요, 악질 이름 생성기 개발자 박종현입니다.

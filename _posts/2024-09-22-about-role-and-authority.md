@@ -2,8 +2,7 @@
 layout: post
 title: 권위와 역할에 관해
 date: '2024-09-22'
-categories: [opinion]
-tags: [opinion, community-management]
+category: [essay]
 ---
 
 우리는 의사소통을 위해 많은 것들에 단어를 붙였다. 단어란 것이 으레 그렇듯, 단어마다 가지게 되는 정형적인 이미지나 분위기라는 것이 있기 마련이다.

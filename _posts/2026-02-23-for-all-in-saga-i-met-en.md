@@ -2,6 +2,7 @@
 layout: post
 title: (en) for All in Saga I met
 date: '2026-02-23'
+category: [essay]
 ---
 <style>
   h3 {
