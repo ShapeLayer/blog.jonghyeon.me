@@ -67,8 +67,8 @@ _사가대학 〈네트워크시스템〉 과목 성적 평가 리포트 제출�
 
 [^9]: Dane Knecht, "Cloudflare outage on December 5, 2025." [Online]. Available: https://blog.cloudflare.com/5-december-2025-outage/
 
-[^10] 코딩애플, "ChatGPT を爆破させたクラウドフレア(ChatGPT를 폭파시킨 클라우드 플레어)." [Online]. Available: https://www.youtube.com/shorts/srdf56tlOW8
+[^10]: 코딩애플, "ChatGPT を爆破させたクラウドフレア(ChatGPT를 폭파시킨 클라우드 플레어)." [Online]. Available: https://www.youtube.com/shorts/srdf56tlOW8
 
-[^11] Microsoft, "Microsoft Certified: Azure Solutions Architect Expert." [Online]. Available: https://learn.microsoft.com/en-us/credentials/certifications/azure-solutions-architect/
+[^11]: Microsoft, "Microsoft Certified: Azure Solutions Architect Expert." [Online]. Available: https://learn.microsoft.com/en-us/credentials/certifications/azure-solutions-architect/
 
-[^12] A. AWS, "AWS Certified Solutions Architect - Associate." [Online]. Available: https://aws.amazon.com/certification/certified-solutions-architect-associate/
+[^12]: Amazon AWS, "AWS Certified Solutions Architect - Associate." [Online]. Available: https://aws.amazon.com/certification/certified-solutions-architect-associate/
