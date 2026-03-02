@@ -15,14 +15,18 @@ _〈화상정보처리〉 수업 노트_
 주기 $T$를 갖는 1차원 파형 $f(t)$에 대해 Fourier 급수는 다음과 같다.
 
 $$
-f(t) = \frac{a_0}{2} + \sum_{n=1}^{\infty}\bigl(a_n\cos(n\omega t) + b_n\sin(n\omega t)\bigr)\\
+f(t) = \frac{a_0}{2} + \sum_{n=1}^{\infty}\bigl(a_n\cos(n\omega t) + b_n\sin(n\omega t)\bigr)
+$$
+$$
 \omega = \frac{2\pi}{T}
 $$
 
 계수는 직교성(한 주기 적분 시 상호 성분이 0이 되는 성질)을 이용해 구한다.
 
 $$
-a_n = \frac{2}{T}\int_0^T f(t)\cos(n\omega t)\,dt\\
+a_n = \frac{2}{T}\int_0^T f(t)\cos(n\omega t)\,dt
+$$
+$$
 b_n = \frac{2}{T}\int_0^T f(t)\sin(n\omega t)\,dt
 $$
 
@@ -31,7 +35,9 @@ $$
 Euler 공식 $e^{\pm i n\omega t} = \cos(n\omega t) \pm i\sin(n\omega t)$를 쓰면, Fourier 급수는 복소 지수의 합으로도 쓸 수 있다. 이렇게 함으로서 계산이 간결해지고, 주파수 성분의 진폭과 위상을 하나의 복소수 계수 $C_n$로 표현할 수 있다.  
 
 $$
-f(t) = \sum_{n=-\infty}^{+\infty} C_n e^{i n\omega t}\\
+f(t) = \sum_{n=-\infty}^{+\infty} C_n e^{i n\omega t}
+$$
+$$
 C_n = \frac{1}{T}\int_0^T f(t)\,e^{-i n\omega t}\,dt
 $$
 
@@ -40,7 +46,9 @@ $$
 주기 $T$에 대해서 $T\to\infty$로 확장하여 비주기 신호 $f(t)$에 대해 푸리에 변환을 수행할 수 있다.
 
 $$
-F(f) = \int_{-\infty}^{+\infty} f(t)\,e^{-2\pi i f t}\,dt\\
+F(f) = \int_{-\infty}^{+\infty} f(t)\,e^{-2\pi i f t}\,dt
+$$
+$$
 f(t) = \int_{-\infty}^{+\infty} F(f)\,e^{2\pi i f t}\,df
 $$
 
@@ -55,7 +63,9 @@ $$
 디지털 신호는 유한한 길이의 이산 샘플이므로, 이산 푸리에 변환을 사용한다.
 
 $$
-F(f) = \sum_{x=0}^{N-1} f(x)\,e^{-2\pi i\,fx/N}\\
+F(f) = \sum_{x=0}^{N-1} f(x)\,e^{-2\pi i\,fx/N}
+$$
+$$
 f(x) = \frac{1}{N}\sum_{f=0}^{N-1} F(f)\,e^{2\pi i\,fx/N}
 $$
 
@@ -112,12 +122,16 @@ $$
 
 - Prewitt 필터: 1차 미분 + 평활 효과
     $$
-    \begin{pmatrix} -1 & 0 & +1 \\ -1 & 0 & +1 \\ -1 & 0 & +1 \end{pmatrix},\qquad
+    \begin{pmatrix} -1 & 0 & +1 \\ -1 & 0 & +1 \\ -1 & 0 & +1 \end{pmatrix}
+    $$
+    $$
     \begin{pmatrix} +1 & +1 & +1 \\ 0 & 0 & 0 \\ -1 & -1 & -1 \end{pmatrix}
     $$
 - Sobel 필터: 1차 미분 + 평활 효과 + 중앙 픽셀 가중
     $$
-    \begin{pmatrix} -1 & 0 & +1 \\ -2 & 0 & +2 \\ -1 & 0 & +1 \end{pmatrix},\qquad
+    \begin{pmatrix} -1 & 0 & +1 \\ -2 & 0 & +2 \\ -1 & 0 & +1 \end{pmatrix}
+    $$
+    $$
     \begin{pmatrix} +1 & +2 & +1 \\ 0 & 0 & 0 \\ -1 & -2 & -1 \end{pmatrix}
     $$
 
@@ -126,7 +140,9 @@ $$
 2차 미분을 사용해 윤곽선을 검출하는 방법은, 화상의 밝기 변화의 "곡률"을 추정하여, 곡률이 큰 곳을 에지로 간주하는 것이다. 대표적인 방법으로는 Laplacian 필터가 있다. Laplacian 필터는 중심 픽셀과 주변 픽셀 간의 밝기 차이가 클수록 강하게 반응한다. 4-이웃 Laplacian과 8-이웃 Laplacian처럼 커널 정의가 조금씩 다른데, 일반적으로 8-이웃이 더 많은 방향의 변화에 민감하다.
 
 $$
-\begin{pmatrix} 0 & +1 & 0 \\ +1 & -4 & +1 \\ 0 & +1 & 0 \end{pmatrix},\qquad
+\begin{pmatrix} 0 & +1 & 0 \\ +1 & -4 & +1 \\ 0 & +1 & 0 \end{pmatrix}
+$$
+$$
 \begin{pmatrix} +1 & +1 & +1 \\ +1 & -8 & +1 \\ +1 & +1 & +1 \end{pmatrix}
 $$
 
@@ -148,7 +164,9 @@ $$
 ### 덧셈/평균
 
 $$
-I_{\mathrm{ADD}}(x,y)=A(x,y)+B(x,y)\\
+I_{\mathrm{ADD}}(x,y)=A(x,y)+B(x,y)
+$$
+$$
 I_{\mathrm{AVE}}(x,y)=\frac{1}{2}\bigl(A(x,y)+B(x,y)\bigr)
 $$
 
@@ -165,7 +183,9 @@ $$
 ### 곱셈/혼합
 
 $$
-I_{\mathrm{MUL}}(x,y)=A(x,y)\times B(x,y)\\
+I_{\mathrm{MUL}}(x,y)=A(x,y)\times B(x,y)
+$$
+$$
 I_{\mathrm{MIX}}(x,y)=\alpha A(x,y)+\beta B(x,y)
 $$
 
@@ -178,7 +198,9 @@ $$
 원격탐사에서 널리 쓰는 식생지수 NDVI는 다음과 같이 정의된다. 근적외(NIR) 채널이 없는 경우에는 가시광만으로 유사 지표를 만들기도 한다.
 
 $$
-\mathrm{NDVI}=\frac{\mathrm{NIR}-R}{\mathrm{NIR}+R}\\
+\mathrm{NDVI}=\frac{\mathrm{NIR}-R}{\mathrm{NIR}+R}
+$$
+$$
 ext{(pseudo) NDVI}=\frac{G-R}{G+R}
 $$
 
