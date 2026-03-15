@@ -1,6 +1,6 @@
 ---
 layout: post
-title: AI 사용 코딩에 대해 생각하다
+title: AI 사용 코딩과 수공업 타이핑 숙련공
 date: 2026-03-15
 category: [essay]
 ---
