@@ -1,6 +1,6 @@
 ---
 layout: post
-title: AI 사용 코딩과 수공업 타이핑 숙련공
+title: 프로그래밍하는 AI와 수공업 타이핑 숙련공
 date: 2026-03-15
 category: [essay]
 ---
