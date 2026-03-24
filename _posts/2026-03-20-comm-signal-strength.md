@@ -13,17 +13,21 @@ _〈모바일통신시스템〉 수업 노트_
 
 비교할 어떤 신호의 에너지(Power) $P_1$, $P_2$에 대해서, dB는 다음과 같이 정의된다:
 
+{% raw %}
 $$
 ?\text{dB} = 10 \times \log_{10}{\frac{P_2}{P_1}}
 $$
+{% endraw %}
 
 이와 같이 표현된다면 $P_1$에 대한 $P_2$의 상대적인 크기를 구할 수 있다.  
 
 이 표현은 일반적인 청각 반응을 나타내는데, 실제로는 10000배 커진 소리에 대해서 청각적으로는 40배 커진 소리로 인식하게 된다는 의미와 같다.  
 
+{% raw %}
 $$
 10 \times \log_{10}{\frac{10000}{1}} = 40 \text{dB}
 $$
+{% endraw %}
 
 ## 전압에 대한 데시벨 계산
 
@@ -31,6 +35,7 @@ $$
 
 전력 $P$, 전압 $V$, 저항 $R$에 대해서, 다음과 같은 관계를 가지고 있음에서 데시벨 계산 식을 변환할 필요가 있다.
 
+{% raw %}
 $$
 P = \frac{V^2}{R}
 $$
@@ -43,11 +48,13 @@ $$
 &= 20 \log {\frac{V_1}{V_2}}
 \end{aligned}
 $$
+{% endraw %}
 
 <br />
 
 만약 0.1v의 전압을 가진 원본 신호 $f(t)$ 가 어떤 장치를 통과한 후 5v의 출력 신호 $g(t)$ 를 갖게 되었다면, 다음과 같이 표현할 수 있다:
 
+{% raw %}
 $$
 \begin{aligned}
 \Delta \text{dB} &= 20 \log \frac{g(t)}{f(t)} \\
@@ -55,11 +62,13 @@ $$
 &\approx 34 \text{dB}
 \end{aligned}
 $$
+{% endraw %}
 
 ## 이득(게인; Gain)과 손실(로스; Loss)
 
 데시벨 표현의 장점으로는, $f(t)$와 $g(t)$의 역관계를 음수 곱으로 표현 가능하다는 것이다.  
 
+{% raw %}
 $$
 \begin{aligned}
 \Delta \text{dB} &= 20 \log \frac{f(t)}{g(t)} \\
@@ -67,6 +76,7 @@ $$
 &\approx -34 \text{dB}
 \end{aligned}
 $$
+{% endraw %}
 
 이를 정리하여, 신호의 dB 값이 증가하는 경우, 양수 값으로 표현된다. 이것을 이득으로 정의한다. 역으로 신호의 dB값이 줄어들어 음수가 되는 경우 손실로 정의한다.  
 
@@ -94,17 +104,20 @@ $$
 
 이들 값은 데시벨 정의로부터 획득할 수 있다.
 
+{% raw %}
 $$
 \begin{aligned}
 10 \log \frac{2 P_0}{P_0} &= 10 \log 2 \\
 &\approx 3.01
 \end{aligned}
 $$
+{% endraw %}
 
 ## 데시벨 수식의 변형
 
 데시벨 수식을 변형하면 다음과 같이 어떠한 변수에 대해 수식을 정리할 수 있다.  
 
+{% raw %}
 $$
 P_1 = P_0 \times 10 ^ {\text{dB value} / 10} \\
 P_0 = \frac{P_1}{10 ^ {\text{dB value} / 10}}
@@ -114,6 +127,7 @@ $$
 V_1 = V_0 \times 10 ^ {\text{dB value} / 20} \\
 V_0 = \frac{V_1}{10 ^ {\text{dB value} / 20}}
 $$
+{% endraw %}
 
 다만 이들 수식은 데시벨 정의의 단순 변형일 뿐이므로, 추가로 학습할 소요는 크지 않다.  
 
@@ -121,6 +135,7 @@ $$
 
 어떤 신호가 13dB 증폭되어 1.2W를 나타내었다고 하였을 때, 위 수식을 사용하지 않고 데시벨 정의만을 사용하여 원래의 신호 값 $x$를 계산할 수 있다.  
 
+{% raw %}
 $$
 \begin{aligned}
 13 \text{dB} &= 10 \log \frac{1.2}{x} \\
@@ -129,6 +144,7 @@ $$
 x &\approx 0.06
 \end{aligned}
 $$
+{% endraw %}
 
 ## 신호의 절대 강도
 
@@ -142,12 +158,14 @@ $$
 
 $1 \text{mW}$ 에 대한 데시벨을 $\text{dBm}$ 으로 정의하고, $1 \text{W}$ 에 대한 데시벨을 $\text{dBW}$ 로 정의하여 절대 강도를 표현한다.  
 
+{% raw %}
 $$
 \begin{aligned}
 \text{dBm} &= 10 \times \log \frac{\text{Power}}{1 \text{mW}} \\
 \text{dBW} &= 10 \times \log \frac{\text{Power}}{1 \text{W}}
 \end{aligned}
 $$
+{% endraw %}
 
 <br />
 
@@ -161,4 +179,3 @@ $$
 | $1000 \text{W}$ | $60 \text{dBm}$ |
 
 mW와 W는 1000배 차이이므로, $10 \log 1000 = 30$, $10 \log (1000 \cdot 1000) = 60$ 으로 계산할 수 있다.
-
