@@ -179,3 +179,116 @@ $$
 | $1000 \text{W}$ | $60 \text{dBm}$ |
 
 mW와 W는 1000배 차이이므로, $10 \log 1000 = 30$, $10 \log (1000 \cdot 1000) = 60$ 으로 계산할 수 있다.
+
+## 데시벨의 연산
+
+데시벨에 있어서 다음의 연산이 가능하다.
+
+$$
+\begin{aligned}
+(A \text{dB}) \pm (B \text{dB}) &= (A \pm B) \text{dB} \\
+(A \text{dBm}) \pm (B \text{dB}) &= (A \pm B) \text{dBm} \\
+(A \text{dBm}) - (B \text{dBm}) &= (A - B) \text{dB} \\
+\end{aligned}
+$$
+
+<br />
+
+$$
+(A \text{dB}) \pm (B \text{dB}) = (A \pm B) \text{dB}
+$$
+
+dB는 각 신호 세기의 상대적인 비율을 표현하므로, dB값 간의 덧셈은 상대적인 비율을 증폭하거나 감쇄하는 측면에서 이해할 수 있다.
+
+예를 들어, 10dB 증폭기 뒤에 3dB 감쇄기가 있다면, 전체 시스템의 게인은 $10 \text{dB} + (-3 \text{dB}) = 7 \text{dB}$ 으로서 간주되어 계산 가능하다.
+
+<br />
+
+$$
+(A \text{dBm}) \pm (B \text{dB}) = (A \pm B) \text{dBm}
+$$
+
+dBm은 어떤 신호의 절대적인 강도를 표현한다. 따라서 어떤 신호 $A$ 에 대해서 dB의 덧셈은, 변화량 값 dB표시의 $B$ 만큼의 증폭 혹은 감쇄 처리로서 이해할 수 있다.  
+
+이 수식의 계산은 신호에 이득/손실(변화량)을 실제로 적용하는 과정으로서 계산 가능한데, 10dBm의 신호가 3dB 증폭기를 통과하면, 13dBm의 신호로 계산된다.  
+
+<br />
+
+$$
+(A \text{dBm}) - (B \text{dBm}) = (A - B) \text{dB}
+$$
+
+dBm으로 표시된 어떤 두 신호의 절대적인 값은, 비율을 구하는 데 사용할 수 있다. dB는 로그 스케일로 계산되어 $-$ 연산이 실제로는 나눗셈 연산(혹은 분수)이므로, 연산의 결과로서 두 신호 전력 사이의 비율을 획득할 수 있다.  
+
+출력 전력이 20dBm, 입력 전력이 10dBm인 회로의 이득은 $20 - 10 = 10 \text{dB}$ 로서 계산된다. dB는 두 신호의 상대적인 크기 차이를 표현하므로, $10 \log \frac{P_{\text{out}}}{P_{\text{in}}}$ 으로 바로 계산할수도 있다.  
+
+$$
+\begin{aligned}
+A \text{dBm} &= 10 \log{\frac{a \text{mW}}{1 \text{mW}}} \\
+B \text{dBm} &= 10 \log{\frac{b \text{mW}}{1 \text{mW}}} \\
+A \text{dBm} - B \text{dBm} &= 10 \log{\frac{a \text{mW}}{1 \text{mW}}} - 10 \log{\frac{b \text{mW}}{1 \text{mW}}} \\
+A \text{dBm} - B \text{dBm} &= 10 \log \frac{a \text{mW}}{b \text{mW}} \\
+&= (A - B)\text{dB}
+\end{aligned}
+$$
+
+<br />
+
+주목할만한 점은, $A \text{dBm} + B \text{dBm}$ 은 고려되지 않는다는 것이다. 이것은 로그 스케일 계산에 있어서 이 계산으로부터 얻어낼 수 있는 사실이, 최소한 직관적으로 기대할만한 것(dBm 신호 두 개의 더하기)과는 거리가 멀기 때문이다.  
+
+$$
+\begin{aligned}
+A \text{dBm} &= 10 \log{\frac{a \text{mW}}{1 \text{mW}}} \\
+B \text{dBm} &= 10 \log{\frac{b \text{mW}}{1 \text{mW}}} \\
+A \text{dBm} + B \text{dBm} &= 10 \log (a \times b)
+\end{aligned}
+$$
+
+그 정의 상 두 신호의 전력을 합치려고 한다면, $A \text{dBm} + B \text{dBm}$ 이 아니라, 각 신호의 전력 값인 $a$, $b$에 대해서 더한 후 dBm 값을 구해야 한다. 예를 들어 $a = 10, b = 10$이라면 다음과 같다:
+
+$$
+\begin{aligned}
+10 \text{dBm} &= 10 \log{10 \text{mW}} \\
+10 \text{mW} + 10 \text{mW} &= 20 \text{mW} \\
+10 \log_{10}20 &\approx 13 \text{dBm} \\
+&\ne 20 \text{dBm}
+\end{aligned}
+$$
+
+## 예시 상황
+
+신호 $A$ 가 $40 \text{dBm}$, 신호 $B$ 가 $2 \text{dBW}$ 라면, $1 \text{dBW} = 30 \text{dBm}$ 이므로, $B = 30 + 2 = 32 \text{dBm}$ 이다. 이 변환을 통해 신호 $B$에 대한 신호 $A$의 강도를 $40 \text{dBm} - 32 \text{dBm} = 8 \text{dBm}$ 으로 구할 수 있다.  
+
+$$
+\begin{aligned}
+A &= 40 \text{dBm} \\
+B &= 2 \text{dBW} = 1 \text{dBW} + 2 \text{dBm} \\
+&= 32 \text{dBm} \\
+A - B &= 8 \text{dBm}
+\end{aligned}
+$$
+
+<br />
+
+신호 $200 \text{mW}$ 는 약 $23 \text{dBm}$ 으로 표현할 수 있다.  
+
+$$
+\begin{aligned}
+10 \log_{10} 200 &= 10 \log_{10} (2 \times 100) \\
+&= 10 (\log_{10}2 + \log_{10}{100}) \\
+&\approx 10(0.301 + 2) \\
+&= 23.01 \text{dBm}
+\end{aligned}
+$$
+
+<br />
+
+출력이 $7 \text{dBW}$ 인 오디오 앰프릐 전력은 다음과 같이 구할 수 있다.
+
+$$
+\begin{aligned}
+7 \text{dBW} &= 10 \log_{10}{\frac{x \text{W}}{1 \text{W}}} \\
+0.7 \text{dBW} &= \log_{10}{\frac{x \text{W}}{1 \text{W}}} \\
+10^{0.7} &= x \approx 5.01
+\end{aligned}
+$$
