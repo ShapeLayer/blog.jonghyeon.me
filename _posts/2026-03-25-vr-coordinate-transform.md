@@ -133,6 +133,40 @@ $$
 
 만약 동차좌표계를 쓰지 않고 일반 좌표계에서 덧셈(이동)과 곱셈(회전)을 섞어서 이 계층 구조를 구현하려 한다면, 부모가 회전할 때마다 자식의 이동 경로를 매번 새로 계산해야 할 것이다.  
 
+## 예시 상황
+
+로컬 좌표계의 정점 $P_\text{local} (2, 1)$ 에 대해서, 세 가지 변환을 순서대로 적용할 때, 최종 월드 좌표 $P_\text{world}$ 는 다음과 같이 구할 수 있다.  
+
+1. 모든 축으로 2배 확대
+2. 반시계 방향으로 90도 회전
+3. $x$ 축으로 3, $y$ 축으로 2 만큼 이동
+
+$$
+S = \begin{bmatrix} 2 & 0 & 0 \\ 0 & 2 & 0 \\ 0 & 0 & 1 \end{bmatrix} \\
+R = \begin{bmatrix} 0 & -1 & 0 \\ 1 & 0 & 0 \\ 0 & 0 & 1 \end{bmatrix} \\
+T = \begin{bmatrix} 1 & 0 & 3 \\ 0 & 1 & 2 \\ 0 & 0 & 1 \end{bmatrix}
+$$
+
+$$
+\begin{aligned}
+R \cdot S &= \begin{bmatrix} 0 & -1 & 0 \\ 1 & 0 & 0 \\ 0 & 0 & 1 \end{bmatrix} \begin{bmatrix} 2 & 0 & 0 \\ 0 & 2 & 0 \\ 0 & 0 & 1 \end{bmatrix} \\
+&= \begin{bmatrix} 0 & -2 & 0 \\ 2 & 0 & 0 \\ 0 & 0 & 1 \end{bmatrix} \\
+M = T \cdot (R \cdot S) &= \begin{bmatrix} 1 & 0 & 3 \\ 0 & 1 & 2 \\ 0 & 0 & 1 \end{bmatrix} \begin{bmatrix} 0 & -2 & 0 \\ 2 & 0 & 0 \\ 0 & 0 & 1 \end{bmatrix} \\
+&= \begin{bmatrix} 0 & -2 & 3 \\ 2 & 0 & 2 \\ 0 & 0 & 1 \end{bmatrix}
+\end{aligned}
+$$
+
+병합된 변환 행렬 $M$ 을 다음과 같이 적용해 활용한다:
+
+$$
+\begin{aligned}
+P_\text{world} &= M \cdot P_\text{local} \\
+&= \begin{bmatrix} 0 & -2 & 3 \\ 2 & 0 & 2 \\ 0 & 0 & 1 \end{bmatrix} \begin{bmatrix} 2 \\ 1 \\ 1 \end{bmatrix}
+\end{aligned}
+$$
+
+따라서 $P_\text{world}$ 는 $\tilde{P_\text{world}} = (1, 6, 1)$ 이므로, $(1, 6)$ 이다.
+
 ## 마무리
 
 정리해서, 동차좌표계의 도입으로 결합 법칙을 사용하여, 정점 $P_0$ 에 변환을 적용하기 전에 여러 단계의 변환 처리를 미리 하나의 변환행렬로 압축해낼 수 있다.  
