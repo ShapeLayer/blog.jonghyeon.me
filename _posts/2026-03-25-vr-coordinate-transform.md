@@ -23,24 +23,15 @@ _〈가상현실〉 수업 노트_
 
 1.  크기 변환 (Scaling):
     $$
-    \begin{aligned}
-    \begin{bmatrix} x_1 \\ y_1 \\ z_1 \end{bmatrix} &= \begin{bmatrix} s_x & 0 & 0 \\ 0 & s_y & 0 \\ 0 & 0 & s_z \end{bmatrix} \begin{bmatrix} x \\ y \\ z \end{bmatrix} \\
-    &= \begin{bmatrix} s_x x \\ s_y y \\ s_z z \end{bmatrix}
-    \end{aligned}
+    \begin{bmatrix} x_1 \\ y_1 \\ z_1 \end{bmatrix} = \begin{bmatrix} s_x & 0 & 0 \\ 0 & s_y & 0 \\ 0 & 0 & s_z \end{bmatrix} \begin{bmatrix} x \\ y \\ z \end{bmatrix} = \begin{bmatrix} s_x x \\ s_y y \\ s_z z \end{bmatrix}
     $$
 2.  회전 변환 (Rotation, Z축 기준):
     $$
-    \begin{aligned}
-    \begin{bmatrix} x_2 \\ y_2 \\ z_2 \end{bmatrix} &= \begin{bmatrix} \cos\theta & -\sin\theta & 0 \\ \sin\theta & \cos\theta & 0 \\ 0 & 0 & 1 \end{bmatrix} \begin{bmatrix} x_1 \\ y_1 \\ z_1 \end{bmatrix} \\
-    &= \begin{bmatrix} x_1\cos\theta - y_1\sin\theta \\ x_1\sin\theta + y_1\cos\theta \\ z_1 \end{bmatrix}
-    \end{aligned}
+    \begin{bmatrix} x_2 \\ y_2 \\ z_2 \end{bmatrix} = \begin{bmatrix} \cos\theta & -\sin\theta & 0 \\ \sin\theta & \cos\theta & 0 \\ 0 & 0 & 1 \end{bmatrix} \begin{bmatrix} x_1 \\ y_1 \\ z_1 \end{bmatrix} = \begin{bmatrix} x_1\cos\theta - y_1\sin\theta \\ x_1\sin\theta + y_1\cos\theta \\ z_1 \end{bmatrix}
     $$
 3.  이동 변환 (Translation):
     $$
-    \begin{aligned}
-    \begin{bmatrix} x_{final} \\ y_{final} \\ z_{final} \end{bmatrix} &= \begin{bmatrix} x_2 \\ y_2 \\ z_2 \end{bmatrix} + \begin{bmatrix} t_x \\ t_y \\ t_z \end{bmatrix} \\
-    &= \begin{bmatrix} x_2 + t_x \\ y_2 + t_y \\ z_2 + t_z \end{bmatrix}
-    \end{aligned}
+    \begin{bmatrix} x_{final} \\ y_{final} \\ z_{final} \end{bmatrix} = \begin{bmatrix} x_2 \\ y_2 \\ z_2 \end{bmatrix} + \begin{bmatrix} t_x \\ t_y \\ t_z \end{bmatrix} = \begin{bmatrix} x_2 + t_x \\ y_2 + t_y \\ z_2 + t_z \end{bmatrix}
     $$
 
 이 세 변환 계산을 항상 모두 거친다고 가정하고, 변환 수식을 다음과 같이 정리할 수 있다.
@@ -65,25 +56,15 @@ $$
 
 1.  크기 변환 (Scaling):
     $$
-    \begin{aligned}
-    \begin{bmatrix} x_1 \\ y_1 \\ z_1 \\ 1 \end{bmatrix} &= \begin{bmatrix} s_x & 0 & 0 & 0 \\ 0 & s_y & 0 & 0 \\ 0 & 0 & s_z & 0 \\ 0 & 0 & 0 & 1 \end{bmatrix} \begin{bmatrix} x \\ y \\ z \\ 1 \end{bmatrix} \\
-    &= \begin{bmatrix} s_x x \\ s_y y \\ s_z z \\ 1 \end{bmatrix}
-    \end{aligned}
+    \begin{bmatrix} x_1 \\ y_1 \\ z_1 \\ 1 \end{bmatrix} = \begin{bmatrix} s_x & 0 & 0 & 0 \\ 0 & s_y & 0 & 0 \\ 0 & 0 & s_z & 0 \\ 0 & 0 & 0 & 1 \end{bmatrix} \begin{bmatrix} x \\ y \\ z \\ 1 \end{bmatrix} = \begin{bmatrix} s_x x \\ s_y y \\ s_z z \\ 1 \end{bmatrix}
     $$
 2.  회전 변환 (Rotation, Z축 기준):
     $$
-    \begin{aligned}
-    \begin{bmatrix} x_2 \\ y_2 \\ z_2 \\ 1 \end{bmatrix} &= \begin{bmatrix} \cos\theta & -\sin\theta & 0 & 0 \\ \sin\theta & \cos\theta & 0 & 0 \\ 0 & 0 & 1 & 0 \\ 0 & 0 & 0 & 1 \end{bmatrix} \begin{bmatrix} x_1 \\ y_1 \\ z_1 \\ 1 \end{bmatrix} \\
-    &= \begin{bmatrix} x_1\cos\theta - y_1\sin\theta \\ x_1\sin\theta + y_1\cos\theta \\ z_1 \\ 1 \end{bmatrix}
-    \end{aligned}
+    \begin{bmatrix} x_2 \\ y_2 \\ z_2 \\ 1 \end{bmatrix} = \begin{bmatrix} \cos\theta & -\sin\theta & 0 & 0 \\ \sin\theta & \cos\theta & 0 & 0 \\ 0 & 0 & 1 & 0 \\ 0 & 0 & 0 & 1 \end{bmatrix} \begin{bmatrix} x_1 \\ y_1 \\ z_1 \\ 1 \end{bmatrix} = \begin{bmatrix} x_1\cos\theta - y_1\sin\theta \\ x_1\sin\theta + y_1\cos\theta \\ z_1 \\ 1 \end{bmatrix}
     $$
 3.  이동 변환 (Translation):
     $$
-    \begin{aligned}
-    \begin{bmatrix} x_{final} \\ y_{final} \\ z_{final} \\ 1 \end{bmatrix} &= \begin{bmatrix} 1 & 0 & 0 & t_x \\ 0 & 1 & 0 & t_y \\ 0 & 0 & 1 & t_z \\ 0 & 0 & 0 & 1 \end{bmatrix} \begin{bmatrix} x_2 \\ y_2 \\ z_2 \\ 1 \end{bmatrix} \\
-    &= \begin{bmatrix} x_2 + t_x \cdot 1 \\ y_2 + t_y \cdot 1 \\ z_2 + t_z \cdot 1 \\ 1 \end{bmatrix} \\
-    &= \begin{bmatrix} x_2 + t_x \\ y_2 + t_y \\ z_2 + t_z \\ 1 \end{bmatrix}
-    \end{aligned}
+    \begin{bmatrix} x_{final} \\ y_{final} \\ z_{final} \\ 1 \end{bmatrix} = \begin{bmatrix} 1 & 0 & 0 & t_x \\ 0 & 1 & 0 & t_y \\ 0 & 0 & 1 & t_z \\ 0 & 0 & 0 & 1 \end{bmatrix} \begin{bmatrix} x_2 \\ y_2 \\ z_2 \\ 1 \end{bmatrix} = \begin{bmatrix} x_2 + t_x \cdot 1 \\ y_2 + t_y \cdot 1 \\ z_2 + t_z \cdot 1 \\ 1 \end{bmatrix} = \begin{bmatrix} x_2 + t_x \\ y_2 + t_y \\ z_2 + t_z \\ 1 \end{bmatrix}
     $$
 
 
@@ -112,8 +93,8 @@ $$
 어떤 변환을 10회 연달아 처리해야 하는 상황을 가정한다. 일반 좌표계에서는 단계마다 덧셈 항이 누적되어 수식이 기하급수적으로 복잡해지지만, 동차좌표계에서는 단순한 행렬 곱셈으로 완결할 수 있다.  
 
 1. 1단계: $P_1 = M_1 P_0 + T_1$
-2. 2단계: $\begin{aligned}P_2 &= M_2 (M_1 P_0 + T_1) + T_2 \\ &= (M_2 M_1) P_0 + (M_2 T_1 + T_2)\end{aligned}$
-3. 3단계: $\begin{aligned}P_3 &= M_3 (M_2 M_1 P_0 + M_2 T_1 + T_2) + T_3 \\ &= (M_3 M_2 M_1) P_0 + (M_3 M_2 T_1 + M_3 T_2 + T_3)\end{aligned}$
+2. 2단계: $P_2 = M_2 (M_1 P_0 + T_1) + T_2 = (M_2 M_1) P_0 + (M_2 T_1 + T_2)$
+3. 3단계: $P_3 = M_3 (M_2 M_1 P_0 + M_2 T_1 + T_2) + T_3 = (M_3 M_2 M_1) P_0 + (M_3 M_2 T_1 + M_3 T_2 + T_3)$
 
 이 표현을 동차좌표계의 도입으로 이와 같이 표현할 수 있다.
 
