@@ -11,11 +11,11 @@ _〈모바일통신시스템〉 수업 노트_
 
 어떤 통신에 대해서 통신 성능을 평가하는 방법은 여러 가지가 있을 수 있다. 보통 수율(throughput)이라고 이야기하는데, 오늘날 통신은 여러 개 레이어를 겹쳐 구현되므로, 각 단계마다 각각의 방법으로 정의하고 평가할 수 있다.  
 
-![](./signal-performance/throughput.png)
+![](/static/posts/signal-performance/throughput.png)
 
 물리 단계에서 수율을 평가하는 방법으로는, 물리적인 거리 $d$ 를 특정한 신호 비트가 얼마나 빨리, 속도 $v_\text{sig}$ 혹은 전송시간 $t_\text{sig}$ 를 사용하여, 이동할 수 있는지 판단하는 것이 가능할 것이다.  
 
-![](./signal-performance/transfer-speed.png)
+![](/static/posts/signal-performance/transfer-speed.png)
 
 $$
 \begin{aligned}
@@ -51,7 +51,7 @@ $S$ 는 신호강도, $N$ 은 잡음 강도로, 전체 신호 세기 $S + N$ 에
 
 <br />
 
-![](./signal-performance/shannon.jpeg)  
+![](/static/posts/signal-performance/shannon.jpeg)  
 
 _채널 별로 만족할 SNR은 여유분을 고려하여 설정된다. 아래 항목의 10dB는 계산 결과로는 0dB이다._
 
