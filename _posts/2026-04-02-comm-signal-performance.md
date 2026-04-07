@@ -92,7 +92,7 @@ $$
 또한 전송 속도인 비트 전송률 $R$ 에 대해서 $T_b = 1 / R$ 이므로 아래와 같이 변형할 수 있다.  
 
 $$
-T_b = \frac{1}{R}\\
+T_b = \frac{1}{R} \\
 \frac{E_b}{N_0} = ST_b \times \frac{1}{N_0} = \frac{S}{R} \times \frac{1}{kT}
 $$
 
