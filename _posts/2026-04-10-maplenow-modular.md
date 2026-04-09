@@ -171,6 +171,10 @@ $$
 그냥 단순히 랜덤하게 0부터 100사이의 실수를 하나 뽑아서 그 숫자가 특정한 확률보다 작은지 비교하면 되는 것 아닌가요? 라고 할 수도 있습니다.  
 
 $$
+R = \left\{ r | 0 \leq r \leq 100 \right\}
+$$
+
+$$
 \text{MAGIC}(r) =
 \begin{cases}
   \text{success} & \text{if } r < 0.5 \\
