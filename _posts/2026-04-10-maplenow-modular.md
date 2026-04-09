@@ -24,7 +24,7 @@ category: [computer-science]
 다만 이번에 이슈가 된 배경에는, 그 원인을 설명하면서 본의 아니게 인터넷 강의가 열리게 되어 버리게 된 것이 클 것이다.  
 
 ![](/static/posts/2026-04-09-maplenow-modular/react-fm.png)  
-_그래서 대략 유저들은 이러한 반응인 모양이다.._
+_그래서 대략 유저들은 이러한 반응인 모양이다.. [#](https://www.fmkorea.com/best/9689040550)_
 
 <br />
 
