@@ -1,6 +1,6 @@
 ---
 layout: post
-title: '4월 9일 MAPLE NOW 확률 이슈 분석'
+title: '4월 9일 MAPLE NOW에서 공개된 메이플스토리 확률 이슈 분석'
 date: 2026-04-10
 category: [computer-science]
 ---
