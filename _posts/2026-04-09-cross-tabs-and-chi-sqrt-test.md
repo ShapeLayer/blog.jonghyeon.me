@@ -56,7 +56,15 @@ $$
 # 기대빈도 표시
 # 행 비율 표시
 # 맥네마 검정은 수행하지 않음
-cross_table <- CrossTable(data$직업, data$성별, digits=3, max.width=5, expected=TRUE, prop.r=TRUE, mcnemar=FALSE)
+cross_table <- CrossTable(
+  data$직업, 
+  data$성별, 
+  digits=3, 
+  max.width=5, 
+  expected=TRUE, 
+  prop.r=TRUE, 
+  mcnemar=FALSE
+)
 ```
 
 <p><strong>Cell Contents</strong></p>
@@ -143,11 +151,11 @@ cross_table <- CrossTable(data$직업, data$성별, digits=3, max.width=5, expec
             </tr>
             <tr>
                   <td colspan="2">성별 합계</td>
-                  <td>남자 55 / 여자 35</td>
+                  <td>남자 55<br />여자 35</td>
                   <td>-</td>
                   <td>-</td>
                   <td>-</td>
-                  <td>남자 0.611 / 여자 0.389</td>
+                  <td>남자 0.611<br />여자 0.389</td>
                   <td>-</td>
                   <td>-</td>
             </tr>
