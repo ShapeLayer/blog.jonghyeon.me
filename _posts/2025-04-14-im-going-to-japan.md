@@ -1,9 +1,8 @@
 ---
 layout: post
-title: 일본 교환학생 / 1. 교환 유학을 가게 되었습니다.
+title: 교환 유학을 가게 되었습니다.
 date: '2025-04-14'
-categories: [exchange-student]
-tags: [exchange-student, japan]
+categories: [shorts]
 ---
 
 교환학생을 가게 되었습니다.
