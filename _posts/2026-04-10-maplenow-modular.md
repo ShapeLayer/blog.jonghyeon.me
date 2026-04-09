@@ -173,8 +173,8 @@ $$
 $$
 \text{MAGIC}(r) =
 \begin{cases}
-  \text{\text{success}} & \text{if } r < 0.5 \\
-  \text{\text{failure}} & \text{otherwise}
+  \text{success} & \text{if } r < 0.5 \\
+  \text{failure} & \text{otherwise}
 \end{cases}
 $$
 
