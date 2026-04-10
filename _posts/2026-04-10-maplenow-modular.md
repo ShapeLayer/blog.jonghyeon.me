@@ -1,6 +1,6 @@
 ---
 layout: post
-title: '4월 9일 MAPLE NOW에서 공개된 메이플스토리 확률 이슈 분석'
+title: '4월 9일 MAPLE NOW에서 공개된 메이플스토리 확률 로직 내 모듈러 편향 이슈'
 date: 2026-04-10
 category: [computer-science]
 ---
