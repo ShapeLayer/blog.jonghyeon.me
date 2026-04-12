@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 자유공간에서의 전파
+title: 자유공간에서의 전파(Propagation)
 date: 2026-04-12
 category: [mobile-communication-system]
 ---
