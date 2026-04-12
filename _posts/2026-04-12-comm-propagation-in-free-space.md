@@ -94,14 +94,14 @@ $$
 $$
 \begin{aligned}
 \text{ERP} \text{[dBm]} &= \text{EIRP} \text{[dBm]} - G_d \text{[dB]} \\
-&= P_t \cdot G_t - 2.15 \text{\text{[dB]}}
+&= P_t \cdot G_t - 2.15 \text{[dB]}
 \end{aligned}
 $$
 
 ERP는 반파장 다이폴 안테나를 기준으로 하는 지표이므로, 로그 스케일 표현에서 조금 다른 단위를 사용한다. 다이폴 안테나에 대한 상대적 데시벨 dBd(Decibel relative to dipole)은 다음과 같은 관계를 갖는다.  
 
 $$
-G_t \left[\text{dBd}\right] = G_t \left[\text{dBi}\right] - 2.15 \text{\text{[dB]}}
+G_t \left[\text{dBd}\right] = G_t \left[\text{dBi}\right] - 2.15 \text{[dB]}
 $$
 
 ### 예시 계산
