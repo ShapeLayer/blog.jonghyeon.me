@@ -285,3 +285,186 @@ $$
 &= (\frac{3}{40 \pi})^2 (\frac{10^6}{f})^2 (\frac{10^3}{d})^2
 \end{aligned}
 $$
+
+## Friis 자유공간 전파 모델
+
+![](/static/posts/2026-04-12-comm-propagation-in-free-space/friis-model-space.png)  
+
+Fraunhofer 거리 $d_f$ 는 안테나로부터 전파가 안정적인 구면파 형태로 퍼져나가는 원거리 영역(Far-field)의 기준 정의를 정의한다. 송신 안테나의 물리적인 치수 $D$, 반송파의 파장 $\lambda$에 대해 정의된다.  
+
+$$
+d_f = \frac{2 D^2}{\lambda}
+$$
+
+$$
+d_f > D, d_f > \lambda
+$$
+
+이 때 수신 전력은 송신 지점으로부터의 거리의 제곱에 반비례하여 감소한다. 단, 측정 거리 $d$ 는 Fraunhofer 거리 $d_f$ 보다 크거나 같아야 한다.    
+
+$$
+P_r \propto \frac{1}{d^2}
+$$
+
+$$
+P_r(d) = P_r(d_0) \left(\frac{d_0}{d}\right)^2
+$$
+
+$$
+d \geq d_0 \geq d_f
+$$
+
+수신 전력 $P_r$ 은 dB 단위로 표현할 수 있다.  
+
+$$
+\begin{aligned}
+P_r(d) \left[\text{dBm}\right] &= P_r(d_0) \left[\text{dBm}\right] + 20 \log_{10}\left(\frac{d_0}{d}\right) \\
+\end{aligned}
+$$
+
+수신 전력 $P_r$ 과 거리 $d$ 는 제곱의 반비례 관계이므로, dB 단위로 표현할 때, 이를 고려하여야 한다. 거리가 2배 증가하면 수신 전력은 6dB 감소하고, 거리가 10배 증가하면 수신 전력은 20dB 감소한다.  
+
+$$
+\Delta P = 10 \log{(P_r(d)/P_r(d_0))} = 20 \log{\left(d_0 / d\right)}
+$$
+
+$$
+\Delta P_{\text{2 times}} = 20 \log_{10}{\frac{1}{2}} = -6 \text{dB}/\text{oct}
+$$
+
+$$
+\Delta P_{\text{10 times}} = 20 \log_{10}{\frac{1}{10}} = -20 \text{dB}/\text{dec}
+$$
+
+<br />
+
+또 이 모델에서 "안테나 끝단에서 관측점까지의 거리" $r$ 은 대해서는 "안테나 중심에서 관측점까지의 거리" $R$, "안테나 중심에서 끝단까지의 거리" $D$ 에 대해서 정리할 수 있다.  
+
+$$
+r = \sqrt{R^2 + \left(\frac{D}{2}\right)^2}
+$$
+
+이 관계는 테일러 급수 전개를 동원해 근사할 수 있다.  
+
+$$
+\begin{aligned}
+r &= \sqrt{R^2 + \left(\frac{D}{2}\right)^2} \\
+&= R \sqrt{1 + \left(\frac{D}{2R}\right)^2} \\
+&\approx R \left(1 + \frac{1}{2} \left(\frac{D}{2R}\right)^2\right) \\
+&= R + \frac{D^2}{8R}
+\end{aligned}
+$$
+
+이렇게 획득한 근사값을 통해 중심 거리와 끝단 거리의 차이는 $D^2 / 8R$ 로 근사될 수 있음을 알 수 있다.  
+
+$$
+\Delta = r - R \approx \frac{D^2}{8R}
+$$
+
+<br />
+
+전파는 이동 거리에 따라 위상이 변화하므로, 위상 오차가 발생한다. 위상 오차는 거리 차이 $\Delta$ 만큼 발생하는데, 구체적으로는 위상 상수와의 곱으로 표현된다.  
+
+수신점에서 전파를 '평면파'라고 부르기 위해서는 위상 차이가 매우 작아야 한다. 그래서 $\Delta$ 만큼 신호가 틀어질 때, 얼마나 틀어짐을 허용할 것인가 판단하게 된다.  
+
+$$
+\phi = \beta \Delta = \frac{2 \pi}{\lambda} \cdot \frac{D^2}{8R} = \frac{\pi D^2}{4 \lambda R}
+$$
+
+일반적으로는 위상 오차의 허용 범위 $\text{Th}$ 를 $\pi / 8$ 로 설정한다. 그렇게 설정하여 획득한 부등식 관계를 $R$ 에 대해 정리하면, 중심에서 관측점까지의 거리 $R$ 이 안테나의 치수 $D$ 와 파장 $\lambda$ 에 대해서 어떻게 설정되어야 하는지 알 수 있다.  
+
+$$
+\frac{\pi D^2}{4 \lambda R} \leq \text{Th} =\frac{\pi}{8} \Leftrightarrow R \geq \frac{2 D^2}{\lambda}
+$$
+
+## Path Loss: 경로 손실
+
+![](/static/posts/2026-04-12-comm-propagation-in-free-space/pathloss.png)  
+
+수신 전력 $P_r$ 은 자유 공간에서 $P_t$ 와 $G_t$, $G_r$, 을 사용해 표현했었다. 하지만 실제 환경은 자유 공간이 아니고, 신호의 온전한 전파에 적대적이므로, 자유 공간에서의 이론값만큼의 성능을 낼 수 없다.  
+
+실제 환경에서 신호가 전파되는 동안 발생하는 손실을 표현하기 위해서는, 실제로 측정 가능한 값에 대한 관계로 표현할 수 있어야 한다.  
+
+$$
+P_r = \frac{P_t G_t G_r}{L_t L L_r}
+$$
+
+_측정 가능한 값으로 정의한 수신 전력 $P_r$ 은 송신기 출력 전력 $P_t$, 송/수신 안테나의 이득 $G_t$, $G_r$, 송신 및 수신 측의 선로 상의 손실 $L_t$, $L_r$, 송수신 중에 공중을 지나며 발생하는 경로 손실 $L$ 의 관계로 표현된다._
+
+경로손실(Path Loss) $L$ 은 송수신 안테나 사이에 신호가 전파되는 동안 발생하는 손실을 표현하는 지표이다. Path Loss는 송신 전력과 수신 전력의 비율로 정의된다.  
+
+$$
+\begin{aligned}
+L &= \frac{P_{ti}}{P_{ri}} \\
+&= \frac{P_t G_t G_r}{P_r L_t L_r} \\
+L_{\text{dB}} &= 10 \log{\left(\frac{P_{ti}}{P_{ri}}\right)}
+\end{aligned}
+$$
+
+<br />
+
+위의 재정의에서 확인 가능하듯, 안테나 방사전력 EIRP, ERP도 실제로 공중으로 방사되는 유효 전력으로 재정의할 수 있다.  
+
+$$
+\begin{aligned}
+\text{EIRP} &= \frac{P_t G_t}{L_t} = P_{ti} \\
+\text{ERP} &= \text{EIRP} - 2.15 \text{[dB]}
+\end{aligned}
+$$
+
+반파장 다이폴 안테나는 일반적으로 등방성 안테나보다 2.15dB의 이득이 있다. 따라서 ERP는 EIRP에서 2.15dB를 뺀 값으로 표현된다.  
+
+### 예시 계산
+
+기지국 송신선로 손실 $L_t$ 가 10dB, 기지국 송신 전력 $P_t$ 가 10W, 송신 안테나 이득 $G_t$ 가 0dBd, 수신기 단말 손실 $L_t$ 가 2dB, 이동 수신기 이득 $G_r$ 가 12dBd, 이동 수신기 감도 $P_r$ 가 -104dBm 일 때, 아래 표와 같이 단위를 통일하여 계산할 수 있다.  
+
+| 항목 | 원 단위 | dB 단위로 통일 | 비고 |
+| :-: | :-: | :-: | :-: |
+| $G_t$ | 0dBd | 2.15dBi | \*1 |
+| $G_r$ | 12dBd | 14.15dBi | \*1 |
+| $P_t$ | 10W | 10dBW | \*2 |
+| $P_r$ | -104dBm | -134dBW | \*2 |
+| $L_t$ | 10dB | 10dB | |
+| $L_r$ | 2dB | 2dB | |
+
+\*1 안테나 이득을 모두 등방성 안테나(Isotropic) 기준으로 표현하였다. 반파장 다이폴 안테나는 등방성 안테나보다 2.15dB의 이득이 있으므로, dBd로 표현된 안테나 이득을 dBi로 변환하기 위해 2.15dB를 더해 변환한다.  
+\*2 원 단위로 표현된 전력은 W과 dBm이 혼재되어 있다. 그래서 이들 단위를 dBW로 통일해 표현하였다. 10W 는 로그 스케일로 표현하면 $10 \log_{10}{10/1} = 10 \text{dBW}$, -104dBm은 $-104 \text{[dBm]} - 10\log_{10}{\frac{1}{1000}} = -104 - 30 = -134 \text{[dBW]}$ 이다.  
+
+이렇게 표현함으로써, 통일단 단위 시스템에서 사칙연산만을 활용하여 계산하는데 유용하게 된다.  
+
+$$
+\begin{aligned}
+P_r \text{[dBW]} &= P_t \text{[dBW]} + G_t \text{[dBi]} + G_r \text{[dBi]} - L_t \text{[dB]} - L_r \text{[dB]} - L \text{[dB]} \\
+-134 &= 10 + 2.15 + 14.15 - 10 - 2 - L \\
+L &= 10 + 2.15 + 14.15 - (-134) - 10 - 2 \\
+&= 148.3 \text{dB}
+\end{aligned}
+$$
+
+<br />
+
+EIRP:
+
+$$
+\begin{aligned}
+P_{ti} \text{[dBW]} &= P_t \text{[dBW]} + G_t \text{[dBi]} - L_t \text{[dB]} \\
+&= 10 + 2.15 - 10 \\
+&= 2.15 \text{dBW} = 1.64 \text{W}
+\end{aligned}
+$$
+
+<br />
+
+ERP:
+
+$$
+\text{ERP} \text{[dBW]} = \text{EIRP} \text{[dBW]} - 2.15 \text{[dBi]}
+$$
+
+$$
+\begin{aligned}
+L &= P_t \text{[dBW]} + G_t \text{[dBi]} + G_r \text{[dBi]} - P_r \text{[dBW]} - L_t \text{[dB]} - L_r \text{[dB]} \\
+&= 10 + 2.15 + 14.15 - (-134) - 10 - 2 \\
+&= 148.3 \text{dB}
+\end{aligned}
+$$
