@@ -9,26 +9,26 @@ _〈가상현실〉 수업 노트_
 
 ## 오일러각
 
-![](./vr-rotation-in-3d-space/unity-transform.png)  
+![](/static/posts/2026-04-14-vr-rotation-in-3d-space/unity-transform.png)  
 
 3차원 공간에서 어떤 물체의 회전 상태를 표현할 때, $x$, $y$, $z$ 로 위치 값으로 표현한 것에서 기인하여 익숙한 형태인 $(x, y, z)$ 벡터로 표현하곤 한다. 이렇게 표현하고자 한다면, 실제로 이 벡터의 값은 아래와 같이, $x$, $y$, $z$ 축을 기준으로 물체가 얼마나 회전하였는지 나타낼 수 있을 것이다.  
 
-![](./vr-rotation-in-3d-space/rotate-based-in-axes.png)  
+![](/static/posts/2026-04-14-vr-rotation-in-3d-space/rotate-based-in-axes.png)  
 
 
 ## 고정된 축 기준 회전 표현
 
-![](./vr-rotation-in-3d-space/euler-2-stage-rotate.png)  
+![](/static/posts/2026-04-14-vr-rotation-in-3d-space/euler-2-stage-rotate.png)  
 
 하지만 단순 축 기준 표현으로는 물체와 함께 회전축도 회전하므로, 여러 개 축에 대해서 회전을 적용할 때 그 결과가 기대와는 다르게 나타날 것이다. 그래서 회전을 어떤 축에 대한 회전으로 표현하려면 회전을 정의하는 축이 고정되어야 한다.  
 
 축을 고정하여 Roll, Pitch, Yaw 축을 정의하고, 이 축을 기준으로 반시계 방향으로 얼마나 회전하는지 표현할 수 있다.  
 
-![](./vr-rotation-in-3d-space/airplane-rotate-based-in-fixed-axes.png)  
+![](/static/posts/2026-04-14-vr-rotation-in-3d-space/airplane-rotate-based-in-fixed-axes.png)  
 
 <br />
 
-![](./vr-rotation-in-3d-space/fixed-angle-def-airplane.png)  
+![](/static/posts/2026-04-14-vr-rotation-in-3d-space/fixed-angle-def-airplane.png)  
 
 $$
 R = (\theta, \phi, \psi)
@@ -186,7 +186,7 @@ $$
 
 ## 짐벌 구조로 표현하기
 
-![](./vr-rotation-in-3d-space/xyz-gimbal.jpg)  
+![](/static/posts/2026-04-14-vr-rotation-in-3d-space/xyz-gimbal.jpg)  
 
 이렇게 고정 축에 대해서 회전을 정의할 때, 각 축을 짐벌로 표현하여, Pitch를 $x$ 짐벌, Roll을 $y$ 짐벌, Yaw를 $z$ 짐벌로 간주한다. 이렇게 표현하는 데에는, 계산 순서에 따라, 회전이 반영되는 범위가 다르기 때문이다.  
 
@@ -203,7 +203,7 @@ $$
 
 ## 짐벌락
 
-![](./vr-rotation-in-3d-space/gimbal-lock.jpg)
+![](/static/posts/2026-04-14-vr-rotation-in-3d-space/gimbal-lock.jpg)
 
 짐벌 구조에서 Pitch($x$)가 $90^\circ$ 가 되면, Roll($y$)과 Yaw($z$) 축이 일치하면서, 두 회전축이 같은 방향을 바라보게 된다. 이렇게 되면 3차원 공간에서, 3개의 회전 자유도 중 1개를 잃고 2개의 축으로만 회전할 수 있는 상태가 되는데, 이 상태를 짐벌락(Gimbal Lock) 이라고 한다.
 
