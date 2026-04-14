@@ -15,7 +15,7 @@ _〈가상현실〉 수업 노트_
 
 동차좌표계는 원래의 좌표에 새로운 축을 추가하여 $N$ 차원의 값을 $N + 1$ 차원으로 다루는 좌표계이다. 만약 어떤 3차원 좌표 $P(x, y, z)$ 가 있다면, 이 좌표의 동차 좌표는 $\tilde{P}(x, y, z, 1)$ 이다.  
 
-동차좌표를 형성하면서, 새 축에 $1$ 을 추가했다. 이 값은 의도와 목적에 따라 다른 값이 도입될 수 있으나, 좌표계 변환에서 동차좌표계를 사용하는 목적을 고려하면 대개는 $1$ 을 도입한다.  
+동차좌표를 형성하면서, 새 축에 $1$ 을 추가했다. 이 값은 의도와 목적에 따라 다른 값이 도입될 수 있으나, 좌표계 변환에서 동차좌표계를 사용하는 목적을 고려하면 대개는 $1$ 을 도입한다. (점은 보통 마지막 성분을 $1$로, 방향 벡터는 평행 이동의 영향을 받지 않도록 마지막 성분을 $0$으로 설정한다.)  
 
 ## 좌표계 변환에서 동차좌표계의 사용
 
@@ -43,7 +43,7 @@ _〈가상현실〉 수업 노트_
     \end{aligned}
     $$
 
-이 세 변환 계산을 항상 모두 거친다고 가정하고, 변환 수식을 다음과 같이 정리할 수 있다.
+이 세 변환 계산을 항상 모두 거친다고 가정하고, $S \rightarrow R \rightarrow T$ 의  변환 수식을 다음과 같이 정리할 수 있다.
 
 $$
 \begin{cases} 
@@ -126,12 +126,34 @@ $$
 변환의 전파는 연쇄적인 행렬곱으로 쉽게 구현할 수 있다. 인체 모델에서 어깨, 팔꿈치, 손목, 손가락으로 이어지는 변환을 처리하고자 할 때 다음과 같이 작성할 수 있다.  
 
 $$
-M_{final} = M_\text{어깨} \times M_\text{팔꿈치} \times M_\text{손목} \times M_\text{손가락}
+M_{global, 손가락} = M_\text{어깨} \times M_\text{팔꿈치} \times M_\text{손목} \times M_\text{손가락}
 $$
 
 이렇게 하여, $M_\text{어깨}$ 가 회전하는 상황에서는, 그 하위의 팔꿈치, 손목, 손가락이 추가적인 계산 없이, 곱셈 결과에 의해 자동으로 어깨를 축으로 함께 회전할 수 있다.  
 
 만약 동차좌표계를 쓰지 않고 일반 좌표계에서 덧셈(이동)과 곱셈(회전)을 섞어서 이 계층 구조를 구현하려 한다면, 부모가 회전할 때마다 자식의 이동 경로를 매번 새로 계산해야 할 것이다.  
+
+## 복합 변환
+
+![](/static/posts/2026-03-25-vr-coordinate-transform/complex_transform.png)  
+
+동차좌표계를 이용해 이동, 회전, 크기 변환을 하나의 행렬로 수행할 수 있다. 다만 이들 처리를 수행할 때, 변환의 대상이 어떤 계에 속한 일부 객체인지, 혹은 계 전체인지에 따라 복합 변환의 적용 과정이 조금 다르다.  
+
+<br />
+
+계(System) 안의 특정한 정점이 변환의 대상인 경우는 물체 변환(Object Transformation)이라고 한다. 고정된 기준 좌표계에서 물체의 점이나 형상을 직접 이동, 회전, 확대한다.  
+
+$$
+P_\text{world} = T \cdot R \cdot S \cdot P_\text{local} = M \cdot P_\text{local}
+$$
+
+<br />
+
+계 전체가 변환의 대상인 경우에는 좌표계 변환(Coordinate Transformation)을 사용한다. 점을 직접 움직이는 대신, 그 점이 표현되는 로컬 좌표계의 축과 원점을 변환한다. 각 단계의 다음 변환은 이전 단계에서 이미 변형된 로컬 좌표계를 기준으로 적용된다.  
+
+$$
+P_\text{world} = S \cdot R \cdot T \cdot P_\text{local} = M \cdot P_\text{local}
+$$
 
 ## 예시 상황
 
@@ -141,31 +163,25 @@ $$
 2. 반시계 방향으로 90도 회전
 3. $x$ 축으로 3, $y$ 축으로 2 만큼 이동
 
+이 문제는 점 자체를 절대 좌표계에서 직접 변환하는 것이 아니라, 로컬 좌표계가 순차적으로 이동, 회전, 확대되며 정의되는 상황으로 해석할 수 있으므로 좌표계 변환으로 처리한다. 따라서 각 변환 행렬 $S$, $R$, $T$ 가 다음과 같을 때, $P_\text{world}$ 는 $S \cdot R \cdot T \cdot P_\text{local}$ 로 구할 수 있다.
+
 $$
-S = \begin{bmatrix} 2 & 0 & 0 \\ 0 & 2 & 0 \\ 0 & 0 & 1 \end{bmatrix} \\
-R = \begin{bmatrix} 0 & -1 & 0 \\ 1 & 0 & 0 \\ 0 & 0 & 1 \end{bmatrix} \\
-T = \begin{bmatrix} 1 & 0 & 3 \\ 0 & 1 & 2 \\ 0 & 0 & 1 \end{bmatrix}
+\begin{aligned}
+S &= \begin{bmatrix} 2 & 0 & 0 \\ 0 & 2 & 0 \\ 0 & 0 & 1 \end{bmatrix} \\
+R &= \begin{bmatrix} 0 & -1 & 0 \\ 1 & 0 & 0 \\ 0 & 0 & 1 \end{bmatrix} \\
+T &= \begin{bmatrix} 1 & 0 & 3 \\ 0 & 1 & 2 \\ 0 & 0 & 1 \end{bmatrix}
+\end{aligned}
 $$
 
 $$
 \begin{aligned}
-R \cdot S &= \begin{bmatrix} 0 & -1 & 0 \\ 1 & 0 & 0 \\ 0 & 0 & 1 \end{bmatrix} \begin{bmatrix} 2 & 0 & 0 \\ 0 & 2 & 0 \\ 0 & 0 & 1 \end{bmatrix} \\
-&= \begin{bmatrix} 0 & -2 & 0 \\ 2 & 0 & 0 \\ 0 & 0 & 1 \end{bmatrix} \\
-M = T \cdot (R \cdot S) &= \begin{bmatrix} 1 & 0 & 3 \\ 0 & 1 & 2 \\ 0 & 0 & 1 \end{bmatrix} \begin{bmatrix} 0 & -2 & 0 \\ 2 & 0 & 0 \\ 0 & 0 & 1 \end{bmatrix} \\
-&= \begin{bmatrix} 0 & -2 & 3 \\ 2 & 0 & 2 \\ 0 & 0 & 1 \end{bmatrix}
+P_\text{world} &= S \cdot R \cdot T \cdot P_\text{local} \\
+&= \begin{bmatrix} 2 & 0 & 0 \\ 0 & 2 & 0 \\ 0 & 0 & 1 \end{bmatrix} \cdot \begin{bmatrix} 0 & -1 & 0 \\ 1 & 0 & 0 \\ 0 & 0 & 1 \end{bmatrix} \cdot \begin{bmatrix} 1 & 0 & 3 \\ 0 & 1 & 2 \\ 0 & 0 & 1 \end{bmatrix} \cdot \begin{bmatrix} 2 \\ 1 \\ 1 \end{bmatrix} \\
+&= \begin{bmatrix} 2 & 0 & 0 \\ 0 & 2 & 0 \\ 0 & 0 & 1 \end{bmatrix} \cdot \begin{bmatrix} 0 & -1 & 0 \\ 1 & 0 & 0 \\ 0 & 0 & 1 \end{bmatrix} \cdot \begin{bmatrix} 5 \\ 3 \\ 1 \end{bmatrix} \\
+&= \begin{bmatrix} 2 & 0 & 0 \\ 0 & 2 & 0 \\ 0 & 0 & 1 \end{bmatrix} \cdot \begin{bmatrix} -3 \\ 5 \\ 1 \end{bmatrix} \\
+&= \begin{bmatrix} -6 \\ 10 \\ 1 \end{bmatrix}
 \end{aligned}
 $$
-
-병합된 변환 행렬 $M$ 을 다음과 같이 적용해 활용한다:
-
-$$
-\begin{aligned}
-P_\text{world} &= M \cdot P_\text{local} \\
-&= \begin{bmatrix} 0 & -2 & 3 \\ 2 & 0 & 2 \\ 0 & 0 & 1 \end{bmatrix} \begin{bmatrix} 2 \\ 1 \\ 1 \end{bmatrix}
-\end{aligned}
-$$
-
-따라서 $P_\text{world}$ 는 $\tilde{P_\text{world}} = (1, 6, 1)$ 이므로, $(1, 6)$ 이다.
 
 ## 마무리
 
