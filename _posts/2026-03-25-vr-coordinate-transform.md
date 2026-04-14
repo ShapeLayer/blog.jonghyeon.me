@@ -151,8 +151,14 @@ $$
 
 계 전체가 변환의 대상인 경우에는 좌표계 변환(Coordinate Transformation)을 사용한다. 점을 직접 움직이는 대신, 그 점이 표현되는 로컬 좌표계의 축과 원점을 변환한다. 각 단계의 다음 변환은 이전 단계에서 이미 변형된 로컬 좌표계를 기준으로 적용된다.  
 
+변환은 이동 $T$, 회전 $R$, 크기 변환 $S$ 순서로 적용된다. 이동이 회전보다 먼저 적용되면, 이동이 회전에 의해 영향을 받지 않고, 이동이 회전의 축과 원점에 영향을 주지 않기 때문이다.  
+
 $$
-P_\text{world} = S \cdot R \cdot T \cdot P_\text{local} = M \cdot P_\text{local}
+\begin{aligned}
+P_\text{world} &= S \cdot (R \cdot (T \cdot P_\text{local})) \\
+&= S \cdot R \cdot T \cdot P_\text{local} \\
+&= M \cdot P_\text{local}
+\end{aligned}
 $$
 
 ## 예시 상황
