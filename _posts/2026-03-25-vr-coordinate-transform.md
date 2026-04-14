@@ -169,7 +169,7 @@ P_\text{world} &= S \cdot (R \cdot (T \cdot P_\text{local})) \\
 \end{aligned}
 $$
 
-## 예시 상황
+## 예시 상황 \#1
 
 로컬 좌표계의 정점 $P_\text{local} (2, 1)$ 에 대해서, 세 가지 변환을 순서대로 적용할 때, 최종 월드 좌표 $P_\text{world}$ 는 다음과 같이 구할 수 있다.  
 
@@ -195,6 +195,33 @@ P_\text{world} &= S \cdot R \cdot T \cdot P_\text{local} \\
 &= \begin{bmatrix} 2 & 0 & 0 \\ 0 & 2 & 0 \\ 0 & 0 & 1 \end{bmatrix} \cdot \begin{bmatrix} -3 \\ 5 \\ 1 \end{bmatrix} \\
 &= \begin{bmatrix} -6 \\ 10 \\ 1 \end{bmatrix}
 \end{aligned}
+$$
+
+## 예시 상황 \#2
+
+좌표계 $\left\{A\right\}$ 는 전역 좌표계 $\left\{W\right\}$ 에 대해서 $x_\text{W}$ 방향으로 $+3$, $y_\text{W}$ 방향으로 $+2$, 반시계 방향으로 $90 \degree$ 회전한 상태이다.  
+
+$$
+^W T _A = \begin{bmatrix} 0 & -1 & 3 \\ 1 & 0 & 2 \\ 0 & 0 & 1 \end{bmatrix}
+$$
+
+전역 좌표계의 어떤 점 $p$ 가 $(5, 6)$ 일 때, 좌표계 $\left\{A\right\}$ 에서의 점 $p_A$ 는 다음과 같이 구할 수 있다.  
+
+$$
+^W p = \begin{bmatrix} 5 \\ 6 \end{bmatrix}
+$$
+
+$$
+\begin{aligned}
+^A p &= ^A T _W \cdot ^W p \\
+&= (^W T _A)^{-1} \cdot ^W p \\
+&= \begin{bmatrix} 0 & 1 & -2 \\ -1 & 0 & 3 \\ 0 & 0 & 1 \end{bmatrix} \cdot \begin{bmatrix} 5 \\ 6 \\ 1 \end{bmatrix} \\
+&= \begin{bmatrix} 4 \\ -2 \\ 1 \end{bmatrix}
+\end{aligned}
+$$
+
+$$
+\therefore \  ^A p = (4, -2)
 $$
 
 ## 마무리
