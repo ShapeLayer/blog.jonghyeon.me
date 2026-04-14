@@ -126,7 +126,7 @@ $$
 변환의 전파는 연쇄적인 행렬곱으로 쉽게 구현할 수 있다. 인체 모델에서 어깨, 팔꿈치, 손목, 손가락으로 이어지는 변환을 처리하고자 할 때 다음과 같이 작성할 수 있다.  
 
 $$
-M_{global, 손가락} = M_\text{어깨} \times M_\text{팔꿈치} \times M_\text{손목} \times M_\text{손가락}
+M_{global, 손가락} = M_\text{어깨} \cdot M_\text{팔꿈치} \cdot M_\text{손목} \cdot M_\text{손가락}
 $$
 
 이렇게 하여, $M_\text{어깨}$ 가 회전하는 상황에서는, 그 하위의 팔꿈치, 손목, 손가락이 추가적인 계산 없이, 곱셈 결과에 의해 자동으로 어깨를 축으로 함께 회전할 수 있다.  
@@ -144,8 +144,16 @@ $$
 계(System) 안의 특정한 정점이 변환의 대상인 경우는 물체 변환(Object Transformation)이라고 한다. 고정된 기준 좌표계에서 물체의 점이나 형상을 직접 이동, 회전, 확대한다.  
 
 $$
-P_\text{world} = T \cdot R \cdot S \cdot P_\text{local} = M \cdot P_\text{local}
+\begin{aligned}
+P_\text{world} &= T \cdot (R \cdot (S \cdot P_\text{local})) \\
+&= T \cdot R \cdot S \cdot P_\text{local} \\
+&= M \cdot P_\text{local}
+\end{aligned}
 $$
+
+변환은 크기 변환 $S$, 회전 $R$, 이동 $T$ 순서로 적용된다.  
+
+회전 $R$ 과 크기 변환 $S$ 는 원점 $(0, 0, 0)$ 을 기준으로 정의되어있다. 때문에 이동 $T$ 가 회전과 크기 변환보다 먼저 적용되면, 이동이 회전과 크기 변환의 축과 원점에 영향을 주게 된다. 이동 $T$ 의 영향으로 원점으로부터 떨어지게 되면, 나머지 두 변환은 "원래의 원점을 중심으로 하는 거대한 궤도 회전", 혹은 "원점으로부터의 거리 확대"가 되므로, 의도한 변환과는 다른 결과가 나올 수 있다.  
 
 <br />
 
