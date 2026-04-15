@@ -11,10 +11,32 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
       - name: Process deploy configuration
         run: |
           sh deploy.sh
+      - name: Checkout embed feed template
+        uses: actions/checkout@v4
+        with:
+          repository: ShapeLayer/blog.jonghyeon.me-jonghyeon.me-embed-feed
+          path: _embed_feed_template
+      - name: Setup uv
+        uses: astral-sh/setup-uv@v5
+      - name: Build embed feed assets
+        working-directory: _embed_feed_template
+        env:
+          EMBED_FEED_DEFAULT_LIMIT: 5
+          EMBED_FEED_BLOG_BASE_URL: https://blog.jonghyeon.me
+        run: |
+          uv run build \
+            --posts-dir ../_posts \
+            --output-dir ../static/embed-feed \
+            --runtime-dir ./runtime \
+            --default-limit "${EMBED_FEED_DEFAULT_LIMIT}" \
+            --blog-base-url "${EMBED_FEED_BLOG_BASE_URL}"
+      - name: Cleanup embed feed template
+        run: |
+          rm -rf _embed_feed_template
       - name: Commit build to deploy branch
         run: |
           git config user.name github-actions
