@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 거리 계산 충돌 검사의 처리
-date: 2026-04-14
+date: 2026-04-15
 category: [virtual-reality]
 ---
 
