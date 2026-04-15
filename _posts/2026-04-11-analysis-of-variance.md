@@ -247,14 +247,17 @@ summary(aov(df$현재급여 ~ df$성별*df$소수민족))
 다음과 같이 특정한 대상들의 1, 2, 3월의 쇼핑액을 측정한 데이터가 있다. 
 
 ```r
+n_subjects <- nrow(df)
 table <- as.data.frame(
   rbind(
-    cbind(df$쇼핑1월, 1),
-    cbind(df$쇼핑2월, 2),
-    cbind(df$쇼핑3월, 3)
+    cbind(df$쇼핑1월, 1, 1:n_subjects),
+    cbind(df$쇼핑2월, 2, 1:n_subjects),
+    cbind(df$쇼핑3월, 3, 1:n_subjects)
   )
 )
-colnames(table) <- c("쇼핑액","월")
+colnames(table) <- c("쇼핑액", "월", "ID")
+table$월 <- as.factor(table$월)
+table$ID <- as.factor(table$ID)
 ```
 
 | 쇼핑액 `numeric` | 월 `int` |
@@ -270,12 +273,20 @@ colnames(table) <- c("쇼핑액","월")
 이 데이터에 대해 반복측정 분산분석을 실시하면 다음과 같다.  
 
 ```r
-summary(aov(쇼핑액 ~ 월, table))
+summary(aov(쇼핑액 ~ 월 + Error(ID/월), data=table))
 ```
 
 | 요인 <br /> `Source` | 자유도 <br /> `Df` | 제곱합 <br /> `Sum Sq` | 평균제곱 <br /> `Mean Sq` | F 값 <br /> `F value` | 유의확률 <br /> `Pr(>F)` | 유의수준 <br /> `Signif.` |
 | :--- | :---: | :---: | :---: | :---: | :---: | :---: |
-| 월 | 1 | 12,802 | 12,802 | 37.77 | 2.87e-09 | `***` |
-| `Residuals (잔차)` | 268 | 90,841 | 339 | | | |
+| `Residuals (잔차)` | 89 | 37,297 | 419.1 | | | |
 
-월 변수의 유의확률 $p$ 값은 $2.87 \times 10^{-09}$로 유의수준 0.001보다 훨씬 작다. 따라서 귀무가설을 기각하고, 쇼핑액이 월에 따라 유의미하게 다르다고 결론지을 수 있다.  
+_개채(ID) 간 오차 항목_  
+
+| 요인 <br /> `Source` | 자유도 <br /> `Df` | 제곱합 <br /> `Sum Sq` | 평균제곱 <br /> `Mean Sq` | F 값 <br /> `F value` | 유의확률 <br /> `Pr(>F)` | 유의수준 <br /> `Signif.` |
+| :--- | :---: | :---: | :---: | :---: | :---: | :---: |
+| 월 | 2 | 14,060 | 7,030 | 23.93 | 6.23e-10 | `***` |
+| `Residuals (잔차)` | 178 | 52,285 | 294 | | | |
+
+_개체 내 오차(ID:월) 항목_  
+
+월 변수의 유의확률 $p$ 값은 $6.23 \times 10^{-10}$로 유의수준 0.001보다 훨씬 작다. 따라서 귀무가설을 기각하고, 쇼핑액이 월에 따라 유의미하게 다르다고 결론지을 수 있다.  
