@@ -2,7 +2,7 @@
 layout: post
 title: "전남대학교 전산 시스템의 새로운 시도: 비밀번호 없는 로그인, 그리고 고민거리"
 date: 2026-04-07
-category: [essay]
+category: [opinion]
 ---
 
 ## 도입
