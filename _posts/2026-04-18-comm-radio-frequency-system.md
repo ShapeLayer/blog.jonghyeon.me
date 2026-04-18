@@ -139,16 +139,16 @@ $$
 $$
 \begin{aligned}
 d &= \log^{-1}\left(\frac{G - 10 \log e}{10}\right) \\
-&\approx \log^{-1}\left(\frac{2.14}{10}\right) = 1.63 \text{ dBi} \\
+&\approx \log^{-1}\left(\frac{2.14}{10}\right) = 1.64 \\
 \end{aligned}
 $$
 
 $$
-g = d \times e = 1.63 \times 0.85 = 1.39
+g = d \times e = 1.64 \times 0.85 = 1.40
 $$
 
 $$
-G \text{[dBi]} = 10 \log g = 10 \log{1.39} \approx 1.43 \text{ dBi}
+G \text{[dBi]} = 10 \log g = 10 \log{1.40} \approx 1.43 \text{ dBi}
 $$
 
 <br />
