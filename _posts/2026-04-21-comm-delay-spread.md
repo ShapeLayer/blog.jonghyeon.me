@@ -71,7 +71,7 @@ $$
 
 <br />
 
-![](/static/posts/2026-04-20-correlation-coefficient-and-correlation-analysis/delay-spread-in-env.png)  
+![](/static/posts/2026-04-21-comm-delay-spread/delay-spread-in-env.png)  
 _지역 별 Delay Spread $T_d$_
 
 전원 지역은 장애물이 적어 비교적 작은 Delay Spread를 보이는 반면, 도심 지역은 장애물이 많아 큰 Delay Spread를 보인다.  
