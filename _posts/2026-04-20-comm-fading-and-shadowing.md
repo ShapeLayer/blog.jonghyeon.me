@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 페이딩(Fading)과 섀도잉(Shadowing)
-date: 2026-04-21
+date: 2026-04-20
 category: [mobile-communication-system]
 ---
 
@@ -55,7 +55,7 @@ $$
 
 ### Log-normal Shadowing 모델
 
-![](/static/posts/2026-04-21-comm-fading-and-shadowing/log-normal-shadowing-model-graph.png)  
+![](/static/posts/2026-04-20-comm-fading-and-shadowing/log-normal-shadowing-model-graph.png)  
 _Log-normal Shadowing 모델에서의 Shadowing Model은 평균이 $0$ 이고 정규 분포를 따르는 모습을 보인다._
 
 신호가 이동할 때, 건물이나 산과 같은 장애물에 가로막혀 발생하는 신호 세기가 변화하게 된다. Log-normal Shadowing 모델에서는 신호 감쇠량 $PL$ 이 평균이 $0$ 이고 분산이 $\sigma^2$ 인 가우시안 정규분포를 따르는 랜덤 변수라고 가정한다.  
@@ -121,7 +121,7 @@ $$
 
 Tx, Rx 안테나의 높이가 변경되는 것과 같은 환경 변화는 기본 모델에서 Compensation factor를 조정하여 표현할 수 있다.  
 
-![](/static/posts/2026-04-21-comm-fading-and-shadowing/okumura-model-variations.jpeg)  
+![](/static/posts/2026-04-20-comm-fading-and-shadowing/okumura-model-variations.jpeg)  
 
 $$
 \begin{aligned}
@@ -209,23 +209,23 @@ _개방 지역(open)에서의 하타 모델_
 
 ## 실사례에서의 손실 모델 정의와 사용
 
-![](/static/posts/2026-04-21-comm-fading-and-shadowing/3gpp-tr-38.901-pathloss-table.png)  
+![](/static/posts/2026-04-20-comm-fading-and-shadowing/3gpp-tr-38.901-pathloss-table.png)  
 _3GPP TR 38.901에서 제안된 손실 모델의 구체적인 사례_  
 
-![](/static/posts/2026-04-21-comm-fading-and-shadowing/3gpp-tr-36.777-pathloss-table.png)  
+![](/static/posts/2026-04-20-comm-fading-and-shadowing/3gpp-tr-36.777-pathloss-table.png)  
 _무인 항공기의 통신 시나리오를 가정하여 제안된 3GPP TR 36.777에서의 손실 모델 사례_  
 
 실제로 통신 시스템을 설계할 때, 이러한 손실 모델들은 중요한 역할을 한다. 다양한 주체가 이들 모델을 정의하여 3GPP에 제안하게 되는데, 3GPP에서는 제출된 모델들을 검증하여 표준화한다.  
 
 ## Small-scale fading
 
-![](/static/posts/2026-04-21-comm-fading-and-shadowing/var-scale-fading-graph.png)
+![](/static/posts/2026-04-20-comm-fading-and-shadowing/var-scale-fading-graph.png)
 
 Small-scale fading은 수 밀리초 단위로 빠르게 변화하는 페이딩이다. 주로 다양한 요인에 부딪혀 반사되어 발생하는 다중 경로(multipath)에 의해 보강간섭, 상쇄간섭이 발생한다.  
 
 신호 그래프 상에서 매우 빠르고 작은 규모로 흔들리는 형태로 나타나는데, 특정한 주파수에 따라 변화하거나(Frequency-selective fading) 시간의 흐름에 따라 변화하는(Time-selective fading) 형태로 나타날 수 있다.  
 
-![](/static/posts/2026-04-21-comm-fading-and-shadowing/multipath-fading.png)  
+![](/static/posts/2026-04-20-comm-fading-and-shadowing/multipath-fading.png)  
 
 ### Rayleigh fading
 
