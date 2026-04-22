@@ -1,4 +1,11 @@
-직교 코드
+---
+layout: post
+title: 직교코드
+date: 2026-04-22
+category: [mobile-communication-system]
+---
+
+_〈모바일통신시스템〉 수업 노트_
 
 ## Matched Filter (정합 필터)
 
