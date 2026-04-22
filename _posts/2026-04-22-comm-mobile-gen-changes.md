@@ -108,6 +108,9 @@ UE에서 Node B를 거쳐 RNC로 전달되는 신호는, 통신의 유형에 따
 
 ## 5세대 이동통신의 하위호환성
 
+![](/static/posts/2026-04-22-comm-mobile-gen-changes/NSA-Core.webp)  
+_source: 3GPP_
+
 5세대 이동통신은 4세대 이동통신과 하위호환성을 유지한다. 5세대 이동통신 사용자가 4세대 이동통신 사용자와 통신할 수 있게 하기 위함이다. 5세대 이동통신에서의 하위호환성 모드는 NSA(Non-Standalone)라고 불린다. 반대로 5세대 이동통신 네트워크로만 구성하는 경우는 SA(Standalone) 모드로 불린다.  
 
 NSA는 LTE 액세스와 NR 액세스 모두 지원, Duel Connectivity를 제공한다. 이 때 4세대 기지국 eNB가 마스터 노드, 5세대 기지국 gNB가 보조 노드로서 동작하여 4/5세대 네트워크를 상호 운영한다.  
