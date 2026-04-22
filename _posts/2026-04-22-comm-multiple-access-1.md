@@ -9,7 +9,7 @@ _〈모바일통신시스템〉 수업 노트_
 
 <br />
 
-![](./comm-multiple-access-1/resource_allocation.png)  
+![](/static/posts/2026-04-22-comm-multiple-access-1/resource_allocation.png)  
 
 다중접속 기술은 하나의 전송 매체에 연결된 여러 개 단말기가 그 매체에 동시에 접속해 통신할 수 있게 하는 기술이다. 널리 알려진 고전적인 방식에는 시분할 다중접속(TDMA), 주파수분할 다중접속(FDMA), 코드분할 다중접속(CDMA)이 있다.  
 
