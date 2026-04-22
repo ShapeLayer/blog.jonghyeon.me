@@ -26,3 +26,9 @@ Decode-and-Forward는 수신된 신호를 디코딩하여 원래의 데이터로
 <br />
 
 리피터가 신호를 수신하면 LNA(Low Noise Amplifier)를 통과시켜 신호를 증폭한다. 증폭한 신호는 Oscillation Frequency(오실레이션 주파수)와 섞여서, 그 사이의 주파수(중간 주파수, Intermediate Frequency)로 다운컨버전된다. 이렇게 획득한 신호는 증폭을 원하는 주파수의 신호를 필터링하여 High Power Amplifier로 증폭, 커버리지 구멍에 서비스를 제공한다.  
+
+1. LNA(Low Noise Amplifier, 저잡음 증폭기) 통과: 수신된 신호의 노이즈를 최소화
+2. IF(Intermediate Frequency, 중간 주파수)로 다운컨버전: 로컬 오실레이터(Local Oscillator) 주파수와 섞어 신호를 원하는 주파수로 변환
+3. 필터링: 필터를 이용해 원하는 주파수의 신호만 선택, 나머지 잡음이나 타자의 신호는 제거
+4. HPA(High Power Amplifier, 고출력 증폭기) 통과: 추출한 신호를 강한 전력으로 증폭
+5. 방사: 커버리지 홀로 증폭한 신호 방사
