@@ -161,7 +161,9 @@ $$
 
 <br />
 
-$N_I$ 가 6(= 6개의 간섭 고려), $D_i$ 가 모두 $D$ 라고 가정하면, SIR은 다음과 같이 계산된다.  
+![](/static/posts/2026-04-22-comm-cellular-system/6-intercell-interference.png)  
+
+$N_I$ 가 6(= 6개의 간섭), $D_i$ 가 모두 $D$ 라고 가정하면, SIR은 다음과 같이 계산된다.  
 
 $$
 \text{SIR} = \frac{Q^n}{N_I} = \frac{(\sqrt{3N})^n}{6}
