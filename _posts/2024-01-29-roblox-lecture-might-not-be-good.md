@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 로블록스를 컴퓨터 교육에 사용하는 것은 좋지 않을지도 모른다
+title: 로블록스를 컴퓨터 교육에 사용하기란
 date: '2024-01-29'
 categories: [opinion]
 ---

@@ -7,10 +7,6 @@ category: [rewinding]
 
 안녕하세요, &lt;2024 하반기 전남대학교 PIMM 알고리즘 파티&gt; 대회 총괄 박종현<sup>belline0124</sup>입니다.
 
-2023년 대회와 상반기 대회 회고에서 이야기할만한건 다 했고, 더 이상 할 만한 이야기는 없겠다 싶어 이번에는 별다른 이유가 없으면 이런 글은 적지 못하리라 생각했습니다.
-
-하지만 희망은 빗나갔고.. 이번 대회는 지난 두 대회만큼이나 특기할 점이 꽤 있었습니다.
-
 <video src="/static/posts/2024-09-23-rewinding-2024-2-pimm-party/instagram-reels.mp4" loop="loop" muted="muted" autoplay="autoplay" playsinline style="width: 100%"></video>
 
 ## 일 좀 그만 늘려
@@ -19,7 +15,7 @@ category: [rewinding]
 
 대회 TF 역시 예외는 아니어서, PS는 이미 꽤 오랜 시간 동안 하지 못하고 있었고, 출제 문제도 퀄리티 컨트롤이 제대로 되지 않았습니다.
 
-더 이상 문제 상황을 방치할 수는 없었기 때문에 TF 관리에 신경쓰기로 하고 퀄리티 컨트롤에 실패한 문제는 폐기처분했습니다.
+더 이상 문제 상황을 방치할 수는 없었기 때문에 대회를 얼마 남짓 남겼을 시절에 TF 관리에 신경쓰기로 하고 퀄리티 컨트롤에 실패한 문제는 폐기처분했습니다.
 
 <div style="display: flex; justify-items: center; gap: .5em; align-items: center;">
     <img src="/static/posts/2024-09-23-rewinding-2024-2-pimm-party/figa.png" style="object-fit: contain; max-height: 100%"/><img src="/static/posts/2024-09-23-rewinding-2024-2-pimm-party/figb.png" style="object-fit: contain; max-height: 100%" />
