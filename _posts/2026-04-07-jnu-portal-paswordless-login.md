@@ -67,7 +67,9 @@ _금융감독원을 사칭한 피싱사이트[자료=과학기술정보통신부
 
 ![](/static/posts/2026-04-07-jnu-portal-paswordless-login/chrome-jnu-sso.png)  
 
-최근에는 노트북에도 지문 인식, 얼굴 인식과 같은 생체 인증 수단이 계속해서 탑재되고 있고, 태블릿은 원래 노트북보다는 휴대폰에 더욱 가까운 만큼, 휴대폰이 아니어도 패스키 인증을 사용할 수 있게 되고 있습니다. 윈도우 노트북의 생체인증 기능인 [Windows Hello](https://www.microsoft.com/ko-kr/windows/tips/passkeys), 맥북의 [Touch ID](https://support.apple.com/en-by/guide/passwords/mchl4af65d1a/mac)은 이미 패스키를 전면적으로 지원하고 있습니다.  
+최근에는 노트북에도 지문 인식, 얼굴 인식과 같은 생체 인증 수단이 계속해서 탑재되고 있고, 태블릿은 원래 노트북보다는 휴대폰에 더욱 가까운 만큼, 휴대폰이 아니어도 패스키 인증을 사용할 수 있게 되고 있습니다. 윈도우 노트북의 생체인증 기능인 [Windows Hello](https://www.microsoft.com/ko-kr/windows/tips/passkeys), 맥북의 [Touch ID](https://support.apple.com/en-by/guide/passwords/mchl4af65d1a/mac)는 이미 패스키를 전면적으로 지원하고 있습니다. (이에, [다른 저자는 오늘날 노트북은 모두 보안 수단이 내장되어있다](https://ahelwer.ca/post/2026-05-08-builtin-u2f/)고 하기도 했습니다.[^1])  
+
+[^1]: 물론 다소 다른 의미로 요약한 문장이므로, 모든 노트북 제품에 생체 인증 수단이 내장되어있다는 뜻은 아니지만, 다중 인증으로 활용할 수 있는 수단은 모두 충분하다는 뜻입니다.
 
 뿐만 아니라 [크롬 비밀번호 관리자](https://support.google.com/chrome/answer/13168025)나, 1Password, Bitwarden과 같은 비밀번호 관리자 프로그램에, 기기에 저장된 패스키 인증 정보를 동기화하여 사용할 수도 있습니다. 패스키 인증을 위해서 패스키 정보가 등록된 기기를 따로 꺼내지 않고, 지금 사용하고 있는 기기에서 바로 패스키 인증을 할 수 있는 것입니다.  
 
