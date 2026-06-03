@@ -168,7 +168,7 @@ $$
 ### IQ Modulation & Up-conversion
 
 $$
-s_{BB}(t) \Rightarrow \text{IQ Modulation \& Up-conversion} \Rightarrow s(t)
+s_{BB}(t) \Rightarrow \text{IQ Modulation / Up-conversion} \Rightarrow s(t)
 $$
 
 <br />
@@ -219,7 +219,7 @@ $$
 ### Down-conversion & IQ Demodulation
 
 $$
-y(t) \Rightarrow \text{Down-conversion \& IQ Demodulation} \Rightarrow s_{BB}(t)
+y(t) \Rightarrow \text{Down-conversion / IQ Demodulation} \Rightarrow s_{BB}(t)
 $$
 
 <br />
