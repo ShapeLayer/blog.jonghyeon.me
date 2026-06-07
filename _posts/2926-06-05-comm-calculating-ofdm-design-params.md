@@ -7,7 +7,7 @@ category: [mobile-communication-system]
 
 _〈모바일통신시스템〉 수업 노트_
 
-\
+<br />
 
 OFDM 시스템을 구성하는 주요한 파라미터 몇 개를 알고 있다면, 이 시스템의 스펙을 확인할 수 있다.  
 
