@@ -18,7 +18,7 @@ _좌측의 작은 도형이 LTE의 목표, 큰 도형이 NR의 목표_
 | Feature | LTE | NR |
 | :-: | :-: | :-: |
 | Waveform | DL: CP-OFDM<br />UL: DFT-s-OFDM | DL: CP-OFDM<br />UL: CP-OFDM or DFT-s-OFDM |
-| Modulation | QPSK, 16QAM, 64QAM | pi/2-BPSK<sup>1bit/sym</sup>, QPSK<sup>2bit/sym</sup>, 16QAM<sup>4bit/sym</sup>, 64QAM<sup>6bit/sym</sup>, 256QAM<sup>8bit/sym</sup> |
+| Modulation | QPSK, <br /> 16QAM, <br />  64QAM | pi/2-BPSK<sup>1bit/sym</sup>, <br /> QPSK<sup>2bit/sym</sup>, <br /> 16QAM<sup>4bit/sym</sup>, <br /> 64QAM<sup>6bit/sym</sup>, <br /> 256QAM<sup>8bit/sym</sup> |
 | MIMO Max Layers | 4(DL) | 16(DL), 8(UL) |
 
 MIMO Layer는 MIMO 시스템에서 동시에 전송할 수 있는 데이터 스트림의 개수이다. DFT-s-OFDM은 1랭크 MIMO 시스템이라고 하는데, 이 때의 랭크가 1개의 UE가 가질 수 있는 MIMO Layer의 개수를 의미한다.  
