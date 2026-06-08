@@ -108,6 +108,6 @@ $$
 
 Special Subframe은 세 파트로 구성된다. DwPTS는 다운링크 전송이 끝나고 업링크로 전환하기 위한 시간으로, 기지국이 다운링크를 보내다가 업링크로 전환할 때, 스위칭 시간이 요구되는데, 이 전환 시간 동안 신호가 뒤엉키지 않도록 하는 역할을 한다. GP는 Guard Period로, DwPTS와 UpPTS 사이의 간격으로, 업링크와 다운링크가 서로 간섭하지 않도록 하는 역할을 한다. UpPTS는 업링크 전송이 시작되기 전에 필요한 시간으로, 단말이 업링크 전송을 준비한다. 단말이 기지국에 망 접속을 요청하는 임의접근(RACH) 프리앰블이나 사운딩 참조 신호(SRS)를 전송한다.
 
-![](/static/posts/2026-06-07-lte-overview/spcial-subframe.png)
+![](/static/posts/2026-06-07-comm-lte-overview/spcial-subframe.png)
 
 그래서 Special Subframe에서는 통신 전환을 위한 준비작업은 수행되어도, 실제로 의미있는 데이터 교환은 이루어지지 않는다.  
