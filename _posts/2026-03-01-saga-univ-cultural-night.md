@@ -23,6 +23,14 @@ category: [review]
 
 그래서 처음에는 무대 행사 대신 체험형 부스를 내고 [〈matcha〉](https://store.steampowered.com/app/2090580/Matcha/) 게임을 플레이하는 프로그램을 운영하는 안을 내었다. 이 게임은 한글 자모의 조합 원리를 이용해서, 2048이나 [슬라이딩 퍼즐](https://namu.wiki/w/%EC%8A%AC%EB%9D%BC%EC%9D%B4%EB%94%A9%20%ED%8D%BC%EC%A6%90)처럼 자모 문자를 이동하여, 한국어를 모르는 사람이 한국어 단어를 완성해내는 것을 목표로 하는 게임이다. 
 
+<style>
+iframe {
+  width: 100%;
+  height: 35cqw;
+  margin: .6em 0;
+}
+</style>
+
 <iframe src="https://www.youtube.com/embed/GV_le1AVn_E?si=t6MMuSmqCyW4QODI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="width: 100%"></iframe>
 
 나는 한국어를 모르는 사람들도 플레이할 수 있는 게임임을 어필했지만, 팀 내에서는 한글을 모르는 사람들이 이 게임을 플레이할 수 있겠냐는 이견이 계속해서 제기되었다. 또 다들 체험부스 운영이 자신의 노트북을 차출하는 형태가 될 것을 내심 우려하는 것 같았다. 내 이름이 올라간 이상, 내 노트북은 기어이 사용할 생각이었지만, 회전률을 생각하면 내 노트북 한대로는 불충분했다. 필요하다면 이 게임을 베이스로 커스텀한 새 게임을 만들겠다고까지 했으나, 결국 이 의견은 지지를 얻지 못했다.  
