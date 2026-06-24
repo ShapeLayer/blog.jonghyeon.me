@@ -2,7 +2,7 @@
 layout: post
 title: 일본에 교환학생까지 가서 한국 문화로 퀴즈쇼를 열다니,
 date: '2026-03-01'
-category: [review]
+category: [rewinding]
 ---
 
 ## 도입
