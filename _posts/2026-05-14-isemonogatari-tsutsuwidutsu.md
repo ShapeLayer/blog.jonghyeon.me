@@ -2,7 +2,7 @@
 layout: post
 title: "고전 《우물벽(筒井筒)》에서 확인할 수 있는 '미야비'의 정신"
 date: 2026-05-14
-category: [essay]
+category: [report]
 ---
 
 _이세모노가타리, 《우물벽》의 역과 해석_

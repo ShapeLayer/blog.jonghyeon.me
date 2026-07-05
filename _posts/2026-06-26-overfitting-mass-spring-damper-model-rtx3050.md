@@ -2,8 +2,8 @@
 layout: post
 title: 하드웨어 과적합 접근으로 Mass Spring Damper 시스템 최적화하기
 date: 2026-06-26
-category: [computer-science]
-tag: [virtual-reality]
+category: [report]
+tag: [virtual-reality, cuda, computer-science]
 ---
 
 <style>

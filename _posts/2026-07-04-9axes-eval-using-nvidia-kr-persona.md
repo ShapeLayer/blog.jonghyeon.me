@@ -2,7 +2,7 @@
 layout: post
 title: 대한민국 국민 묘사 합성 페르소나의 9Axes 평가 수행
 date: 2026-07-04
-categories: [essay]
+categories: [report]
 ---
 
 
