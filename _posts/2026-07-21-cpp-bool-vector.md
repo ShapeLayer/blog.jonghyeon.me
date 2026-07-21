@@ -30,6 +30,7 @@ int_container.push_back(1);
 printf("int_container[0]: %d\n", int_container[0]);
 std::vector<long long int> lld_container;
 lld_container.push_back(1);
+printf("lld_container[0]: %d\n", lld_container[0]);
 /**
  * warning: format specifies type 'int' but the argument has type 'value_type' (aka 'long long') [-Wformat]
  */
