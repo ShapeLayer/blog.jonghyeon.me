@@ -1,6 +1,6 @@
 ---
 layout: post
-title: C++ std::vector&ltbool&gt;
+title: C++ std::vector&lt;bool&gt;
 date: 2026-07-21
 categories: [c++]
 tags: [c++, std]
