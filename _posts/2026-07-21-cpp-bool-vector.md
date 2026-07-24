@@ -104,6 +104,52 @@ flag_vec.at(2): 1
 
 <br />
 
+또, 여러 개 인덱스 값이 같은 주소를 가리키고 있으므로 다른 데이터 타입보다도 더 스레드 안전하지 않다. 서로 다른 스레드에서 서로 다른 인덱스 값을 동시에 바꾸려고 할 때, 인덱스가 다르더라도 인접한 인덱스라면 잠재적으로 같은 주소를 가리킬 수도 있으므로, 한 스레드가 수정한 값을 다른 스레드가 덮어써버릴 수도 있다.  
+
+```c++
+int main() {
+  std::vector<bool> vec(8, false);
+
+  std::thread t1([&]() { vec[0] = true; });
+  std::thread t2([&]() { vec[1] = true; });
+
+  t1.join();
+  t2.join();
+  
+  return 0;
+}
+```
+
+```sh
+clang++ -fsanitize=thread -g ...
+```
+
+```
+==================
+WARNING: ThreadSanitizer: data race (pid=30200)
+  Write of size 8 at 0x000109b003a0 by thread T2:
+    ...
+
+  Previous write of size 8 at 0x000109b003a0 by thread T1:
+    ...
+    
+  Location is heap block of size 8 at 0x000109b003a0 allocated by main thread:
+    ...
+
+  Thread T2 (tid=126228, running) created by main thread at:
+    ...
+
+  Thread T1 (tid=126227, finished) created by main thread at:
+    ...
+
+SUMMARY: ThreadSanitizer: data race __bit_reference:146 in std::__1::__bit_reference<std::__1::vector<bool, std::__1::allocator<bool>>, true>::operator=[abi:nqe210106](bool)
+==================
+ThreadSanitizer: reported 1 warnings
+...
+```
+
+<br />
+
 > std::vector should not be specialized with bool. 
 
 이와 같이 예측 불가능한 동작으로 인해 MISRA C++에서는 `std::vector<bool>`의 사용을 금지하기까지 했다. [MISRA C++2023 Rule 26.3.1](https://kr.mathworks.com/help/bugfinder/ref/misracpp2023rule26.3.1.html)
