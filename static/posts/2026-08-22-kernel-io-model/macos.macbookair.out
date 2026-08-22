@@ -1,0 +1,6 @@
+Supports: kqueue
+FD: 5000, Loop: 10000
+
+select, avg 356.24 us
+poll, avg 571.44 us
+kqueue, avg 0.57 us

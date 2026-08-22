@@ -1,0 +1,6 @@
+Supports: epoll
+FD: 5000, Loop: 10000
+
+select, avg 254.49 us
+poll, avg 237.15 us
+kqueue, avg 4.46 us
