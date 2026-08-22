@@ -114,7 +114,7 @@ int epoll_wait(int n;
 
 ### Multiplexing 구현 성능 비교
 
-[성능 실험 코드](https://github.com/shapelayer/blog.jonghyeon.me/tree/main/static/2026-08-22-kernel-io-model)
+[성능 실험 코드](https://github.com/shapelayer/blog.jonghyeon.me/tree/main/static/posts/2026-08-22-kernel-io-model)
 
 이 실험 코드에서는 수천개의 파일 디스크립터를 생성해 감시하도록 한 뒤, 임의의 fd에 이벤트를 발생시켰다. 그 후 select, poll, epoll/kqueue를 사용하여 이벤트가 발생한 fd를 감지하는데 걸리는 시간을 측정하였다. 그 결과는 아래와 같다.  
 
