@@ -146,6 +146,38 @@ Macbook Air (M4, 2024):
 
 `select`, `poll`은 감시하는 fd 수가 늘어날수록 성능이 저하되었지만, `epoll`/`kqueue`는 감시하는 fd 수가 늘어나더라도 성능이 저하되지 않았다.  
 
-파일 디스크립터를 5000개로 늘려도 `select`는 panic하지 않았는데, 이는 현대 OS에서 구현의 시스템 실패를 막기 위해 유동적으로 처리 가능하게 구현했기 때문으로 보인다.  
+### (여담) `select`에서 FD_SETSIZE를 초과하는 fd에 대해
 
-또한 macOS 환경에서는 `poll`이 `select`보다 성능이 저하되었는데, 이것은 오늘날 macOS와 맥북에서만 볼 수 있는 특화된(혹은 특이한) 하드웨어와 커널 구현 때문인 것으로 보인다.  
+위 실험에서 파일 디스크립터를 5000개를 생성했음에도, 코드가 `select`를 콜하면서 실패하지 않았다. 처음에는 현대 OS에서 구현의 시스템 실패를 막기 위해 유동적으로 처리 가능하게 구현했기 때문이라고 생각했는데, 실제로는 undefined behavior였고 실행 시점의 앞뒤 배경 상 우연히 실패하지 않았던 것이었다.  
+
+```
+ShapeLayer ➜ /workspaces/sync (main) $ gcc  -O2 -D_FORTIFY_SOURCE=2 io_multi_perf_test.c
+io_multi_perf_test.c: In function ‘main’:
+io_multi_perf_test.c:70:5: warning: ignoring return value of ‘write’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+   70 |     write(pipes[MAX_FD_COUNT - 1][1], &dummy, 1); // 마지막 FD에 이벤트 발생
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+io_multi_perf_test.c:75:5: warning: ignoring return value of ‘read’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+   75 |     read(pipes[MAX_FD_COUNT - 1][0], &dummy, 1); // clear
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+io_multi_perf_test.c:93:5: warning: ignoring return value of ‘write’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+   93 |     write(pipes[MAX_FD_COUNT - 1][1], &dummy, 1);
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+io_multi_perf_test.c:95:5: warning: ignoring return value of ‘read’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+   95 |     read(pipes[MAX_FD_COUNT - 1][0], &dummy, 1);
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+io_multi_perf_test.c:117:5: warning: ignoring return value of ‘write’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+  117 |     write(pipes[MAX_FD_COUNT - 1][1], &dummy, 1);
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+io_multi_perf_test.c:119:5: warning: ignoring return value of ‘read’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+  119 |     read(pipes[MAX_FD_COUNT - 1][0], &dummy, 1);
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+```
+
+```
+@ShapeLayer ➜ /workspaces/sync (main) $ ./a.out
+Supports: epoll
+FD: 5000, Loop: 10000
+
+*** bit out of range 0 - FD_SETSIZE on fd_set ***: terminated
+Aborted (core dumped)
+```
