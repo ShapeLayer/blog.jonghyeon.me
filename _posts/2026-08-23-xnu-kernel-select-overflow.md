@@ -55,7 +55,7 @@ macOS가 커널로 사용하고 있는 XNU는 [apple-oss-distribution/xnu](https
   }
 #undef getbits
 ```
-_발췌: [`sys_generic.c`:1317](https://github.com/apple-oss-distributions/xnu/blob/rel/xnu-12377/bsd/kern/sys_generic.c#L1317); `select`가 콜되면, 구현에서 커널 공간으로 마스크를 복사하는 것을 알 수 있다._  
+_발췌: [`sys_generic.c`:1317](https://github.com/apple-oss-distributions/xnu/blob/rel/xnu-12377/bsd/kern/sys_generic.c#L1317); `select`가 호출되면, 구현에서 커널 공간으로 마스크를 복사하는 것을 알 수 있다._  
 
 <br />
 
@@ -185,7 +185,7 @@ __darwin_check_fd_set_overflow(int n, const void *fd_set, int unlimited_select)
 
 때문에 감시할 파일 디스크립터 목록을 `FD_SET` 매크로로 생성하면 처리 불가능한 파일 디스크립터 값이 무시되어, `select`가 호출될 때 undefined behavior가 발생하지 않았다.  
 
-## 추가 근거: macOS 환경 실험에서 `select`와 `poll`의 성능 차이 값
+## (추가) macOS 환경 실험에서 `select`와 `poll`의 성능 차이 값
 
 Macbook Air (M4, 2024):
 - 환경
@@ -200,7 +200,7 @@ Macbook Air (M4, 2024):
 
 앞서 수행한 실험에서, `poll`은 `select`의 성능 개선 구현임에도 불구하고 `select`보다 호출 처리에 오랜 시간이 소요된 것이 확인되었다. 이것 역시 `select`가 호출되기 이전에 `FD_SET`에 의해 처리 불가능한 파일 디스크립터 값이 무시되어, `select`가 처리할 값이 `poll`보다 적었기 때문으로 추정된다.  
 
-## 추가 실험
+## (추가) `FD_SET`을 사용하지 않은 파일 디스크립터 목록을 `select`에 전달
 
 `FD_SET` 매크로에 의해 처리 불가능한 파일 디스크립터 값이 무시되었기 때문에, `FD_SET` 매크로를 사용하지 않고 직접 지정한 값을 `select`로 호출해보았다.  
 
