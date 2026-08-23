@@ -151,7 +151,7 @@ Macbook Air (M4, 2024):
 위 실험에서 파일 디스크립터를 5000개를 생성했음에도, 코드가 `select`를 콜하면서 실패하지 않았다. 처음에는 현대 OS에서 구현의 시스템 실패를 막기 위해 유동적으로 처리 가능하게 구현했기 때문이라고 생각했는데, 실제로는 undefined behavior였고 실행 시점의 앞뒤 배경 상 우연히 실패하지 않았던 것이었다.  
 
 ```
-ShapeLayer ➜ /workspaces/sync (main) $ gcc  -O2 -D_FORTIFY_SOURCE=2 io_multi_perf_test.c
+ShapeLayer ➜ /workspaces/sync (main) $ gcc -O2 -D_FORTIFY_SOURCE=2 io_multi_perf_test.c
 io_multi_perf_test.c: In function ‘main’:
 io_multi_perf_test.c:70:5: warning: ignoring return value of ‘write’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
    70 |     write(pipes[MAX_FD_COUNT - 1][1], &dummy, 1); // 마지막 FD에 이벤트 발생
@@ -181,3 +181,5 @@ FD: 5000, Loop: 10000
 *** bit out of range 0 - FD_SETSIZE on fd_set ***: terminated
 Aborted (core dumped)
 ```
+
+(추가) 하지만 위 증상은 macOS에서는 재현되지 않았다. 또한 macOS에서 실험 코드가 `select`보다 `poll`이 더 느리게 측정된 것도 특기할만 한데, 이것에 관해서는 추가로 확인해 [별도 포스트를 작성]()하였다.  
