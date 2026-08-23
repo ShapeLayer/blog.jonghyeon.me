@@ -6,7 +6,7 @@ categories: [paper]
 tags: [paper, acm/jacm, operating-system, real-time-systems]
 ---
 
-Liu, Chung Laung, and James W. Layland. "Scheduling algorithms for multiprogramming in a hard-real-time environment." Journal of the ACM (JACM) 20.1 (1973): 46-61.
+[Liu, Chung Laung, and James W. Layland. "Scheduling algorithms for multiprogramming in a hard-real-time environment." Journal of the ACM (JACM) 20.1 (1973): 46-61.](https://dl.acm.org/doi/10.1145/321738.321743)
 
 ## 배경
 
