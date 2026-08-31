@@ -1,6 +1,6 @@
 ---
 layout: post
-title: macOS select(2)가 오버플로우되지 않는 상황에 대해
+title: macOS, xnu 커널에서 select(2)가 오버플로우되지 않는 상황에 대해
 date: '2026-08-23'
 category: [operating-system]
 ---
