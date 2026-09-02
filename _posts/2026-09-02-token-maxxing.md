@@ -47,7 +47,7 @@ _&lt;2028 글로벌 지능 위기&gt;의 해설 영상_
 
 보고서는 더 이상 지능이 인간의 전유물이 아니게 된 세상, 지능에 매겨지던 가격이 현저히 저렴해지는 세상을 묘사하고 있었다. 나도 내심 불안감에 휩싸였지만, 이내 금융시장의 호들갑이겠거니 하며 안정을 찾기 위해 노력했다.
 
-그로부터 얼마 지나지 않아, 앤트로픽은 미토스로 이름 붙인 모델 하나로 미국 행정부 전체를 [움직이게 만들었다.](https://premium.sbs.co.kr/article/8ZiIqZOlh) [#](https://www.nars.go.kr/report/view.do?cmsCode=CM0043&brdSeq=49446)
+그로부터 얼마 지나지 않아, 앤트로픽은 미토스로 이름 붙인 모델 하나로 미국 행정부를 [움직이게 만들었다.](https://premium.sbs.co.kr/article/8ZiIqZOlh) [#](https://www.nars.go.kr/report/view.do?cmsCode=CM0043&brdSeq=49446)
 
 ## 사례: 비전공자 개발 프로젝트 팀에서 활동하기
 
