@@ -71,10 +71,9 @@ iframe {
 
 ## 방법론
 
-![](/static/posts/2026-06-26-overfitting-mass-spring-damper-model-rtx3050/unity-impl-struct.svg)  
-_간략화된 구현 구조_  
+이 작업에서는 발산 문제로부터 상대적으로 자유로운 Implicit Euler Method를 사용하도록 수치적분법을 변형했다. Implict Euler Method을 사용하면서 대응해야 할 것에는 높은 컴퓨팅 비용이 있었다.  
 
-이번 시도에서는 CPU에 의해 처리되는 MonoBehaviour 구현을 GPU에서 처리하도록 하고, 발산 문제로부터 상대적으로 자유로운 Implicit Euler Method를 사용하도록 수치적분법을 변형했다. 또한 이 GPU 처리에 대해서 조금 더 설계 환경에 맞춰 최적화할 수 있도록 CUDA 처리를 구현하고 동적 링크하여 유니티 런타임에서 사용했다.  
+Implict Euler Method의 높은 컴퓨팅 비용은, 렌더링 타이밍으로부터 물리 계산 타이밍을 분리하여 선형 보간하도록 하고, MonoBehaviour 구현으로 CPU에서 동작하게 되는 렌더링 로직을 GPU를 사용하도록 수정하였으며, 이 렌더링 처리를 RTX 3050에 맞게 튜닝하여 RTX 3050에서 성능 개선을 획득할 수 있도록 해, 런타임이 감당 가능하도록 완화하였다.  
 
 이 작업 구현의 최적화 대상 PC 환경은 다음과 같다.
 
@@ -82,11 +81,58 @@ _간략화된 구현 구조_
 | :-: | :-: |
 | CPU | AMD Ryzen 5 5600 6-Core Processor (12 CPUs), ~3.5GHz |
 | RAM | 32GB |
-| GPU | NVIDIA GeForce RTX 3050 (VRAM 8GB) |
+| GPU | NVIDIA GeForce RTX 3050 (VRAM 8GB, GA106, Compute Capability 8.6, L2 2MB) |
 | OS | Windows 11 Education |
-| CUDA | CUDA 13.2 |
+
+## 렌더링 타이밍으로부터 물리 계산 타이밍 분리
+
+Implicit Euler는 한 스텝마다 선형 시스템을 풀어야 하므로, 모든 물리 틱에서 실행하면 비용이 빠르게 커진다. 따라서 이 구현은 매 틱마다 적분하지 않는다. `GetFramesSkippingCompute(timeStep)`가 계산을 건너뛸 횟수 $n$을 정하고, `FixedUpdate`가 $n+1$회 호출되는 동안 실제 적분은 처음 한 번만 수행한다. 나머지 호출에서는 이미 계산해 둔 두 상태 사이를 선형보간하여 메시만 갱신한다.
+
+엄밀히 말하면 여기서 분리한 대상은 Unity의 `Update` 렌더 콜백과 물리 계산이 아니다. 현재 구현에서 `Update`는 `Time.fixedDeltaTime`과 측정값을 갱신하고, 적분과 `UpdateVisualMesh` 호출은 모두 `FixedUpdate`에서 일어난다. 즉 고정 시간 간격의 물리 틱 안에서 **비싼 적분 빈도**와 **메시를 갱신하는 빈도**를 분리한 것이다. 실제 화면 표시 시점은 이후 Unity 렌더링 파이프라인이 결정한다.
+
+계산 틱에는 먼저 현재 파티클 위치를 `previousSimulatedPositions`에 복사한다. 그 뒤 CUDA 또는 C# Implicit Euler로 다음 상태를 계산해 `currentSimulatedPositions`에 저장한다. 메시 갱신은 다음 식의 $\alpha$를 사용한다.
+
+$$
+\alpha = \frac{\texttt{interpolationStep}}{\texttt{interpolationStepCount}},
+\qquad
+x_{\mathrm{visual}} = (1-\alpha)x_{\mathrm{previous}} + \alpha x_{\mathrm{current}}
+$$
+
+여기서 `interpolationStepCount = n + 1`이다. 계산 직후에는 $\alpha=1/(n+1)$이고, 건너뛴 틱마다 한 단계씩 증가하여 다음 계산 직전에는 $\alpha=1$이 된다. 따라서 파티클의 내부 상태는 다음 적분 결과로 즉시 진행하지만, 화면 메시는 이전 결과에서 새 결과까지 여러 틱에 걸쳐 이동한다. 이 방식은 메시의 갱신을 멈추지 않으면서 solver 호출 수를 $1/(n+1)$ 수준으로 낮춘다.
+
+건너뛴 틱 수만큼 시뮬레이션 시간이 느려지지 않도록, 실제 적분에 전달하는 시간 간격도 확대해야 한다. 구현의 C# 경로 `IntegrateImplicitEuler`와 CUDA 경로 `TryStepNativeImplicit`은 모두 다음의 유효 시간 간격을 사용한다.
+
+$$
+h_{\mathrm{effective}} = \texttt{timeStep} \times (n+1)
+$$
+
+예를 들어 `timeStep = 0.01`이면 `GetFramesSkippingCompute`는 $n=2$를 반환한다. 따라서 3회의 `FixedUpdate`마다 한 번 적분하고, 적분에는 $0.03\,\mathrm{s}$를 사용하며, 메시는 $1/3$, $2/3$, $3/3$의 비율로 보간된다. $n$만 곱하면 이 경우 $0.02\,\mathrm{s}$만 진행되어 시뮬레이션 시간이 실제 시간의 2/3 속도로 흐르므로, 반드시 $n+1$을 사용해야 한다.
+
+이 기법은 화면상 갱신 빈도와 solver 호출 횟수에 직접 영향을 준다. 그러므로 아래 CUDA 커널 최적화의 성능을 평가할 때에는 계산 생략 및 보간을 적용한 효과와 커널 자체의 효과를 분리해 측정해야 한다. 또한 적분 구간을 넓히는 대가로 한 스텝의 수치 오차 특성도 달라지므로, 프레임레이트뿐 아니라 동일한 유효 시간 간격에서의 안정성과 거동도 함께 확인해야 한다.
+
 
 ## RTX 3050 (8GB) 과적합 최적화
+
+### CG 반복에서 발생하는 호스트 동기화 제거
+
+Conjugate gradient(CG) 반복에서 계산하는 $\alpha$, $\beta$, breakdown 플래그는 모두 디바이스 메모리의 스칼라 슬롯에 둔다. 내적의 reduction 결과를 호스트로 복사해 이 계수를 계산하면, 복사 지점마다 CUDA 스트림이 동기화되어 GPU의 작업 대기열이 끊긴다.  
+
+<br />
+
+$$
+\alpha = \frac{r \cdot r}{p \cdot A p}, \quad \beta = \frac{r_{\text{new}} \cdot r_{\text{new}}}{r \cdot r}
+$$
+
+각 계수는 reduction 커널에서 합계를 얻은 스레드가 바로 계산한다. CG 반복 전체를 호스트 개입 없이 CUDA 작업 대기열에 적재하고, 호스트는 일정한 반복 묶음이 끝난 뒤에만 잔차를 확인한다. 이미 수렴한 상태에서 몇 회를 더 반복하는 비용보다, 매 반복마다 파이프라인을 비우는 비용이 훨씬 크기 때문이다.  
+
+### 커널 런치 횟수 축소
+
+이 시스템에서는 커널 하나가 수 마이크로초 안에 끝나므로, 호스트가 커널을 작업 대기열에 넣는 과정도 유의미한 비용으로 고려할 수 있다. 따라서 CG 반복은 역할이 이어지는 점별 연산을 하나의 커널에 결합하여, 반복당 여섯 번의 커널 실행으로 구성한다.
+
+- 내적 2단계 reduction 커널은 합계를 얻은 스레드에서 $\alpha$ 또는 $\beta$까지 계산한다.
+- 잔차 갱신 커널은 갱신 직후의 잔차로 $r \cdot r$ 부분합도 계산한다.
+- 탐색 방향 $p$ 갱신 커널은 다음 반복에 사용할 질량 항 $M p$를 함께 기록한다. 행렬-벡터 곱은 스프링 항을 누적하는 커널로 완성한다.
+- 힘 초기화 커널은 초기 상태 $x_0$, $v_0$도 함께 저장한다.
 
 ### `float4` 사용
 
@@ -95,6 +141,10 @@ NVIDIA GPU의 어셈블리 명령어에는 128비트의 데이터를 한 번에 
 <br />
 
 `float4` 데이터 타입은 16바이트(128비트)로 크기로 구성된 벡터 타입으로, 이 데이터 타입을 사용하면 위의 `LDG.E.128`(store는 `STG.E.128`) 명령으로 컴파일된다. 주소가 16바이트에 맞춰 정렬되어있고, 접근 패턴이 연속적이라면, GPU는 메모리 접근을 벡터화하여 128비트 단위로 데이터를 고속으로 읽고 쓸 수 있다. [^1][^2]  
+
+<br />
+
+다만 이 이득이 어디에서 발생하는지는 구분해야 한다. 위 설명의 전제인 '접근 패턴이 연속적'이라는 조건은 파티클 인덱스를 순차적으로 순회하는 점별 연산 커널에서만 성립한다. 스프링 커널은 스프링의 양 끝점 인덱스를 경유해서 위치를 읽으므로 접근이 연속적이지 않고, 캐시 라인 활용률도 낮아진다. 또한 이 구현은 `w` 성분을 사용하지 않으므로 메모리의 25%가 패딩으로 소비된다. 대역폭에 제약되는 워크로드에서는 이 낭비가 벡터화 이득을 상쇄할 수 있다.
 
 [^1]: "5.4.2.3. Built-in Types", CUDA C++ Programming Guide https://docs.nvidia.com/cuda/cuda-programming-guide/05-appendices/cpp-language-extensions.html#built-in-types
 
@@ -112,17 +162,13 @@ GPU에서 레지스터는 각 스레드가 가장 빠르게 접근할 수 있는
 
 <br />
 
-그래서 이 구현에서는 병목을 피하기 위한 방법으로 스레드 당 레지스터 수를 제한하도록 하였다. 블록당 최대 256개의 스레드, 하나의 SM에 최소 2개의 블록이 상주하도록 컴파일러에 레지스터 사용 상한 추론 힌트를 주었다.  
+`__launch_bounds__`는 커널의 레지스터 부하에 따라 다르게 지정한다. 점별 연산 커널과 reduction 커널은 스레드당 레지스터 사용량이 낮으므로, SM당 여섯 블록, 즉 1536스레드가 상주하도록 최대 점유율을 목표로 한다.
 
 $$
-256 \times 2 = 512 \text{ threads per SM}
+256 \times 6 = 1536 \text{ threads per SM}
 $$
 
-RTX 3050의 SM 당 레지스터 파일 크기, 64K개의 32-bit 레지스터를 고려하면, 스레드당 레지스터 수의 상한은 대략 128개 즈음으로 계산 가능하다.  
-
-$$
-\frac{64 \times 1024}{256 \times  2} = 128 \text{ registers per thread}
-$$
+반면 스프링 커널은 두 끝점의 위치와 속도, 방향 벡터와 여러 스칼라를 동시에 유지하므로 레지스터 압박이 크다. 이 커널에는 SM당 네 블록, 1024스레드를 지정한다. 최대 점유율을 강제해 local memory 스필이 발생하는 상황을 피하면서, 간접 메모리 접근의 지연을 숨길 만큼의 워프를 확보하기 위한 선택이다.
 
 ### 읽기 전용 데이터로 플래그 (`__ldg`)
 
@@ -138,17 +184,21 @@ Mass-Spring-Damper 시스템의 implicit 적분 경로는 conjugate gradient(CG)
 
 [^5]: "4.13. L2 Cache Control" CUDA Programming Guide, https://docs.nvidia.com/cuda/cuda-programming-guide/04-special-topics/l2-cache-control.html
 
-RTX 3050이 기반하고 있는 NVIDIA Ampere 아키텍처는 L2 캐시 내 데이터 잔류(residency)를 제어할 수 있다. 그래서 이 구현에서는 L2 전체 용량의 75%를 persisting 데이터용 예산으로 산정하고 예약 설정했다. 75%는 임의로 설정한 값으로, 일반 데이터가 L2 캐시를 사용할 수 있도록 여유를 남기기 위해 25%를 남겨두었다.[^6]  
+RTX 3050이 기반하는 NVIDIA Ampere 아키텍처는 L2 캐시 내 데이터 잔류(residency)를 제어할 수 있다. 이 구현은 persisting cache 예산을 L2 전체 용량의 고정 비율로 정하지 않고, 실제로 상주시킬 버퍼의 크기에서 산정한다.[^6]
 
 [^6]: "4.13.4. L2 Persistence Example", CUDA Programming Guide, https://docs.nvidia.com/cuda/cuda-programming-guide/04-special-topics/l2-cache-control.html#l2-persistence-example
 
 <br />
 
-구체적으로 `cudaDeviceSetLimit`을 사용해 제한을 설정했는데, 이 방법으로는 영역의 크기를 예약하는 정도만 수행할 수 있다. 따라서 어떤 버퍼가 실제로 L2에 우선 보존할 수 있게 대상 주소 범위를 persisting으로 플래그하는 접근 정책을 함께 적용하였다. (`cudaAccessPolicyWindow`의 `hitProp = cudaAccessPropertyPersisting`)
+`cudaDeviceSetLimit`은 L2에서 persisting 용도로 사용할 수 있는 영역의 크기를 정한다. 대상 버퍼가 실제로 이 영역을 우선 사용하도록, 대상 주소 범위에는 `cudaAccessPolicyWindow`의 `hitProp = cudaAccessPropertyPersisting` 접근 정책도 적용한다.
+
+<br />
+
+선형화된 스프링 계수 배열은 약 34KB이며, RTX 3050의 L2 캐시 2MB보다 훨씬 작다. 필요 이상의 set-aside 영역을 예약하면 위치, 속도, 잔차 벡터가 사용할 L2 공간만 줄어든다. 따라서 대상 크기를 128KB 단위로 올림하고, 하드웨어 상한 및 L2 용량의 1/4을 넘지 않도록 제한한다. 이 상한은 메시가 커졌을 때 persisting 영역이 캐시 대부분을 점유하지 않도록 한다.
 
 ### 분기에서 비롯되는 제어 해저드 최소화
 
-주어진 수치적분 처리와 Mass-Spring-Damper 시스템을 따르는 예제 모델에서는 몇 개 점을 고정시켜놓고 나머지 점만 움직이도록 하여 움직임을 확인하는 시나리오가 있다. 이 때 사전에 주어진 구현에서는 고정 점을 처리하기 위해 분기문을 사용했는데, 잠재적으로 branch divergence가 발생할 수 있다.  
+Mass-Spring-Damper 시스템의 천과 볼륨 메시 시나리오에서는 일부 점을 고정하고 나머지 점만 움직인다. 점이 고정되어 있는지에 따라 분기하면, 하나의 워프 안에서 고정점과 자유점이 섞일 때 branch divergence가 발생할 수 있다.
 
 $$
 x' = \begin{cases}
@@ -157,9 +207,9 @@ x, & \text{otherwise}
 \end{cases}
 $$
 
-따라서 지금 처리하려는 점이 고정되는지 여부를 불리언 플래그 대신 스케일 값으로서 연산 처리하여 분기가 발생하지 않도록 했다.  
+힘 초기화, CG 초기화, 결과 커밋, 내적 부분합, CG 갱신 커널은 고정 여부를 불리언 분기 대신 0 또는 1의 스케일 값으로 계산한다. 고정점에서는 갱신량이 0이 되고, 자유점에서는 원래 식과 같은 갱신량이 계산된다.
 
-### 내적 계산 중 부분합 처리 (`__shfl_down_sync`, `cooperative_groups::memcpy_async`)
+### 내적 계산 중 부분합 처리 (`__shfl_down_sync`)
 
 시스템의 수치적분 계산에서는 내적 계산이 반복적으로 사용되고 있다. 병렬 처리 효율을 위해 스레드별로 데이터를 분할해 병렬로 내적 처리시킬 수 있는데, 이 때 각 스레드의 곱셈 결과를 합산하는 부분합 reduction 과정이 수행되어야 한다.  
 
@@ -173,35 +223,23 @@ $$
 
 <br />
 
-**블록별 부분합의 후속 reduction에서 비동기 복사 사용**
+**블록별 부분합의 후속 reduction**
 
 하나의 스레드 블록만으로 전체 입력에 대해 reduction을 수행하려고 하면 블록 하나가 처리할 수 있는 스레드 수의 한계로 인해, 소수의 블록만 실행되어 SM 대부분이 유휴 상태로 남게 된다. 따라서 대규모 데이터 입력을 처리하게 되는 부분을 분리해 위의 `__shfl_down_sync`를 사용하도록 하고, 이후 각 블록에서 계산된 부분합을 다시 reduction하도록 만들었다.  
 
-서로 다른 block의 값을 합산할 때는 `__shfl_down_sync`를 사용할 수 없다. `__shfl_down_sync`는 같은 warp 내부 lane 사이의 레지스터 값 교환만 지원하기 때문이다. 따라서 각 block에서 계산한 부분합은 global memory에 저장하고, 이후 별도의 reduction 단계에서 이 값을 다시 읽어 처리해야 한다. 이때 다음 단계의 커널에서는 블록별로 처리된 부분합 데이터를 공유 메모리로 staging한 뒤 블록 내부 reduction을 수행할 수 있다.[^8]  
+서로 다른 block의 값을 합산할 때는 `__shfl_down_sync`를 사용할 수 없다. `__shfl_down_sync`는 같은 warp 내부 lane 사이의 레지스터 값 교환만 지원하기 때문이다. 따라서 각 block에서 계산한 부분합은 global memory에 저장한 뒤, 별도 커널에서 다시 reduction한다.[^8]
 
 [^8]: Mark Harris, "Optimizing Parallel Reduction in CUDA" Optimizing Parallel Reduction in CUDA
 
-공유 메모리를 사용하는 과정 중에, 동기적인 복사를 사용하면 데이터가 공유 메모리에 준비될 때까지 스레드들이 대기하여 메모리 지연이 그대로 노출된다.  
+### shared memory carveout 설정
 
-그래서 데이터를 비동기적 복사 구현 `cooperative_groups::memcpy_async`를 사용하여, 복사와 계산을 겹치도록 만들었다. 이 구현을 사용하면 복사가 진행되는 동안 이전에 준비된 데이터에 대한 계산을 수행하도록 구성할 수 있다.[^9]  
-
-[^9]: "Cooperative Groups", CUDA Programming Guide, https://docs.nvidia.com/cuda/cuda-programming-guide/04-special-topics/cooperative-groups.html
-
-### shared memory carveout 선호 설정
-
-RTX 3050과 같은 Ampere 계열 GPU에서는 각 SM의 on-chip memory가 L1 cache와 공유 메모리 두 역할을 모두 수행할 수 있게 하는 unified data cache 구조를 갖는다. CUDA는 이 자원을 커널 단위로 L1 cache와 공유 메모리 중 어느 쪽에 더 많이 배분할지에 대한 선호 설정을 제공한다. 본 구현에서는 `cudaFuncSetAttribute(..., cudaFuncAttributePreferredSharedMemoryCarveout, ...)`와 `cudaFuncSetCacheConfig(..., cudaFuncCachePreferShared)`를 사용하여 커널 단위에서 공유 메모리를 선호하도록 설정하였다.[^10][^11]
+RTX 3050과 같은 Ampere 계열 GPU에서는 각 SM의 on-chip memory가 L1 cache와 공유 메모리 두 역할을 모두 수행할 수 있게 하는 unified data cache 구조를 갖는다. CUDA는 이 자원을 커널 단위로 L1 cache와 공유 메모리 중 어느 쪽에 더 많이 배분할지에 대한 선호 설정을 제공한다.[^10][^11]
 
 [^10]: "5.3. Memory Hierarchy" CUDA C++ Programming Guide, Release 13.3, https://docs.nvidia.com/cuda/pdf/CUDA_C_Programming_Guide.pdf
 
 [^11]: "cudaFuncSetCacheConfig, 6.7. Execution Control" CUDA Toolkit Documentation, https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__EXECUTION.html#group__CUDART__EXECUTION_1g6699ca1943ac2655effa0d571b2f4f15
 
-특히 내적 과정 중의 부분 커널 `DotPartialKernel`과 부분합을 reduce하는 커널 `ReducePartialSumKernel`은 reduction 과정에서 공유 메모리를 직접 사용한다. `DotPartialKernel`은 warp별 부분합을 저장하기 위해 공유 메모리 버퍼를 사용하고, `ReducePartialSumKernel`은 트리 reduction을 위해 버퍼와 `cooperative_groups::memcpy_async`의 global-to-shared staging 영역을 사용한다. 따라서 이들 커널에서는 L1 캐시보다 공유 메모리 용량 확보가 성능상 더 중요하다.  
-
-이에 따라 공유 메모리를 사용하는 reduction 계열 커널에는 `cudaFuncAttributePreferredSharedMemoryCarveout` 값을 100(아키텍처가 지원하는 최대치 100%로 공유 메모리 carveout을 선호하라는 의미이다.)으로 설정하여 공유 메모리 편에 자원을 배분하는 것을 선호하도록 하였고, `cudaFuncSetCacheConfig`에는 `cudaFuncCachePreferShared`를 지정하였다. 이와 같이 SM의 L1-공유 메모리 자원 중 가능한 많은 부분을 공유 메모리로 배분하는 것을 선호하도록 힌트하였다.  
-
-반면 공유 메모리를 사용하지 않는 점별 연산, 스프링 연산, 벡터 갱신 및 결과 커밋 커널에는 동일한 설정을 적용하지 않았다. 이러한 커널들은 주로 global memory의 read-only 데이터를 `__ldg` 등을 통해 읽는 방식이 지배적이므로, 공유 메모리를 불필요하게 크게 설정하면 오히려 L1 캐시로 사용할 수 있는 용량이 줄어들 수 있다. 따라서 공유 메모리를 사용하지 않는 커널에는 carveout을 공유 메모리 최소 선호 방향으로 설정하고, L1 캐시를 우선하도록 구성하였다.
-
-이와 같이 공유 메모리 사용 여부에 따라 커널을 구분하여 차등 적용했다. 공유 메모리를 사용하는 reduction 및 협조적 복사 커널에는 공유 메모리 선호 설정을 적용하고, 공유 메모리를 사용하지 않는 연산 중심 커널에는 L1 캐시 선호 설정을 적용함으로써 각 커널의 메모리 접근 특성에 맞는 온칩 메모리 활용을 유도하였다.  
+이 구현의 가장 큰 공유 메모리 사용량은 워프당 `float` 하나이고, 256스레드 블록에서는 32바이트에 불과하다. 반면 `DotPartialKernel`은 두 벡터와 마스크를 global memory에서 연속적으로 읽고, 스프링 커널은 인덱스를 경유해 위치를 수집한다. 두 경우 모두 L1 캐시 용량이 중요하므로, 모든 커널에 L1 캐시 선호 설정을 적용했다.  
 
 ## 결과
 
