@@ -3,7 +3,7 @@ layout: post
 title: A constraint-based god-object method for haptic display 리뷰
 date: 2026-07-02
 categories: [paper]
-tags: [paper, ieee/rsj, vr, haptic]
+tags: [paper, ieee/rsj, vr, haptics]
 ---
 
 [Zilles, Craig B., and J. Kenneth Salisbury. "A constraint-based god-object method for haptic display." Proceedings 1995 ieee/rsj international conference on intelligent robots and systems. Human robot interaction and cooperative robots. Vol. 3. IEEE, 1995.](https://ieeexplore.ieee.org/document/525876)

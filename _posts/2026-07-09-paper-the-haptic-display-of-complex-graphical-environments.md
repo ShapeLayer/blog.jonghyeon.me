@@ -3,7 +3,7 @@ layout: post
 title: The haptic display of complex graphical environments 리뷰
 date: 2026-07-09
 categories: [paper]
-tags: [paper, vr, haptic]
+tags: [paper, vr, haptics]
 ---
 
 [Ruspini, Diego C., Krasimir Kolarov, and Oussama Khatib. "The haptic display of complex graphical environments." Proceedings of the 24th annual conference on Computer graphics and interactive techniques. 1997.](https://dl.acm.org/doi/10.1145/258734.258878)
