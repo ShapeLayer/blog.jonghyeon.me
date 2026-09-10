@@ -8,6 +8,8 @@ tags: [paper, sensors, vr, haptics]
 
 [Abdulali, Arsen, Ruslan Rakhmatov, Tatyana Ogay, and Seokhee Jeon. "Data-Driven Modeling and Rendering of Force Responses from Elastic Tool Deformation." Sensors 18.1 (2018): 237.](https://doi.org/10.3390/s18010237)
 
+〈가상현실〉 수업 참고자료
+
 ## 도입
 
 숟가락 끝을 책상에 대고 손잡이를 누르면 숟가락이 휘면서 손에 반작용 힘이 전달된다. 같은 거리만큼 누르더라도 숟가락의 어느 부분이 닿았는지, 어떤 방향으로 눌렀는지에 따라 힘은 달라진다. 도구가 크게 휘어서 다른 부분까지 책상에 닿으면 힘의 변화도 복잡해진다. 이 연구에서는 이러한 탄성 도구의 변형에서 발생하는 힘을 햅틱 장치로 재현한다. 실제 도구를 누르면서 접촉 위치와 변형 상태, 반작용 힘을 기록하고, 이 데이터로 학습한 모델이 가상 도구의 상태에 맞는 힘을 출력하도록 한다.  
