@@ -2,7 +2,7 @@
 layout: post
 title: C# 이벤트 트리거와 핸들링
 date: '2024-03-28'
-categories: [language, csharp]
+categories: [language]
 tags: [language, csharp]
 ---
 

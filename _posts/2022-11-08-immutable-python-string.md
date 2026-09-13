@@ -2,7 +2,7 @@
 layout: post
 title: 파이썬 문자열 타입의 불변 특성
 date: '2022-11-08'
-categories: [language, python]
+categories: [language]
 tags: [python, computer-science]
 ---
 
