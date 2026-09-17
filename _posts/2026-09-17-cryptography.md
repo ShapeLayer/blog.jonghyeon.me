@@ -428,6 +428,7 @@ $$
     <td>l<br />100</td>
     <td>e<br />000</td>
     <td>r<br />101</td>
+  </tr>
 </table>
 
 <br />
