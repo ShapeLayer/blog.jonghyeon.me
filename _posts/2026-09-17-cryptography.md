@@ -189,7 +189,12 @@ Vigenere Cipher에서는 카이사르 암호의 변형으로, 문자열(혹은 �
     <th>k</th>
   </tr>
   <tr>
-    <td colspan="6">C (3만큼 shift)</td>
+    <td>C (3만큼 shift)</td>
+    <td>A (1만큼 shift)</td>
+    <td>T (20만큼 shift)</td>
+    <td>C</td>
+    <td>A</td>
+    <td>T</td>
   </tr>
   <tr>
     <td>d</td>
