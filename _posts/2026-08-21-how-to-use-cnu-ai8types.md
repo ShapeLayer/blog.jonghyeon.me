@@ -2,7 +2,7 @@
 layout: post
 title: 전남대학교 AI 8종의 사용 방법에 관하여
 date: '2026-08-21'
-category: [essay]
+category: [ai-product]
 ---
 
 전남대학교에서는 다른 학교와 마찬가지로 학생들에게 [유료 인공지능 사용권을 제공](https://news.kbs.co.kr/news/pc/view/view.do?ncd=8432968)하고 있고, 심지어 다른 학교에 비해 훨씬 빠르게 제공하기 시작했다. 하지만 주요한 프론티어 랩과 직접 계약을 맺지 않고, 서드파티로부터 리셀 계약을 맺어 공급하고 있기 때문에, 다소 생소하거나 불편함을 느끼는 학생들이 많다.  
@@ -19,7 +19,7 @@ category: [essay]
 
 ![](/static/posts/2026-08-21-how-to-use-cnu-ai8types/api-key.png)  
 
-학교의 AI 공급자는 API를 제공하고 있고, [자체 규격의 API](https://hello.timelygpt.co.kr/api/v2/chat/sdk) 외에도 [OpenAI Compatible한 OpenRouter 프록시](https://github.com/timely-hub/timely-gpt-sdk/blob/master/OPENAI_SDK_GUIDE.md)를 제공하고 있다. 문서에 언급되어있듯, 오픈라우터의 모든 모델을 사용할 수 있는 것은 아니지만, 주요한 프론티어 모델들은 전부 사용할 수 있다.  
+학교의 AI 공급자는 API를 제공하고 있고, [자체 규격의 API](https://hello.timelygpt.co.kr/api/v2/chat/sdk) 외에도 [OpenAI Compatible한 OpenRouter 프록시](https://github.com/timely-hub/timely-gpt-sdk/blob/master/OPENAI_SDK_GUIDE.md)를 제공하고 있다. 문서에 언급되어있듯, 오픈라우터의 모든 모델을 사용할 수 있는 것은 아니지만, 주요한 프론티어 모델들은 전부 사용할 수 있다. 심지는 Max 플랜이 있어야 하는 페이블5나, 많은 쿼터를 필요로 하는 아스트라도 쿼터 내에서 자유롭게 사용할 수 있다. (사용하는 사람이 적으니, 쿼터도 크게 잡혀서 만족스럽게 사용할 수 있었다.)  
 
 <br />
 
