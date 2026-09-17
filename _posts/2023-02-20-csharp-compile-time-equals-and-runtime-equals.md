@@ -2,7 +2,7 @@
 layout: post
 title: C#의 컴파일타임 상등 비교와 런타임 상등 비교
 date: '2023-02-20'
-categories: [language, csharp]
+categories: [language]
 tags: [language, csharp]
 ---
 
