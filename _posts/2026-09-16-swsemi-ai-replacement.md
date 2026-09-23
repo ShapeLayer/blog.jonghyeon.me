@@ -5,7 +5,9 @@ date: '2026-09-16'
 category: [essay]
 ---
 
-_〈컴퓨터융합세미나〉 세미나 시후감 과제 1차_
+_〈컴퓨터융합세미나〉 세미나 시후감 과제 1차_  
+
+["한국도 예외 아니다." AI가 절대 대체하지 못할 사람ㅣ지식인초대석 EP.69](https://www.youtube.com/watch?v=mOGzaJRFv2E)
 
 <br />
 
