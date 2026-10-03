@@ -10,7 +10,7 @@ tags: [circuits]
 
 마인크래프트의 버튼은 한 번 누르면 짧은 시간동안 레드스톤 신호를 활성화시키는 아이템이다. 푸시 버튼과 동일하게 작동하는 것이다. 하지만 어릴적에는 푸시버튼보다는 누르는 스위치에 더욱 익숙했기 때문에, 스위치를 버튼으로 생각한 나는 이 동작이 자연스럽다고 생각하지 않았다.  
 
-<video width="320" height="240" controls>
+<video controls style="display: block; width: 100%; max-width: 640px; height: auto;">
   <source src="/static/posts/2026-10-03-flip-flops/mc-flipflop.mp4" type="video/mp4">
   <source src="/static/posts/2026-10-03-flip-flops/mc-flipflop-fallback.mp4" type="video/mp4">
 </video>
