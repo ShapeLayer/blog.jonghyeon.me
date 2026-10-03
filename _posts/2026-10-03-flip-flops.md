@@ -44,7 +44,7 @@ _T Flip-flop K 의 회로도 [#](https://minecraft.wiki/w/Redstone_circuits/Memo
     
 | 플립플롭 | 입력 | 출력 | 클록 상승 에지`CLK=1`에서의 동작 |
 | :-: | :-: | :-: | :-: |
-| SR | $S$, $R$, $CLK$ | $Q$, $\overline{Q}$ | `S=set, R=reset` <br /> `0, 0` → 유지 <br /> `0, 1` → 리셋(Q=0) <br /> `1, 0` → 세트(Q=1) <br /> `1, 1` → 금지 |
+| SR | $S$, $R$, $CLK$ | $Q$, $\overline{Q}$ | `S=set, R=reset` <br /> `0, 0` → 유지 <br /> `0, 1` → 리셋(Q=0) <br /> `1, 0` → 세트(Q=1) <br /> `1, 1` → undefined |
 | D | $D$, $CLK$ | $Q$, $\overline{Q}$ | `D=Data` <br /> `D=0` → `Q=0` 저장 <br /> `D=1` → `Q=1` 저장 |
 | JK | $J$, $K$, $CLK$ | $Q$, $\overline{Q}$ | `J=set, K=reset` <br /> `0, 0` → 유지 <br /> `0, 1` → 리셋(Q=0) <br /> `1, 0` → 세트(Q=1) <br /> `1, 1` → 반전 |
 | T | $T$, $CLK$ | $Q$, $\overline{Q}$ | `T=Toggle` <br /> `T=0` → 유지 <br /> `T=1` → 반전 |
