@@ -17,7 +17,7 @@ M.2 나사를 따로 구매하겠다는 생각은 하지 않았는데, 집에 �
 
 ## OS 셋업
 
-OS는 SD 카드에 플래시해 부팅한 후, 부트로더와 OS 이미지를 SSD 편에 옮기는 것으로 NVMe 사용을 설정할 수 있다. [오렌지파이 공식 페이지](http://www.orangepi.org/html/hardWare/computerAndMicrocontrollers/service-and-support/Orange-pi-5.html)에서 OS를 다운로드받을 수 있다. 개인적으로 데스크톱 환경은 불필요하므로 포함되어있지 않은 우분투 빌드를 받았다.
+SD 카드에 OS 이미지를 기록해 부팅한 뒤, NVMe 부팅용 부트로더를 보드의 SPI 플래시에 설치하고 OS 이미지를 SSD에 기록하면 SD 카드 없이 부팅할 수 있다. [오렌지파이 공식 페이지](http://www.orangepi.org/html/hardWare/computerAndMicrocontrollers/service-and-support/Orange-pi-5.html)에서 OS를 다운로드받을 수 있다. 개인적으로 데스크톱 환경은 불필요하므로 포함되어있지 않은 우분투 빌드를 받았다.
 
 ![스크린샷 2026-10-08 오후 5.14.42.png](/static/posts/2026-10-08-orangepi5-nvme/2026-10-08_5.14.42.png)
 
@@ -62,7 +62,7 @@ scp Orangepi5_1.2.4_ubuntu_jammy_server_linux6.1.99.img orangepi@192.168.1.132:/
 
 ![스크린샷 2026-10-08 오후 6.21.06.png](/static/posts/2026-10-08-orangepi5-nvme/2026-10-08_6.21.06.png)
 
-SSD에 OS 이미지를 작성하기 전에 장치 이름을 확인한다. 다른 수정이 없었다면 `nvme0n1`로, `/dev/nvme0n1`에 마운트 된 것을 확인할 수 있다.
+SSD에 OS 이미지를 작성하기 전에 장치 이름을 확인한다. 다른 수정이 없었다면 블록 장치 `/dev/nvme0n1`로 나타나는 것을 확인할 수 있다.
 
 ```bash
 sudo fdisk -l | grep "nvme"
@@ -100,7 +100,7 @@ sudo nand-sata-install
 
 ![image.png](/static/posts/2026-10-08-orangepi5-nvme/image%203.png)
 
-다시 접속을 시도하면 SSD에 플래시된 이미지를 사용하며 호스트 해시가 달라져, SSH 클라이언트 런타임이 접속을 거부하므로, `known_hosts` 의 해당하는 값을 지우고 접속하여야 한다.
+다시 접속을 시도하면 SSD에 플래시된 이미지를 사용하며 호스트 키가 달라져, SSH 클라이언트 런타임이 접속을 거부하므로, `known_hosts` 의 해당하는 값을 지우고 접속하여야 한다.
 
 ![image.png](/static/posts/2026-10-08-orangepi5-nvme/image%204.png)
 
