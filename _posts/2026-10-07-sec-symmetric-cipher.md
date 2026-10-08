@@ -149,16 +149,16 @@ $$
 
 $$
 R_{i - 1} = L_i
-$$
+$$  
 $$
 L_{i - 1} = R_i \oplus F(L_i, K_i)
-$$
+$$  
 
 를 반복하면 평문 $P$ 를 획득할 수 있다.  
 
 $$
 P = (L_0, R_0)
-$$
+$$  
 
 ### Substitution-Permutation Network
 
@@ -273,16 +273,20 @@ MAC은 여러가지 방법으로 메시지를 검증한다. 대표적인 예로 
 
 $$
 C_0 = E(IV \oplus P_0, K)
-$$
+$$  
+
 $$
 C_1 = E(C_0 \oplus P_1, K)
-$$
+$$  
+
 $$
 C_2 = E(C_1 \oplus P_2, K)
-$$
+$$  
+
 $$
 \vdots
-$$
+$$  
+
 $$
 C_{N-1} = E(C_{N-2} \oplus P_{N-1}, K) = \text{MAC}
 $$
@@ -299,10 +303,11 @@ $$
 
 $$
 C_2 = E(C_1 \oplus P_2, K) \ne E(C'_1 \oplus P_2, K) = C'_2
-$$
+$$  
+
 $$
 \vdots
-$$
+$$  
 
 $$
 MAC \ne \text{MAC}
