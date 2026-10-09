@@ -2,7 +2,7 @@
 layout: post
 title: SDN과 NFV
 date: '2025-11-20'
-categories: [lecture-network]
+categories: [network]
 tags: [network, security, zero-trust]
 ---
 
