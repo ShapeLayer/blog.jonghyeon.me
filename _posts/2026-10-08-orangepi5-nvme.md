@@ -1,7 +1,7 @@
 ---
 layout: post
 title: '오렌지파이 5 NVMe SSD 셋업'
-date: '2026-10-07'
+date: '2026-10-08'
 category: [infra]
 ---
 
