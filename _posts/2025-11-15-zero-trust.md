@@ -2,7 +2,7 @@
 layout: post
 title: 제로 트러스트 보안 모델
 date: '2025-11-15'
-categories: [lecture-network]
+categories: [network]
 tags: [network, security, zero-trust]
 ---
 
