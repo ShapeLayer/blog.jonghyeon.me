@@ -154,7 +154,7 @@ const int& ref = __internal_unique_name;
 
 이후에는 이 분류가 조금 더 세분화되었다.  
 
-![](./lvalue-and-rvalue/cpp17.png)  
+![](/static/posts/2026-10-13-lvalue-and-rvalue/cpp17.jpg)  
 
 표현식은 `glvalue`(Generalized L-Value)이거나 `rvalue`이다. `glvalue`는 `lvalue`이거나 `xvalue`(eXpiring value)이다. `rvalue`는 `prvalue`(pure rvalue)이거나 `xvalue`이다.  
 
