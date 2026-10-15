@@ -102,6 +102,10 @@ $S = 193$ 을 만드는 SIK 가중치의 조합을 찾으면, $193 = 120 + 57 + 
 
 [〈RSA〉 참조](/posts/2026-10-12-sec-rsa/)
 
+## Diffie-Hellman
+
+[〈Diffie-Hellman〉 참조](/posts/2026-10-15-sec-diffie-hellman/)
+
 ## Misconceptions on PK
 
 공개 키 암호화가 오늘날 널리 쓰이게 되면서, 몇 가지 오해가 생겼다.  
