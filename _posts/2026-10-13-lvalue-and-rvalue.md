@@ -102,7 +102,7 @@ int main() {
 error: non-const lvalue reference to type 'int' cannot bind to a temporary of type 'int'
 ```
 
-`int& yref = 0`과 `fn(10)`은 모두 변수 선언을 거쳐 유의미한 메모리 공간을 가진 사용하지 않았다. `0`과 `10`은 단지 어느 한 순간 레지스터에 잠시 설정되어 사용된다.  
+`int& yref = 0`과 `fn(10)`은 모두 변수 선언을 거쳐 유의미한 메모리 공간을 가지는 과정이 동반되지 않았다. `0`과 `10`은 단지 어느 한 순간 레지스터에 잠시 설정되어 사용된다.  
 
 ```cpp
 void fn(int& x) { }
