@@ -106,6 +106,10 @@ $S = 193$ 을 만드는 SIK 가중치의 조합을 찾으면, $193 = 120 + 57 + 
 
 [〈Diffie-Hellman〉 참조](/posts/2026-10-15-sec-diffie-hellman/)
 
+## Elliptic Curve
+
+[〈Elliptic Curve Cryptography〉 참조](/posts/2026-10-15-sec-elliptic-curve-cryptography/)
+
 ## Misconceptions on PK
 
 공개 키 암호화가 오늘날 널리 쓰이게 되면서, 몇 가지 오해가 생겼다.  
