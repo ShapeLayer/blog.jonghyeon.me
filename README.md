@@ -1,14 +1,77 @@
-blog.jonghyeon.me
----
+<!-- markdownlint-disable-next-line -->
+<div align="center">
 
-[![Build Blog](https://github.com/ShapeLayer/blog.jonghyeon.me/actions/workflows/build_blog.yml/badge.svg)](https://github.com/ShapeLayer/blog.jonghyeon.me/actions/workflows/build_blog.yml)
+  <!-- markdownlint-disable-next-line -->
+  # Chirpy Jekyll Theme
 
-박종현 개인 블로그 아티클 리포지토리
+  A minimal, responsive, and feature-rich Jekyll theme for technical writing.
 
-이 리포지토리는 블로그 컨텐츠 부분만 포함하고 있습니다. 블로그 테마와 레이아웃 정의 파일은 이 리포지토리에서 확인할 수 없습니다.  
+  [![CI][badge-ci]][ci]&nbsp;
+  [![Codacy Badge][badge-codacy]][codacy]&nbsp;
+  [![GitHub license][badge-license]][license]&nbsp;
+  [![Gem Version][badge-gem]][gem]&nbsp;
+  [![Open in Dev Containers][badge-open-container]][open-container]
 
-## 배포
-하지만 [blog.jonghyeon.me](https://blog.jonghyeon.me)는 이 리포지토리의 Pages 설정에 따라 동작하고 있습니다. [테마 정의를 다른 리포지토리에 분리](./tools.conf)하고, Github Actions를 사용하여 병합 후 [`deploy`](https://github.com/ShapeLayer/blog.jonghyeon.me/tree/deploy) 브랜치에 게시합니다.  
+  [**Live Demo** →][demo]
 
-Github Actions가 수행하는 일부 과정은 [`tools`](./tools/) 디렉토리 하위에 셸 스크립트로 정의하여 해당 디렉토리를 참조하여 확인할 수 있습니다.  
+  [![Devices Mockup](https://chirpy-img.netlify.app/commons/devices-mockup.png)][demo]
 
+</div>
+
+## Features
+
+- **Design & UX** - Responsive layout, Dark/Light modes, Localized UI language,
+  and Dark mode images.
+- **Content Management** - Pinned posts, Hierarchical categories, Trending tags,
+  Auto-generated Table of Contents, and Last modified dates.
+- **Rich Text Support** - Syntax highlighting, Mathematical expressions, Mermaid
+  diagrams & flowcharts, and Embedded media.
+- **Interactivity & Outreach** - Built-in search, Multiple comment systems, and
+  Atom feeds.
+- **System & Optimization** - PWA support, integrated Web analytics, and
+  advanced SEO performance.
+
+## Documentation
+
+To learn how to use, develop, and upgrade the project, please refer to the
+[Wiki][wiki].
+
+## Contributing
+
+Contributions (_pull requests_, _issues_, and _discussions_) are what make the
+open-source community such an amazing place to learn, inspire, and create. Any
+contributions you make are greatly appreciated.
+For details, please refer to our [Contributing Guidelines][contribute-guide].
+
+## Credits
+
+This project is built on the [Jekyll][jekyllrb] ecosystem and integrates a
+collection of [excellent libraries][lib]. Its avatar and favicon are sourced
+from [ClipartMAX][clipartmax].
+
+Furthermore, thanks to everyone who contributed to the development of this project!
+
+[![all-contributors][contributors-avatar]][contributors]
+
+## License
+
+This project is licensed under the [MIT License][license].
+
+[badge-ci]: https://img.shields.io/github/actions/workflow/status/cotes2020/jekyll-theme-chirpy/ci.yml?logo=github
+[badge-codacy]: https://img.shields.io/codacy/grade/4e556876a3c54d5e8f2d2857c4f43894?logo=codacy
+[badge-license]: https://img.shields.io/github/license/cotes2020/jekyll-theme-chirpy?color=goldenrod
+[badge-gem]: https://img.shields.io/gem/v/jekyll-theme-chirpy?&logo=RubyGems&logoColor=ghostwhite&label=gem&color=orange
+[badge-open-container]: https://img.shields.io/badge/Dev_Containers-Open-deepskyblue?logo=linuxcontainers
+[gem]: https://rubygems.org/gems/jekyll-theme-chirpy
+[ci]: https://github.com/cotes2020/jekyll-theme-chirpy/actions/workflows/ci.yml?query=event%3Apush+branch%3Amaster
+[codacy]: https://app.codacy.com/gh/cotes2020/jekyll-theme-chirpy/dashboard?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_grade
+[license]: https://github.com/cotes2020/jekyll-theme-chirpy/blob/master/LICENSE
+[open-container]: https://vscode.dev/redirect?url=vscode://ms-vscode-remote.remote-containers/cloneInVolume?url=https://github.com/cotes2020/jekyll-theme-chirpy
+[jekyllrb]: https://jekyllrb.com/
+[clipartmax]: https://www.clipartmax.com/middle/m2i8b1m2K9Z5m2K9_ant-clipart-childrens-ant-cute/
+[demo]: https://cotes2020.github.io/chirpy-demo/
+[wiki]: https://github.com/cotes2020/jekyll-theme-chirpy/wiki
+[contribute-guide]: https://github.com/cotes2020/jekyll-theme-chirpy/blob/master/docs/CONTRIBUTING.md
+[contributors]: https://github.com/cotes2020/jekyll-theme-chirpy/graphs/contributors
+[contributors-avatar]: https://contrib.rocks/image?repo=cotes2020/jekyll-theme-chirpy&columns=16&max=112
+[lib]: https://github.com/cotes2020/chirpy-static-assets
