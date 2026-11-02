@@ -15,7 +15,7 @@ category: [report]
 
 ## 심박 그래프의 이해
 
-<img src="/static/posts/2026-11-02-mathematical-ecg/SinusRhythmLabels.svg" style="background-color: white;" />
+<img src="/static/posts/2026-11-02-mathematical-ecg/SinusRhythmLabels.svg" style="background-color: white; width: 100%;" />
 
 _[심박 그래프의 개형](https://en.wikipedia.org/wiki/Electrocardiography)_  
 
@@ -198,7 +198,7 @@ $$
 \ttip{Q(\tau)}{Q파: QRS파의 첫 음의 편향}  &= G(\tau;\,-0.04\ttip{\lambda}{QRS 폭 배율. 기본값 1},\;A_Q,\;0.02\lambda) \\
 \ttip{R(\tau)}{R파: QRS파의 주된 양의 편향. 박동 시각 $t_k$ 의 기준점이다.}  &= G(\tau;\,0,\;A_R,\;0.03\lambda) \\
 \ttip{S(\tau)}{S파: R파 뒤의 음의 편향}  &= G(\tau;\,0.04\lambda,\;A_S,\;0.03\lambda) \\
-\ttip{ST(\tau)}{ST segment 항. 허혈 시 상승하거나 하강한다.} &= G(\tau;\,0.15,\;\ttip{h}{ST segment 높이. 조절 변수},\;0.1)\cdot \ttip{\mathbb{1}_{(0.08,\,0.25)}(\tau)}{$0.08 < \tau < 0.25$ 에서만 1인 지시함수. 경계에서 값이 끊긴다.} \\
+\ttip{ST(\tau)}{ST segment 항. 허혈 시 상승하거나 하강한다.} &= G(\tau;\,0.15,\;\ttip{h}{ST segment 높이. 조절 변수},\;0.1)\cdot \ttip{\mathbb{1}_{(0.08,\,0.25)}(\tau)}{$0.08 < \tau < 0.25$ 에서만 1인 지시함수.} \\
 \ttip{T(\tau)}{T파: 심실 재분극}  &= G(\tau;\,0.25,\;\ttip{A_T}{T파 높이. 조절 변수},\;\ttip{\sigma_T}{T파 폭. 프리셋마다 고정}) \\
 \ttip{U(\tau)}{U파: 저칼륨혈증에서 두드러진다}  &= G(\tau;\,0.45,\;\ttip{A_U}{U파 높이. 조절 변수},\;0.06)
 \end{aligned}
@@ -222,7 +222,7 @@ $$
 
 $$
 \begin{aligned}
-\ttip{B(\tau)}{한 박동의 파형. R파 꼭짓점을 $\tau = 0$ 으로 둔다.} &= \ttip{\sum_{i \in \{P,Q,R,S,T,U\}} G(\tau;\,\mu_i, A_i, \sigma_i)}{여섯 가우스 성분의 합}
+\ttip{B(\tau)}{한 박동의 파형. R파 꼭짓점을 $\tau = 0$ 으로 둔다.} &= \ttip{\sum_{i \in \{\ttip{P}{P파},\ttip{Q}{Q파},\ttip{R}{R파},\ttip{S}{S파},\ttip{T}{T파},\ttip{U}{U파}\}} G(\tau;\,\ttip{\mu_i}{각 파형의 중심}, \ttip{A_i}{각 파형의 높이}, \ttip{\sigma_i}{각 파형의 폭})}{여섯 가우스 성분의 합}
 \;\\
 &+\; \ttip{G(\tau;\,0.15,\,h,\,0.1)\,\mathbb{1}_{(0.08,\,0.25)}(\tau)}{ST segment 항}
 \end{aligned}
@@ -246,8 +246,6 @@ $$
 | $S$ | $0.04\lambda$ | $A_S$ | $0.03\lambda$ |
 | $T$ | $0.25$ | $A_T$ | $\sigma_T$ |
 | $U$ | $0.45$ | $A_U$ | $0.06$ |
-
-Q, R, S 성분은 서로 1~1.3σ 거리에 있어서 많이 겹친다. 정상 리듬 프리셋에서 합성 파형의 R 꼭짓점은 $A_R = 1.2$ 가 아니라 약 1.08 mV이고, Q의 극소는 $A_Q = -0.15$ 가 아니라 $\tau \approx -0.08$ 에서 약 $+0.034$ mV이다. 즉 Q파는 baseline 아래로 내려가지 않는다. S의 극소도 $\tau \approx 0.071$ 에서 약 $-0.049$ mV로, $A_S = -0.25$ 보다 훨씬 얕다. 그래서 $A_Q$, $A_R$, $A_S$ 는 각 파의 높이라기보다 QRS 개형을 정하는 계수로 보아야 한다.  
 
 <div id="ecg-beat-graphs"></div>
 <script>
@@ -313,7 +311,7 @@ $$
 -->
 
 $$
-\ttip{\varepsilon_k}{$k$ 번째 박동 간격의 변동 (s)} = (\ttip{u_k}{박동마다 새로 생성하는 0과 1 사이의 균등분포 난수} - 0.5)\,\ttip{\iota}{불규칙성: 0이면 간격이 일정 간격, 크기에 비례하여 불큐칙적임.}\,RR_0
+\ttip{\varepsilon_k}{$k$ 번째 박동 간격의 변동 (s)} = (\ttip{u_k}{박동마다 새로 생성하는 0과 1 사이의 균등분포 난수} - 0.5)\,\ttip{\iota}{불규칙성 스케일 계수}\,RR_0
 $$
 
 <!--
@@ -325,7 +323,7 @@ $$
 $$
 u_k \sim \mathcal{U}(0,1)
 \;\;\Longleftrightarrow\;\;
-\ttip{\varepsilon_k \sim \mathcal{U}\!\left(-\tfrac{\iota RR_0}{2},\; \tfrac{\iota RR_0}{2}\right)}{변동은 기준 간격의 $\pm\iota/2$ 배 범위에서 고르게 분포하고, 박동마다 독립이다.}
+\ttip{\varepsilon_k \sim \mathcal{U}\!\left(-\tfrac{\iota \tta{\ttip{RR_0}{기준 박동 간격 (s)}}{rr0}}{2},\; \tfrac{\iota \ttc{RR_0}{rr0}}{2}\right)}{변동은 기준 간격의 $\pm\iota/2$ 배 범위에서 고르게 분포하고, 박동마다 독립이다.}
 $$
 
 <!--
@@ -351,7 +349,7 @@ $$
 에 대해서 박동 시각은 다음과 같이 쌓인다.
 
 $$
-\ttip{t_{k+1}}{다음 R파 시각} = t_k + \ttip{\max\!\left(0.2,\; RR_0 + \varepsilon_k\right)}{박동 간격. 0.2초보다 짧아지지 않는다.}
+\ttip{t_{k+1}}{다음 R파 시각} = t_k + \ttip{\max\!\left(0.2,\; \ttip{RR_0}{기준 박동 간격 (s)} + \varepsilon_k\right)}{박동 간격. 0.2초보다 짧아지지 않는다.}
 $$
 
 <!--
