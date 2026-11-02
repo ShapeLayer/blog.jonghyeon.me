@@ -1,7 +1,7 @@
 ---
 layout: post
 title: '심박 그래프의 수학적 표현'
-date: '2026-10-18'
+date: '2026-11-02'
 category: [report]
 ---
 
